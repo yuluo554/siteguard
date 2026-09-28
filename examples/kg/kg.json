@@ -1,0 +1,2070 @@
+{
+  "nodes": [
+    {
+      "label": "低风险",
+      "type": "RiskLevel"
+    },
+    {
+      "label": "一般风险",
+      "type": "RiskLevel"
+    },
+    {
+      "label": "较大风险",
+      "type": "RiskLevel"
+    },
+    {
+      "label": "重大风险",
+      "type": "RiskLevel"
+    },
+    {
+      "label": "高处作业",
+      "type": "Category"
+    },
+    {
+      "label": "临时用电",
+      "type": "Category"
+    },
+    {
+      "label": "脚手架",
+      "type": "Category"
+    },
+    {
+      "label": "基坑工程",
+      "type": "Category"
+    },
+    {
+      "label": "起重机械",
+      "type": "Category"
+    },
+    {
+      "label": "消防安全",
+      "type": "Category"
+    },
+    {
+      "label": "有限空间",
+      "type": "Category"
+    },
+    {
+      "label": "其他",
+      "type": "Category"
+    },
+    {
+      "label": "[JGJ 80-2016 4.1.2] 建筑施工高处作业安全技术规范",
+      "type": "Regulation",
+      "text": "临边作业时，应在临边设置防护栏杆，并采用密目式安全立网或工具式栏板封闭。"
+    },
+    {
+      "label": "[JGJ 80-2016 4.5.1] 建筑施工高处作业安全技术规范",
+      "type": "Regulation",
+      "text": "高处作业人员应按规定正确使用安全带，安全带应高挂低用。"
+    },
+    {
+      "label": "[JGJ 80-2016 4.2.1] 建筑施工高处作业安全技术规范",
+      "type": "Regulation",
+      "text": "楼梯口、电梯井口、预留洞口等处应按规范设置防护设施。"
+    },
+    {
+      "label": "[JGJ 80-2016 5.3.1] 建筑施工高处作业安全技术规范",
+      "type": "Regulation",
+      "text": "移动式操作平台应按设计荷载使用，脚轮应锁定，作业时不得晃动移位。"
+    },
+    {
+      "label": "[JGJ 59-2011 3.13] 建筑施工安全检查标准",
+      "type": "Regulation",
+      "text": "高处作业检查评分表：安全网、临边与洞口防护、安全通道、操作平台等为检查评定项目。"
+    },
+    {
+      "label": "[JGJ 46-2005 5.1.1] 施工现场临时用电安全技术规范",
+      "type": "Regulation",
+      "text": "在施工现场专用变压器的供电的TN-S接零保护系统中，电气设备的金属外壳必须与保护零线连接。"
+    },
+    {
+      "label": "[JGJ 46-2005 8.1.3] 施工现场临时用电安全技术规范",
+      "type": "Regulation",
+      "text": "每台用电设备必须有各自专用的开关箱，严禁一个开关箱直接控制两台及两台以上用电设备。"
+    },
+    {
+      "label": "[JGJ 46-2005 8.1.8] 施工现场临时用电安全技术规范",
+      "type": "Regulation",
+      "text": "配电箱、开关箱应装设端正、牢固；固定式配电箱、开关箱的中心点与地面垂直距离应为1.4～1.6m，移动式配电箱、开关箱应装设在坚固、稳定的支架上，其中心点与地面垂直距离宜为0.8～1.6m。"
+    },
+    {
+      "label": "[JGJ 46-2005 7.2.3] 施工现场临时用电安全技术规范",
+      "type": "Regulation",
+      "text": "电缆线路应采用埋地或架空敷设，严禁沿地面明设，并应避免机械损伤和介质腐蚀。"
+    },
+    {
+      "label": "[JGJ 46-2005 8.2.10] 施工现场临时用电安全技术规范",
+      "type": "Regulation",
+      "text": "开关箱中漏电保护器的额定漏电动作电流不应大于30mA，额定漏电动作时间不应大于0.1s。"
+    },
+    {
+      "label": "[JGJ 46-2005 3.2.1] 施工现场临时用电安全技术规范",
+      "type": "Regulation",
+      "text": "电工必须经过按国家现行标准考核合格后，持证上岗工作；其他用电人员必须通过相关教育培训和技术交底，考核合格后方可上岗工作。"
+    },
+    {
+      "label": "[JGJ 59-2011 3.14] 建筑施工安全检查标准",
+      "type": "Regulation",
+      "text": "施工用电检查评分表保证项目包括：外电防护、接地与接零保护系统、配电箱开关箱、现场照明等。"
+    },
+    {
+      "label": "[JGJ 46-2005 8.3.1] 施工现场临时用电安全技术规范",
+      "type": "Regulation",
+      "text": "配电箱、开关箱应有名称、用途、分路标记及系统接线图。"
+    },
+    {
+      "label": "[JGJ 46-2005 8.3.2] 施工现场临时用电安全技术规范",
+      "type": "Regulation",
+      "text": "配电箱、开关箱箱门应配锁，并应由专人负责。"
+    },
+    {
+      "label": "[建质规〔2022〕2号 第四条（一）] 房屋市政工程生产安全重大事故隐患判定标准（2022版）",
+      "type": "Regulation",
+      "text": "施工安全管理有下列情形之一的，应判定为重大事故隐患：建筑施工企业未取得安全生产许可证擅自从事建筑施工活动。"
+    },
+    {
+      "label": "[建质规〔2022〕2号 第四条（二）] 房屋市政工程生产安全重大事故隐患判定标准（2022版）",
+      "type": "Regulation",
+      "text": "施工安全管理有下列情形之一的，应判定为重大事故隐患：施工单位的主要负责人、项目负责人、专职安全生产管理人员未取得安全生产考核合格证书从事相关工作。"
+    },
+    {
+      "label": "[建质规〔2022〕2号 第四条（三）] 房屋市政工程生产安全重大事故隐患判定标准（2022版）",
+      "type": "Regulation",
+      "text": "施工安全管理有下列情形之一的，应判定为重大事故隐患：建筑施工特种作业人员未取得特种作业人员操作资格证书上岗作业。"
+    },
+    {
+      "label": "[建质规〔2022〕2号 第四条（四）] 房屋市政工程生产安全重大事故隐患判定标准（2022版）",
+      "type": "Regulation",
+      "text": "施工安全管理有下列情形之一的，应判定为重大事故隐患：危险性较大的分部分项工程未编制、未审核专项施工方案，或未按规定组织专家对“超过一定规模的危险性较大的分部分项工程范围”的专项施工方案进行论证。"
+    },
+    {
+      "label": "[建质规〔2022〕2号 第五条（一）] 房屋市政工程生产安全重大事故隐患判定标准（2022版）",
+      "type": "Regulation",
+      "text": "基坑工程有下列情形之一的，应判定为重大事故隐患：对因基坑工程施工可能造成损害的毗邻重要建筑物、构筑物和地下管线等，未采取专项防护措施。"
+    },
+    {
+      "label": "[建质规〔2022〕2号 第五条（二）] 房屋市政工程生产安全重大事故隐患判定标准（2022版）",
+      "type": "Regulation",
+      "text": "基坑工程有下列情形之一的，应判定为重大事故隐患：基坑土方超挖且未采取有效措施。"
+    },
+    {
+      "label": "[建质规〔2022〕2号 第五条（三）] 房屋市政工程生产安全重大事故隐患判定标准（2022版）",
+      "type": "Regulation",
+      "text": "基坑工程有下列情形之一的，应判定为重大事故隐患：深基坑施工未进行第三方监测。"
+    },
+    {
+      "label": "[建质规〔2022〕2号 第五条（四）1] 房屋市政工程生产安全重大事故隐患判定标准（2022版）",
+      "type": "Regulation",
+      "text": "基坑工程有下列情形之一的，应判定为重大事故隐患：有下列基坑坍塌风险预兆之一，且未及时处理——支护结构或周边建筑物变形值超过设计变形控制值。"
+    },
+    {
+      "label": "[建质规〔2022〕2号 第五条（四）2] 房屋市政工程生产安全重大事故隐患判定标准（2022版）",
+      "type": "Regulation",
+      "text": "基坑工程有下列情形之一的，应判定为重大事故隐患：有下列基坑坍塌风险预兆之一，且未及时处理——基坑侧壁出现大量漏水、流土。"
+    },
+    {
+      "label": "[建质规〔2022〕2号 第五条（四）3] 房屋市政工程生产安全重大事故隐患判定标准（2022版）",
+      "type": "Regulation",
+      "text": "基坑工程有下列情形之一的，应判定为重大事故隐患：有下列基坑坍塌风险预兆之一，且未及时处理——基坑底部出现管涌。"
+    },
+    {
+      "label": "[建质规〔2022〕2号 第五条（四）4] 房屋市政工程生产安全重大事故隐患判定标准（2022版）",
+      "type": "Regulation",
+      "text": "基坑工程有下列情形之一的，应判定为重大事故隐患：有下列基坑坍塌风险预兆之一，且未及时处理——桩间土流失孔洞深度超过桩径。"
+    },
+    {
+      "label": "[建质规〔2022〕2号 第六条（一）] 房屋市政工程生产安全重大事故隐患判定标准（2022版）",
+      "type": "Regulation",
+      "text": "模板工程有下列情形之一的，应判定为重大事故隐患：模板工程的地基基础承载力和变形不满足设计要求。"
+    },
+    {
+      "label": "[建质规〔2022〕2号 第六条（二）] 房屋市政工程生产安全重大事故隐患判定标准（2022版）",
+      "type": "Regulation",
+      "text": "模板工程有下列情形之一的，应判定为重大事故隐患：模板支架承受的施工荷载超过设计值。"
+    },
+    {
+      "label": "[建质规〔2022〕2号 第六条（三）] 房屋市政工程生产安全重大事故隐患判定标准（2022版）",
+      "type": "Regulation",
+      "text": "模板工程有下列情形之一的，应判定为重大事故隐患：模板支架拆除及滑模、爬模爬升时，混凝土强度未达到设计或规范要求。"
+    },
+    {
+      "label": "[建质规〔2022〕2号 第七条（一）] 房屋市政工程生产安全重大事故隐患判定标准（2022版）",
+      "type": "Regulation",
+      "text": "脚手架工程有下列情形之一的，应判定为重大事故隐患：脚手架工程的地基基础承载力和变形不满足设计要求。"
+    },
+    {
+      "label": "[建质规〔2022〕2号 第七条（二）] 房屋市政工程生产安全重大事故隐患判定标准（2022版）",
+      "type": "Regulation",
+      "text": "脚手架工程有下列情形之一的，应判定为重大事故隐患：未设置连墙件或连墙件整层缺失。"
+    },
+    {
+      "label": "[建质规〔2022〕2号 第七条（三）] 房屋市政工程生产安全重大事故隐患判定标准（2022版）",
+      "type": "Regulation",
+      "text": "脚手架工程有下列情形之一的，应判定为重大事故隐患：附着式升降脚手架未经验收合格即投入使用。"
+    },
+    {
+      "label": "[建质规〔2022〕2号 第七条（四）] 房屋市政工程生产安全重大事故隐患判定标准（2022版）",
+      "type": "Regulation",
+      "text": "脚手架工程有下列情形之一的，应判定为重大事故隐患：附着式升降脚手架的防倾覆、防坠落或同步升降控制装置不符合设计要求、失效、被人为拆除破坏。"
+    },
+    {
+      "label": "[建质规〔2022〕2号 第七条（五）] 房屋市政工程生产安全重大事故隐患判定标准（2022版）",
+      "type": "Regulation",
+      "text": "脚手架工程有下列情形之一的，应判定为重大事故隐患：附着式升降脚手架使用过程中架体悬臂高度大于架体高度的2/5或大于6米。"
+    },
+    {
+      "label": "[建质规〔2022〕2号 第八条（一）] 房屋市政工程生产安全重大事故隐患判定标准（2022版）",
+      "type": "Regulation",
+      "text": "起重机械及吊装工程有下列情形之一的，应判定为重大事故隐患：塔式起重机、施工升降机、物料提升机等起重机械设备未经验收合格即投入使用，或未按规定办理使用登记。"
+    },
+    {
+      "label": "[建质规〔2022〕2号 第八条（二）] 房屋市政工程生产安全重大事故隐患判定标准（2022版）",
+      "type": "Regulation",
+      "text": "起重机械及吊装工程有下列情形之一的，应判定为重大事故隐患：塔式起重机独立起升高度、附着间距和最高附着以上的最大悬高及垂直度不符合规范要求。"
+    },
+    {
+      "label": "[建质规〔2022〕2号 第八条（三）] 房屋市政工程生产安全重大事故隐患判定标准（2022版）",
+      "type": "Regulation",
+      "text": "起重机械及吊装工程有下列情形之一的，应判定为重大事故隐患：施工升降机附着间距和最高附着以上的最大悬高及垂直度不符合规范要求。"
+    },
+    {
+      "label": "[建质规〔2022〕2号 第八条（四）] 房屋市政工程生产安全重大事故隐患判定标准（2022版）",
+      "type": "Regulation",
+      "text": "起重机械及吊装工程有下列情形之一的，应判定为重大事故隐患：起重机械安装、拆卸、顶升加节以及附着前未对结构件、顶升机构和附着装置以及高强度螺栓、销轴、定位板等连接件及安全装置进行检查。"
+    },
+    {
+      "label": "[建质规〔2022〕2号 第八条（五）] 房屋市政工程生产安全重大事故隐患判定标准（2022版）",
+      "type": "Regulation",
+      "text": "起重机械及吊装工程有下列情形之一的，应判定为重大事故隐患：建筑起重机械的安全装置不齐全、失效或者被违规拆除、破坏。"
+    },
+    {
+      "label": "[建质规〔2022〕2号 第八条（六）] 房屋市政工程生产安全重大事故隐患判定标准（2022版）",
+      "type": "Regulation",
+      "text": "起重机械及吊装工程有下列情形之一的，应判定为重大事故隐患：施工升降机防坠安全器超过定期检验有效期，标准节连接螺栓缺失或失效。"
+    },
+    {
+      "label": "[建质规〔2022〕2号 第八条（七）] 房屋市政工程生产安全重大事故隐患判定标准（2022版）",
+      "type": "Regulation",
+      "text": "起重机械及吊装工程有下列情形之一的，应判定为重大事故隐患：建筑起重机械的地基基础承载力和变形不满足设计要求。"
+    },
+    {
+      "label": "[建质规〔2022〕2号 第九条（一）] 房屋市政工程生产安全重大事故隐患判定标准（2022版）",
+      "type": "Regulation",
+      "text": "高处作业有下列情形之一的，应判定为重大事故隐患：钢结构、网架安装用支撑结构地基基础承载力和变形不满足设计要求，钢结构、网架安装用支撑结构未按设计要求设置防倾覆装置。"
+    },
+    {
+      "label": "[建质规〔2022〕2号 第九条（二）] 房屋市政工程生产安全重大事故隐患判定标准（2022版）",
+      "type": "Regulation",
+      "text": "高处作业有下列情形之一的，应判定为重大事故隐患：单榀钢桁架（屋架）安装时未采取防失稳措施。"
+    },
+    {
+      "label": "[建质规〔2022〕2号 第九条（三）] 房屋市政工程生产安全重大事故隐患判定标准（2022版）",
+      "type": "Regulation",
+      "text": "高处作业有下列情形之一的，应判定为重大事故隐患：悬挑式操作平台的搁置点、拉结点、支撑点未设置在稳定的主体结构上，且未做可靠连接。"
+    },
+    {
+      "label": "[建质规〔2022〕2号 第十条] 房屋市政工程生产安全重大事故隐患判定标准（2022版）",
+      "type": "Regulation",
+      "text": "施工临时用电方面，特殊作业环境（隧道、人防工程，高温、有导电灰尘、比较潮湿等作业环境）照明未按规定使用安全电压的，应判定为重大事故隐患。"
+    },
+    {
+      "label": "[建质规〔2022〕2号 第十一条（一）] 房屋市政工程生产安全重大事故隐患判定标准（2022版）",
+      "type": "Regulation",
+      "text": "有限空间作业有下列情形之一的，应判定为重大事故隐患：有限空间作业未履行“作业审批制度”，未对施工人员进行专项安全教育培训，未执行“先通风、再检测、后作业”原则。"
+    },
+    {
+      "label": "[建质规〔2022〕2号 第十一条（二）] 房屋市政工程生产安全重大事故隐患判定标准（2022版）",
+      "type": "Regulation",
+      "text": "有限空间作业有下列情形之一的，应判定为重大事故隐患：有限空间作业时现场未有专人负责监护工作。"
+    },
+    {
+      "label": "[建质规〔2022〕2号 第十二条] 房屋市政工程生产安全重大事故隐患判定标准（2022版）",
+      "type": "Regulation",
+      "text": "拆除工程方面，拆除施工作业顺序不符合规范和施工方案要求的，应判定为重大事故隐患。"
+    },
+    {
+      "label": "[建质规〔2022〕2号 第十三条（一）] 房屋市政工程生产安全重大事故隐患判定标准（2022版）",
+      "type": "Regulation",
+      "text": "暗挖工程有下列情形之一的，应判定为重大事故隐患：作业面带水施工未采取相关措施，或地下水控制措施失效且继续施工。"
+    },
+    {
+      "label": "[建质规〔2022〕2号 第十三条（二）] 房屋市政工程生产安全重大事故隐患判定标准（2022版）",
+      "type": "Regulation",
+      "text": "暗挖工程有下列情形之一的，应判定为重大事故隐患：施工时出现涌水、涌沙、局部坍塌，支护结构扭曲变形或出现裂缝，且有不断增大趋势，未及时采取措施。"
+    },
+    {
+      "label": "[建质规〔2022〕2号 第十四条] 房屋市政工程生产安全重大事故隐患判定标准（2022版）",
+      "type": "Regulation",
+      "text": "使用危害程度较大、可能导致群死群伤或造成重大经济损失的施工工艺、设备和材料，应判定为重大事故隐患。"
+    },
+    {
+      "label": "[建质规〔2022〕2号 第十五条] 房屋市政工程生产安全重大事故隐患判定标准（2022版）",
+      "type": "Regulation",
+      "text": "其他严重违反房屋市政工程安全生产法律法规、部门规章及强制性标准，且存在危害程度较大、可能导致群死群伤或造成重大经济损失的现实危险，应判定为重大事故隐患。"
+    },
+    {
+      "label": "[建质规〔2022〕2号 第五条（四）] 房屋市政工程生产安全重大事故隐患判定标准（2022版）",
+      "type": "Regulation",
+      "text": "基坑工程有下列情形之一的，应判定为重大事故隐患：有下列基坑坍塌风险预兆之一，且未及时处理：1.支护结构或周边建筑物变形值超过设计变形控制值；2.基坑侧壁出现大量漏水、流土；3.基坑底部出现管涌；4.桩间土流失孔洞深度超过桩径。"
+    },
+    {
+      "label": "[建质规〔2022〕2号 第十一条] 房屋市政工程生产安全重大事故隐患判定标准（2022版）",
+      "type": "Regulation",
+      "text": "有限空间作业有下列情形之一的，应判定为重大事故隐患：（一）有限空间作业未履行“作业审批制度”，未对施工人员进行专项安全教育培训，未执行“先通风、再检测、后作业”原则；（二）有限空间作业时现场未有专人负责监护工作。"
+    },
+    {
+      "label": "[建质规〔2022〕2号 第十三条] 房屋市政工程生产安全重大事故隐患判定标准（2022版）",
+      "type": "Regulation",
+      "text": "暗挖工程有下列情形之一的，应判定为重大事故隐患：（一）作业面带水施工未采取相关措施，或地下水控制措施失效且继续施工；（二）施工时出现涌水、涌沙、局部坍塌，支护结构扭曲变形或出现裂缝，且有不断增大趋势，未及时采取措施。"
+    },
+    {
+      "label": "立即按规范在临边部位设置定型化防护栏杆（上杆1.2m、下杆0.6m）并挂设密目安全网，验收合格后方可作业。",
+      "type": "Measure"
+    },
+    {
+      "label": "责令高处作业人员立即系挂符合要求的安全带并做到高挂低用，班前交底再次确认，未整改前停止相关部位作业。",
+      "type": "Measure"
+    },
+    {
+      "label": "对洞口加盖固定盖板并设置警示标识，短边尺寸大于一定值时按规范设置防护栏杆，专人复查销项。",
+      "type": "Measure"
+    },
+    {
+      "label": "更换或补挂破损缺失的安全网，确保架体外侧密目网封闭严密，每周组织一次巡检。",
+      "type": "Measure"
+    },
+    {
+      "label": "清理安全通道内堆放材料，恢复通道畅通并保持照明与标识完好，纳入日常巡查清单。",
+      "type": "Measure"
+    },
+    {
+      "label": "移动操作平台立即停止使用，锁定脚轮、核实配重与荷载，验收合格并挂牌后方可重新投入使用。",
+      "type": "Measure"
+    },
+    {
+      "label": "按TN-S接零保护系统与三级配电两级保护要求整改配电系统，改造方案经审核后实施，整改期间该回路停用。",
+      "type": "Measure"
+    },
+    {
+      "label": "严格执行一机一闸一漏，为每台设备配置专用开关箱，拆除一闸多机接线并复查全部开关箱。",
+      "type": "Measure"
+    },
+    {
+      "label": "为配电箱补装箱门与门锁并落实防雨措施，箱前操作通道保持畅通，明确责任人挂牌管理。",
+      "type": "Measure"
+    },
+    {
+      "label": "破损电缆立即更换，架空或穿管埋地敷设，消除拖地泡水与私拉乱接，全面排查现场线路。",
+      "type": "Measure"
+    },
+    {
+      "label": "更换合格漏电保护器（额定动作电流不大于30mA、动作时间不大于0.1s），检测记录留存并定期试验。",
+      "type": "Measure"
+    },
+    {
+      "label": "立即停止非电工人员接线行为，电气作业必须由持证电工执行，对相关人员进行安全教育并考核。",
+      "type": "Measure"
+    },
+    {
+      "label": "按方案补设连墙件并与建筑结构可靠拉结，连墙件整层缺失的架体立即停止使用，经复查验收后方可恢复作业。",
+      "type": "Measure"
+    },
+    {
+      "label": "附着式升降脚手架立即停止升降与使用，组织安装验收并办理使用登记，防倾覆、防坠落与同步升降控制装置检测合格后方可恢复。",
+      "type": "Measure"
+    },
+    {
+      "label": "对架体悬臂高度超限或悬挑型钢锚固不到位的部位编制专项处理方案，降低悬臂高度或补强拉结锚固，验收合格后使用。",
+      "type": "Measure"
+    },
+    {
+      "label": "脚手架搭设完成组织验收挂牌，脚手板满铺绑扎、挡脚板与安全网齐全，基础沉降或架体变形部位加固处理并加密监测。",
+      "type": "Measure"
+    },
+    {
+      "label": "基坑工程立即停工，补充编制专项施工方案并按规定组织专家论证，按方案完善支护与降排水措施后复工。",
+      "type": "Measure"
+    },
+    {
+      "label": "对超挖部位会同设计单位确定处理方案，严禁盲目回填或继续开挖，设置变形监测点并加密观测频次。",
+      "type": "Measure"
+    },
+    {
+      "label": "委托具备资质的第三方监测单位对深基坑实施监测，明确报警值与处置流程，监测数据异常立即停工撤人。",
+      "type": "Measure"
+    },
+    {
+      "label": "发现侧壁漏水流土、底部管涌等坍塌预兆立即停工，撤出坑内人员，按应急方案回填反压并通知设计单位处理。",
+      "type": "Measure"
+    },
+    {
+      "label": "未经验收或未办理使用登记的起重机械立即停用，组织验收备案，验收合格并办理使用登记后方可投入使用。",
+      "type": "Measure"
+    },
+    {
+      "label": "对安全装置不齐全、失效或被拆除的起重机械立即停机，由专业单位恢复并检测各限位与保险装置，合格后方可作业。",
+      "type": "Measure"
+    },
+    {
+      "label": "严格执行吊装令与索具检查制度，严禁超载斜拉，吊装区域设警戒并由持证信号工指挥；建立定期维保台账并留存记录。",
+      "type": "Measure"
+    },
+    {
+      "label": "动火作业执行审批制度，清理周边可燃物并配备灭火器材与看火人，作业结束确认无阴燃后方可离场。",
+      "type": "Measure"
+    },
+    {
+      "label": "按防火分区补配灭火器材并每月检查压力与有效期，易燃材料分类入库、远离动火区存放并设专人管理。",
+      "type": "Measure"
+    },
+    {
+      "label": "对进场保温材料核验燃烧性能检测报告，不合格材料清退出场，已使用部分按方案更换并留档备查。",
+      "type": "Measure"
+    },
+    {
+      "label": "特殊作业环境照明立即停用，改用符合规定的安全电压照明并经持证电工检测确认，未整改前停止相关部位作业。",
+      "type": "Measure"
+    },
+    {
+      "label": "有限空间作业立即停止，履行作业审批并落实先通风、再检测、后作业，设专人监护，配备气体检测与应急救援器材，严禁盲目施救。",
+      "type": "Measure"
+    },
+    {
+      "label": "立即纠正未佩戴安全帽行为并开展班前安全教育，进入施工现场人员必须正确佩戴符合标准的安全帽，检查合格后方可进入作业区域。",
+      "type": "Measure"
+    },
+    {
+      "label": "临边防护缺失",
+      "type": "HazardType",
+      "base_level": "较大风险",
+      "category": "高处作业"
+    },
+    {
+      "label": "高处作业未系安全带",
+      "type": "HazardType",
+      "base_level": "较大风险",
+      "category": "高处作业"
+    },
+    {
+      "label": "洞口防护缺失",
+      "type": "HazardType",
+      "base_level": "较大风险",
+      "category": "高处作业"
+    },
+    {
+      "label": "安全网缺失或破损",
+      "type": "HazardType",
+      "base_level": "一般风险",
+      "category": "高处作业"
+    },
+    {
+      "label": "安全通道不畅通",
+      "type": "HazardType",
+      "base_level": "一般风险",
+      "category": "高处作业"
+    },
+    {
+      "label": "移动操作平台违规使用",
+      "type": "HazardType",
+      "base_level": "较大风险",
+      "category": "高处作业"
+    },
+    {
+      "label": "未执行三级配电两级保护",
+      "type": "HazardType",
+      "base_level": "较大风险",
+      "category": "临时用电"
+    },
+    {
+      "label": "一机一闸一漏未落实",
+      "type": "HazardType",
+      "base_level": "较大风险",
+      "category": "临时用电"
+    },
+    {
+      "label": "配电箱无门无锁无防雨",
+      "type": "HazardType",
+      "base_level": "一般风险",
+      "category": "临时用电"
+    },
+    {
+      "label": "电缆敷设违规",
+      "type": "HazardType",
+      "base_level": "较大风险",
+      "category": "临时用电"
+    },
+    {
+      "label": "漏电保护器失效或参数不合格",
+      "type": "HazardType",
+      "base_level": "较大风险",
+      "category": "临时用电"
+    },
+    {
+      "label": "非电工私接电气",
+      "type": "HazardType",
+      "base_level": "一般风险",
+      "category": "临时用电"
+    },
+    {
+      "label": "特殊环境照明未用安全电压",
+      "type": "HazardType",
+      "base_level": "较大风险",
+      "category": "临时用电"
+    },
+    {
+      "label": "连墙件缺失或未设置",
+      "type": "HazardType",
+      "base_level": "较大风险",
+      "category": "脚手架"
+    },
+    {
+      "label": "附着式升降脚手架未经验收投入使用",
+      "type": "HazardType",
+      "base_level": "较大风险",
+      "category": "脚手架"
+    },
+    {
+      "label": "脚手架基础沉降或架体变形",
+      "type": "HazardType",
+      "base_level": "较大风险",
+      "category": "脚手架"
+    },
+    {
+      "label": "脚手板铺设不合规",
+      "type": "HazardType",
+      "base_level": "一般风险",
+      "category": "脚手架"
+    },
+    {
+      "label": "基坑工程未编制专项施工方案",
+      "type": "HazardType",
+      "base_level": "较大风险",
+      "category": "基坑工程"
+    },
+    {
+      "label": "基坑土方超挖",
+      "type": "HazardType",
+      "base_level": "较大风险",
+      "category": "基坑工程"
+    },
+    {
+      "label": "深基坑未进行第三方监测",
+      "type": "HazardType",
+      "base_level": "较大风险",
+      "category": "基坑工程"
+    },
+    {
+      "label": "基坑坍塌风险预兆未处置",
+      "type": "HazardType",
+      "base_level": "较大风险",
+      "category": "基坑工程"
+    },
+    {
+      "label": "起重机械未经验收合格使用",
+      "type": "HazardType",
+      "base_level": "较大风险",
+      "category": "起重机械"
+    },
+    {
+      "label": "起重机械安全装置失效或被拆除",
+      "type": "HazardType",
+      "base_level": "较大风险",
+      "category": "起重机械"
+    },
+    {
+      "label": "违规超载吊装",
+      "type": "HazardType",
+      "base_level": "较大风险",
+      "category": "起重机械"
+    },
+    {
+      "label": "起重机械维保缺失",
+      "type": "HazardType",
+      "base_level": "一般风险",
+      "category": "起重机械"
+    },
+    {
+      "label": "动火作业未审批",
+      "type": "HazardType",
+      "base_level": "较大风险",
+      "category": "消防安全"
+    },
+    {
+      "label": "灭火器材缺失或失效",
+      "type": "HazardType",
+      "base_level": "一般风险",
+      "category": "消防安全"
+    },
+    {
+      "label": "易燃材料违规堆放",
+      "type": "HazardType",
+      "base_level": "较大风险",
+      "category": "消防安全"
+    },
+    {
+      "label": "保温材料燃烧性能不符",
+      "type": "HazardType",
+      "base_level": "较大风险",
+      "category": "消防安全"
+    },
+    {
+      "label": "有限空间作业违规",
+      "type": "HazardType",
+      "base_level": "较大风险",
+      "category": "有限空间"
+    },
+    {
+      "label": "未佩戴安全帽",
+      "type": "HazardType",
+      "base_level": "较大风险",
+      "category": "高处作业"
+    },
+    {
+      "label": "临时用电",
+      "type": "WorkType"
+    },
+    {
+      "label": "基坑作业",
+      "type": "WorkType"
+    },
+    {
+      "label": "有限空间作业",
+      "type": "WorkType"
+    },
+    {
+      "label": "消防及动火作业",
+      "type": "WorkType"
+    },
+    {
+      "label": "脚手架作业",
+      "type": "WorkType"
+    },
+    {
+      "label": "起重吊装作业",
+      "type": "WorkType"
+    },
+    {
+      "label": "高处作业",
+      "type": "WorkType"
+    },
+    {
+      "label": "楼层临边",
+      "type": "SiteObject"
+    },
+    {
+      "label": "屋面临边",
+      "type": "SiteObject"
+    },
+    {
+      "label": "楼梯临边",
+      "type": "SiteObject"
+    },
+    {
+      "label": "阳台临边",
+      "type": "SiteObject"
+    },
+    {
+      "label": "外脚手架",
+      "type": "SiteObject"
+    },
+    {
+      "label": "屋面",
+      "type": "SiteObject"
+    },
+    {
+      "label": "钢结构作业面",
+      "type": "SiteObject"
+    },
+    {
+      "label": "洞口",
+      "type": "SiteObject"
+    },
+    {
+      "label": "电梯井口",
+      "type": "SiteObject"
+    },
+    {
+      "label": "预留洞口",
+      "type": "SiteObject"
+    },
+    {
+      "label": "楼梯口",
+      "type": "SiteObject"
+    },
+    {
+      "label": "安全通道",
+      "type": "SiteObject"
+    },
+    {
+      "label": "首层通道",
+      "type": "SiteObject"
+    },
+    {
+      "label": "移动操作平台",
+      "type": "SiteObject"
+    },
+    {
+      "label": "操作平台",
+      "type": "SiteObject"
+    },
+    {
+      "label": "配电室",
+      "type": "SiteObject"
+    },
+    {
+      "label": "总配电箱",
+      "type": "SiteObject"
+    },
+    {
+      "label": "分配电箱",
+      "type": "SiteObject"
+    },
+    {
+      "label": "开关箱",
+      "type": "SiteObject"
+    },
+    {
+      "label": "配电箱",
+      "type": "SiteObject"
+    },
+    {
+      "label": "电缆线路",
+      "type": "SiteObject"
+    },
+    {
+      "label": "主干电缆",
+      "type": "SiteObject"
+    },
+    {
+      "label": "用电设备",
+      "type": "SiteObject"
+    },
+    {
+      "label": "隧道作业面",
+      "type": "SiteObject"
+    },
+    {
+      "label": "地下室",
+      "type": "SiteObject"
+    },
+    {
+      "label": "人防工程",
+      "type": "SiteObject"
+    },
+    {
+      "label": "附着式升降脚手架",
+      "type": "SiteObject"
+    },
+    {
+      "label": "落地脚手架",
+      "type": "SiteObject"
+    },
+    {
+      "label": "满堂脚手架",
+      "type": "SiteObject"
+    },
+    {
+      "label": "基坑工程",
+      "type": "SiteObject"
+    },
+    {
+      "label": "深基坑",
+      "type": "SiteObject"
+    },
+    {
+      "label": "支护结构",
+      "type": "SiteObject"
+    },
+    {
+      "label": "塔式起重机",
+      "type": "SiteObject"
+    },
+    {
+      "label": "施工升降机",
+      "type": "SiteObject"
+    },
+    {
+      "label": "物料提升机",
+      "type": "SiteObject"
+    },
+    {
+      "label": "吊装作业区",
+      "type": "SiteObject"
+    },
+    {
+      "label": "动火作业区",
+      "type": "SiteObject"
+    },
+    {
+      "label": "焊接作业点",
+      "type": "SiteObject"
+    },
+    {
+      "label": "材料堆场",
+      "type": "SiteObject"
+    },
+    {
+      "label": "生活区",
+      "type": "SiteObject"
+    },
+    {
+      "label": "易燃品仓库",
+      "type": "SiteObject"
+    },
+    {
+      "label": "外墙保温作业面",
+      "type": "SiteObject"
+    },
+    {
+      "label": "污水井",
+      "type": "SiteObject"
+    },
+    {
+      "label": "集水坑",
+      "type": "SiteObject"
+    },
+    {
+      "label": "临边防护缺失叠加未系安全带导致高处坠落",
+      "type": "Case",
+      "risk_level": "重大风险"
+    },
+    {
+      "label": "漏电保护器失效叠加电缆拖地引发触电",
+      "type": "Case",
+      "risk_level": "重大风险"
+    },
+    {
+      "label": "配电箱无门无锁无防雨造成意外接触带电部位",
+      "type": "Case",
+      "risk_level": "较大风险"
+    },
+    {
+      "label": "基坑超挖且无第三方监测导致坍塌",
+      "type": "Case",
+      "risk_level": "重大风险"
+    },
+    {
+      "label": "连墙件整层缺失引发脚手架局部坍塌",
+      "type": "Case",
+      "risk_level": "重大风险"
+    },
+    {
+      "label": "塔吊安全装置被违规拆除导致吊物失控",
+      "type": "Case",
+      "risk_level": "重大风险"
+    },
+    {
+      "label": "附着式升降脚手架未经验收投入使用发生坠落",
+      "type": "Case",
+      "risk_level": "重大风险"
+    },
+    {
+      "label": "动火作业未审批无看火人引发火灾",
+      "type": "Case",
+      "risk_level": "较大风险"
+    },
+    {
+      "label": "有限空间未通风检测致中毒窒息",
+      "type": "Case",
+      "risk_level": "重大风险"
+    },
+    {
+      "label": "移动操作平台超载未固定发生倾覆",
+      "type": "Case",
+      "risk_level": "较大风险"
+    }
+  ],
+  "edges": [
+    {
+      "src": "HT:HT-GCZY-001",
+      "relation": "风险分级",
+      "dst": "RL:较大风险"
+    },
+    {
+      "src": "HT:HT-GCZY-001",
+      "relation": "属于",
+      "dst": "CAT:高处作业"
+    },
+    {
+      "src": "HT:HT-GCZY-001",
+      "relation": "整改用",
+      "dst": "MS:ME-GCZY-001"
+    },
+    {
+      "src": "HT:HT-GCZY-001",
+      "relation": "应依据",
+      "dst": "REG:JGJ 80-2016#4.1.2"
+    },
+    {
+      "src": "HT:HT-GCZY-002",
+      "relation": "风险分级",
+      "dst": "RL:较大风险"
+    },
+    {
+      "src": "HT:HT-GCZY-002",
+      "relation": "属于",
+      "dst": "CAT:高处作业"
+    },
+    {
+      "src": "HT:HT-GCZY-002",
+      "relation": "整改用",
+      "dst": "MS:ME-GCZY-002"
+    },
+    {
+      "src": "HT:HT-GCZY-002",
+      "relation": "应依据",
+      "dst": "REG:JGJ 80-2016#4.5.1"
+    },
+    {
+      "src": "HT:HT-GCZY-003",
+      "relation": "风险分级",
+      "dst": "RL:较大风险"
+    },
+    {
+      "src": "HT:HT-GCZY-003",
+      "relation": "属于",
+      "dst": "CAT:高处作业"
+    },
+    {
+      "src": "HT:HT-GCZY-003",
+      "relation": "整改用",
+      "dst": "MS:ME-GCZY-003"
+    },
+    {
+      "src": "HT:HT-GCZY-003",
+      "relation": "应依据",
+      "dst": "REG:JGJ 80-2016#4.2.1"
+    },
+    {
+      "src": "HT:HT-GCZY-004",
+      "relation": "风险分级",
+      "dst": "RL:一般风险"
+    },
+    {
+      "src": "HT:HT-GCZY-004",
+      "relation": "属于",
+      "dst": "CAT:高处作业"
+    },
+    {
+      "src": "HT:HT-GCZY-004",
+      "relation": "整改用",
+      "dst": "MS:ME-GCZY-004"
+    },
+    {
+      "src": "HT:HT-GCZY-004",
+      "relation": "应依据",
+      "dst": "REG:JGJ 59-2011#3.13"
+    },
+    {
+      "src": "HT:HT-GCZY-005",
+      "relation": "风险分级",
+      "dst": "RL:一般风险"
+    },
+    {
+      "src": "HT:HT-GCZY-005",
+      "relation": "属于",
+      "dst": "CAT:高处作业"
+    },
+    {
+      "src": "HT:HT-GCZY-005",
+      "relation": "整改用",
+      "dst": "MS:ME-GCZY-005"
+    },
+    {
+      "src": "HT:HT-GCZY-005",
+      "relation": "应依据",
+      "dst": "REG:JGJ 59-2011#3.13"
+    },
+    {
+      "src": "HT:HT-GCZY-006",
+      "relation": "风险分级",
+      "dst": "RL:较大风险"
+    },
+    {
+      "src": "HT:HT-GCZY-006",
+      "relation": "属于",
+      "dst": "CAT:高处作业"
+    },
+    {
+      "src": "HT:HT-GCZY-006",
+      "relation": "整改用",
+      "dst": "MS:ME-GCZY-006"
+    },
+    {
+      "src": "HT:HT-GCZY-006",
+      "relation": "应依据",
+      "dst": "REG:JGJ 80-2016#5.3.1"
+    },
+    {
+      "src": "HT:HT-LSYD-001",
+      "relation": "风险分级",
+      "dst": "RL:较大风险"
+    },
+    {
+      "src": "HT:HT-LSYD-001",
+      "relation": "属于",
+      "dst": "CAT:临时用电"
+    },
+    {
+      "src": "HT:HT-LSYD-001",
+      "relation": "整改用",
+      "dst": "MS:ME-LSYD-001"
+    },
+    {
+      "src": "HT:HT-LSYD-001",
+      "relation": "应依据",
+      "dst": "REG:JGJ 46-2005#5.1.1"
+    },
+    {
+      "src": "HT:HT-LSYD-002",
+      "relation": "风险分级",
+      "dst": "RL:较大风险"
+    },
+    {
+      "src": "HT:HT-LSYD-002",
+      "relation": "属于",
+      "dst": "CAT:临时用电"
+    },
+    {
+      "src": "HT:HT-LSYD-002",
+      "relation": "整改用",
+      "dst": "MS:ME-LSYD-002"
+    },
+    {
+      "src": "HT:HT-LSYD-002",
+      "relation": "应依据",
+      "dst": "REG:JGJ 46-2005#8.1.3"
+    },
+    {
+      "src": "HT:HT-LSYD-003",
+      "relation": "风险分级",
+      "dst": "RL:一般风险"
+    },
+    {
+      "src": "HT:HT-LSYD-003",
+      "relation": "属于",
+      "dst": "CAT:临时用电"
+    },
+    {
+      "src": "HT:HT-LSYD-003",
+      "relation": "整改用",
+      "dst": "MS:ME-LSYD-003"
+    },
+    {
+      "src": "HT:HT-LSYD-003",
+      "relation": "应依据",
+      "dst": "REG:JGJ 46-2005#8.3.2"
+    },
+    {
+      "src": "HT:HT-LSYD-004",
+      "relation": "风险分级",
+      "dst": "RL:较大风险"
+    },
+    {
+      "src": "HT:HT-LSYD-004",
+      "relation": "属于",
+      "dst": "CAT:临时用电"
+    },
+    {
+      "src": "HT:HT-LSYD-004",
+      "relation": "整改用",
+      "dst": "MS:ME-LSYD-004"
+    },
+    {
+      "src": "HT:HT-LSYD-004",
+      "relation": "应依据",
+      "dst": "REG:JGJ 46-2005#7.2.3"
+    },
+    {
+      "src": "HT:HT-LSYD-005",
+      "relation": "风险分级",
+      "dst": "RL:较大风险"
+    },
+    {
+      "src": "HT:HT-LSYD-005",
+      "relation": "属于",
+      "dst": "CAT:临时用电"
+    },
+    {
+      "src": "HT:HT-LSYD-005",
+      "relation": "整改用",
+      "dst": "MS:ME-LSYD-005"
+    },
+    {
+      "src": "HT:HT-LSYD-005",
+      "relation": "应依据",
+      "dst": "REG:JGJ 46-2005#8.2.10"
+    },
+    {
+      "src": "HT:HT-LSYD-006",
+      "relation": "风险分级",
+      "dst": "RL:一般风险"
+    },
+    {
+      "src": "HT:HT-LSYD-006",
+      "relation": "属于",
+      "dst": "CAT:临时用电"
+    },
+    {
+      "src": "HT:HT-LSYD-006",
+      "relation": "整改用",
+      "dst": "MS:ME-LSYD-006"
+    },
+    {
+      "src": "HT:HT-LSYD-006",
+      "relation": "应依据",
+      "dst": "REG:JGJ 46-2005#3.2.1"
+    },
+    {
+      "src": "HT:HT-LSYD-007",
+      "relation": "风险分级",
+      "dst": "RL:较大风险"
+    },
+    {
+      "src": "HT:HT-LSYD-007",
+      "relation": "属于",
+      "dst": "CAT:临时用电"
+    },
+    {
+      "src": "HT:HT-LSYD-007",
+      "relation": "整改用",
+      "dst": "MS:ME-LSYD-007"
+    },
+    {
+      "src": "HT:HT-LSYD-007",
+      "relation": "应依据",
+      "dst": "REG:建质规〔2022〕2号#第十条"
+    },
+    {
+      "src": "HT:HT-SJA-001",
+      "relation": "风险分级",
+      "dst": "RL:较大风险"
+    },
+    {
+      "src": "HT:HT-SJA-001",
+      "relation": "属于",
+      "dst": "CAT:脚手架"
+    },
+    {
+      "src": "HT:HT-SJA-001",
+      "relation": "整改用",
+      "dst": "MS:ME-SJA-001"
+    },
+    {
+      "src": "HT:HT-SJA-001",
+      "relation": "应依据",
+      "dst": "REG:建质规〔2022〕2号#第七条（二）"
+    },
+    {
+      "src": "HT:HT-SJA-002",
+      "relation": "风险分级",
+      "dst": "RL:较大风险"
+    },
+    {
+      "src": "HT:HT-SJA-002",
+      "relation": "属于",
+      "dst": "CAT:脚手架"
+    },
+    {
+      "src": "HT:HT-SJA-002",
+      "relation": "整改用",
+      "dst": "MS:ME-SJA-002"
+    },
+    {
+      "src": "HT:HT-SJA-002",
+      "relation": "应依据",
+      "dst": "REG:建质规〔2022〕2号#第七条（三）"
+    },
+    {
+      "src": "HT:HT-SJA-003",
+      "relation": "风险分级",
+      "dst": "RL:较大风险"
+    },
+    {
+      "src": "HT:HT-SJA-003",
+      "relation": "属于",
+      "dst": "CAT:脚手架"
+    },
+    {
+      "src": "HT:HT-SJA-003",
+      "relation": "整改用",
+      "dst": "MS:ME-SJA-004"
+    },
+    {
+      "src": "HT:HT-SJA-003",
+      "relation": "应依据",
+      "dst": "REG:建质规〔2022〕2号#第七条（一）"
+    },
+    {
+      "src": "HT:HT-SJA-004",
+      "relation": "风险分级",
+      "dst": "RL:一般风险"
+    },
+    {
+      "src": "HT:HT-SJA-004",
+      "relation": "属于",
+      "dst": "CAT:脚手架"
+    },
+    {
+      "src": "HT:HT-SJA-004",
+      "relation": "整改用",
+      "dst": "MS:ME-SJA-004"
+    },
+    {
+      "src": "HT:HT-JK-001",
+      "relation": "风险分级",
+      "dst": "RL:较大风险"
+    },
+    {
+      "src": "HT:HT-JK-001",
+      "relation": "属于",
+      "dst": "CAT:基坑工程"
+    },
+    {
+      "src": "HT:HT-JK-001",
+      "relation": "整改用",
+      "dst": "MS:ME-JK-001"
+    },
+    {
+      "src": "HT:HT-JK-001",
+      "relation": "应依据",
+      "dst": "REG:建质规〔2022〕2号#第四条（四）"
+    },
+    {
+      "src": "HT:HT-JK-002",
+      "relation": "风险分级",
+      "dst": "RL:较大风险"
+    },
+    {
+      "src": "HT:HT-JK-002",
+      "relation": "属于",
+      "dst": "CAT:基坑工程"
+    },
+    {
+      "src": "HT:HT-JK-002",
+      "relation": "整改用",
+      "dst": "MS:ME-JK-002"
+    },
+    {
+      "src": "HT:HT-JK-002",
+      "relation": "应依据",
+      "dst": "REG:建质规〔2022〕2号#第五条（二）"
+    },
+    {
+      "src": "HT:HT-JK-003",
+      "relation": "风险分级",
+      "dst": "RL:较大风险"
+    },
+    {
+      "src": "HT:HT-JK-003",
+      "relation": "属于",
+      "dst": "CAT:基坑工程"
+    },
+    {
+      "src": "HT:HT-JK-003",
+      "relation": "整改用",
+      "dst": "MS:ME-JK-003"
+    },
+    {
+      "src": "HT:HT-JK-003",
+      "relation": "应依据",
+      "dst": "REG:建质规〔2022〕2号#第五条（三）"
+    },
+    {
+      "src": "HT:HT-JK-004",
+      "relation": "风险分级",
+      "dst": "RL:较大风险"
+    },
+    {
+      "src": "HT:HT-JK-004",
+      "relation": "属于",
+      "dst": "CAT:基坑工程"
+    },
+    {
+      "src": "HT:HT-JK-004",
+      "relation": "整改用",
+      "dst": "MS:ME-JK-004"
+    },
+    {
+      "src": "HT:HT-JK-004",
+      "relation": "应依据",
+      "dst": "REG:建质规〔2022〕2号#第五条（四）1"
+    },
+    {
+      "src": "HT:HT-JK-004",
+      "relation": "应依据",
+      "dst": "REG:建质规〔2022〕2号#第五条（四）2"
+    },
+    {
+      "src": "HT:HT-JK-004",
+      "relation": "应依据",
+      "dst": "REG:建质规〔2022〕2号#第五条（四）3"
+    },
+    {
+      "src": "HT:HT-JK-004",
+      "relation": "应依据",
+      "dst": "REG:建质规〔2022〕2号#第五条（四）4"
+    },
+    {
+      "src": "HT:HT-QZ-001",
+      "relation": "风险分级",
+      "dst": "RL:较大风险"
+    },
+    {
+      "src": "HT:HT-QZ-001",
+      "relation": "属于",
+      "dst": "CAT:起重机械"
+    },
+    {
+      "src": "HT:HT-QZ-001",
+      "relation": "整改用",
+      "dst": "MS:ME-QZ-001"
+    },
+    {
+      "src": "HT:HT-QZ-001",
+      "relation": "应依据",
+      "dst": "REG:建质规〔2022〕2号#第八条（一）"
+    },
+    {
+      "src": "HT:HT-QZ-002",
+      "relation": "风险分级",
+      "dst": "RL:较大风险"
+    },
+    {
+      "src": "HT:HT-QZ-002",
+      "relation": "属于",
+      "dst": "CAT:起重机械"
+    },
+    {
+      "src": "HT:HT-QZ-002",
+      "relation": "整改用",
+      "dst": "MS:ME-QZ-002"
+    },
+    {
+      "src": "HT:HT-QZ-002",
+      "relation": "应依据",
+      "dst": "REG:建质规〔2022〕2号#第八条（五）"
+    },
+    {
+      "src": "HT:HT-QZ-003",
+      "relation": "风险分级",
+      "dst": "RL:较大风险"
+    },
+    {
+      "src": "HT:HT-QZ-003",
+      "relation": "属于",
+      "dst": "CAT:起重机械"
+    },
+    {
+      "src": "HT:HT-QZ-003",
+      "relation": "整改用",
+      "dst": "MS:ME-QZ-003"
+    },
+    {
+      "src": "HT:HT-QZ-004",
+      "relation": "风险分级",
+      "dst": "RL:一般风险"
+    },
+    {
+      "src": "HT:HT-QZ-004",
+      "relation": "属于",
+      "dst": "CAT:起重机械"
+    },
+    {
+      "src": "HT:HT-QZ-004",
+      "relation": "整改用",
+      "dst": "MS:ME-QZ-003"
+    },
+    {
+      "src": "HT:HT-XF-001",
+      "relation": "风险分级",
+      "dst": "RL:较大风险"
+    },
+    {
+      "src": "HT:HT-XF-001",
+      "relation": "属于",
+      "dst": "CAT:消防安全"
+    },
+    {
+      "src": "HT:HT-XF-001",
+      "relation": "整改用",
+      "dst": "MS:ME-XF-001"
+    },
+    {
+      "src": "HT:HT-XF-002",
+      "relation": "风险分级",
+      "dst": "RL:一般风险"
+    },
+    {
+      "src": "HT:HT-XF-002",
+      "relation": "属于",
+      "dst": "CAT:消防安全"
+    },
+    {
+      "src": "HT:HT-XF-002",
+      "relation": "整改用",
+      "dst": "MS:ME-XF-002"
+    },
+    {
+      "src": "HT:HT-XF-003",
+      "relation": "风险分级",
+      "dst": "RL:较大风险"
+    },
+    {
+      "src": "HT:HT-XF-003",
+      "relation": "属于",
+      "dst": "CAT:消防安全"
+    },
+    {
+      "src": "HT:HT-XF-003",
+      "relation": "整改用",
+      "dst": "MS:ME-XF-002"
+    },
+    {
+      "src": "HT:HT-XF-004",
+      "relation": "风险分级",
+      "dst": "RL:较大风险"
+    },
+    {
+      "src": "HT:HT-XF-004",
+      "relation": "属于",
+      "dst": "CAT:消防安全"
+    },
+    {
+      "src": "HT:HT-XF-004",
+      "relation": "整改用",
+      "dst": "MS:ME-XF-003"
+    },
+    {
+      "src": "HT:HT-XF-004",
+      "relation": "应依据",
+      "dst": "REG:建质规〔2022〕2号#第十四条"
+    },
+    {
+      "src": "HT:HT-YXKJ-001",
+      "relation": "风险分级",
+      "dst": "RL:较大风险"
+    },
+    {
+      "src": "HT:HT-YXKJ-001",
+      "relation": "属于",
+      "dst": "CAT:有限空间"
+    },
+    {
+      "src": "HT:HT-YXKJ-001",
+      "relation": "整改用",
+      "dst": "MS:ME-YXKJ-001"
+    },
+    {
+      "src": "HT:HT-YXKJ-001",
+      "relation": "应依据",
+      "dst": "REG:建质规〔2022〕2号#第十一条（一）"
+    },
+    {
+      "src": "HT:HT-YXKJ-001",
+      "relation": "应依据",
+      "dst": "REG:建质规〔2022〕2号#第十一条（二）"
+    },
+    {
+      "src": "HT:HT-GCZY-007",
+      "relation": "风险分级",
+      "dst": "RL:较大风险"
+    },
+    {
+      "src": "HT:HT-GCZY-007",
+      "relation": "属于",
+      "dst": "CAT:高处作业"
+    },
+    {
+      "src": "HT:HT-GCZY-007",
+      "relation": "整改用",
+      "dst": "MS:ME-GCZY-007"
+    },
+    {
+      "src": "HT:HT-GCZY-001",
+      "relation": "作业类型",
+      "dst": "WT:高处作业"
+    },
+    {
+      "src": "HT:HT-GCZY-001",
+      "relation": "发生于",
+      "dst": "SO:楼层临边"
+    },
+    {
+      "src": "HT:HT-GCZY-001",
+      "relation": "发生于",
+      "dst": "SO:屋面临边"
+    },
+    {
+      "src": "HT:HT-GCZY-001",
+      "relation": "发生于",
+      "dst": "SO:楼梯临边"
+    },
+    {
+      "src": "HT:HT-GCZY-001",
+      "relation": "发生于",
+      "dst": "SO:阳台临边"
+    },
+    {
+      "src": "HT:HT-GCZY-002",
+      "relation": "作业类型",
+      "dst": "WT:高处作业"
+    },
+    {
+      "src": "HT:HT-GCZY-002",
+      "relation": "发生于",
+      "dst": "SO:外脚手架"
+    },
+    {
+      "src": "HT:HT-GCZY-002",
+      "relation": "发生于",
+      "dst": "SO:屋面"
+    },
+    {
+      "src": "HT:HT-GCZY-002",
+      "relation": "发生于",
+      "dst": "SO:钢结构作业面"
+    },
+    {
+      "src": "HT:HT-GCZY-002",
+      "relation": "发生于",
+      "dst": "SO:洞口"
+    },
+    {
+      "src": "HT:HT-GCZY-003",
+      "relation": "作业类型",
+      "dst": "WT:高处作业"
+    },
+    {
+      "src": "HT:HT-GCZY-003",
+      "relation": "发生于",
+      "dst": "SO:电梯井口"
+    },
+    {
+      "src": "HT:HT-GCZY-003",
+      "relation": "发生于",
+      "dst": "SO:预留洞口"
+    },
+    {
+      "src": "HT:HT-GCZY-003",
+      "relation": "发生于",
+      "dst": "SO:楼梯口"
+    },
+    {
+      "src": "HT:HT-GCZY-004",
+      "relation": "作业类型",
+      "dst": "WT:高处作业"
+    },
+    {
+      "src": "HT:HT-GCZY-004",
+      "relation": "发生于",
+      "dst": "SO:外脚手架"
+    },
+    {
+      "src": "HT:HT-GCZY-004",
+      "relation": "发生于",
+      "dst": "SO:楼层临边"
+    },
+    {
+      "src": "HT:HT-GCZY-005",
+      "relation": "作业类型",
+      "dst": "WT:高处作业"
+    },
+    {
+      "src": "HT:HT-GCZY-005",
+      "relation": "发生于",
+      "dst": "SO:安全通道"
+    },
+    {
+      "src": "HT:HT-GCZY-005",
+      "relation": "发生于",
+      "dst": "SO:首层通道"
+    },
+    {
+      "src": "HT:HT-GCZY-006",
+      "relation": "作业类型",
+      "dst": "WT:高处作业"
+    },
+    {
+      "src": "HT:HT-GCZY-006",
+      "relation": "发生于",
+      "dst": "SO:移动操作平台"
+    },
+    {
+      "src": "HT:HT-GCZY-006",
+      "relation": "发生于",
+      "dst": "SO:操作平台"
+    },
+    {
+      "src": "HT:HT-LSYD-001",
+      "relation": "作业类型",
+      "dst": "WT:临时用电"
+    },
+    {
+      "src": "HT:HT-LSYD-001",
+      "relation": "发生于",
+      "dst": "SO:配电室"
+    },
+    {
+      "src": "HT:HT-LSYD-001",
+      "relation": "发生于",
+      "dst": "SO:总配电箱"
+    },
+    {
+      "src": "HT:HT-LSYD-001",
+      "relation": "发生于",
+      "dst": "SO:分配电箱"
+    },
+    {
+      "src": "HT:HT-LSYD-002",
+      "relation": "作业类型",
+      "dst": "WT:临时用电"
+    },
+    {
+      "src": "HT:HT-LSYD-002",
+      "relation": "发生于",
+      "dst": "SO:开关箱"
+    },
+    {
+      "src": "HT:HT-LSYD-002",
+      "relation": "发生于",
+      "dst": "SO:配电箱"
+    },
+    {
+      "src": "HT:HT-LSYD-003",
+      "relation": "作业类型",
+      "dst": "WT:临时用电"
+    },
+    {
+      "src": "HT:HT-LSYD-003",
+      "relation": "发生于",
+      "dst": "SO:开关箱"
+    },
+    {
+      "src": "HT:HT-LSYD-003",
+      "relation": "发生于",
+      "dst": "SO:配电箱"
+    },
+    {
+      "src": "HT:HT-LSYD-003",
+      "relation": "发生于",
+      "dst": "SO:分配电箱"
+    },
+    {
+      "src": "HT:HT-LSYD-004",
+      "relation": "作业类型",
+      "dst": "WT:临时用电"
+    },
+    {
+      "src": "HT:HT-LSYD-004",
+      "relation": "发生于",
+      "dst": "SO:电缆线路"
+    },
+    {
+      "src": "HT:HT-LSYD-004",
+      "relation": "发生于",
+      "dst": "SO:主干电缆"
+    },
+    {
+      "src": "HT:HT-LSYD-005",
+      "relation": "作业类型",
+      "dst": "WT:临时用电"
+    },
+    {
+      "src": "HT:HT-LSYD-005",
+      "relation": "发生于",
+      "dst": "SO:开关箱"
+    },
+    {
+      "src": "HT:HT-LSYD-005",
+      "relation": "发生于",
+      "dst": "SO:配电箱"
+    },
+    {
+      "src": "HT:HT-LSYD-006",
+      "relation": "作业类型",
+      "dst": "WT:临时用电"
+    },
+    {
+      "src": "HT:HT-LSYD-006",
+      "relation": "发生于",
+      "dst": "SO:配电箱"
+    },
+    {
+      "src": "HT:HT-LSYD-006",
+      "relation": "发生于",
+      "dst": "SO:用电设备"
+    },
+    {
+      "src": "HT:HT-LSYD-007",
+      "relation": "作业类型",
+      "dst": "WT:临时用电"
+    },
+    {
+      "src": "HT:HT-LSYD-007",
+      "relation": "发生于",
+      "dst": "SO:隧道作业面"
+    },
+    {
+      "src": "HT:HT-LSYD-007",
+      "relation": "发生于",
+      "dst": "SO:地下室"
+    },
+    {
+      "src": "HT:HT-LSYD-007",
+      "relation": "发生于",
+      "dst": "SO:人防工程"
+    },
+    {
+      "src": "HT:HT-SJA-001",
+      "relation": "作业类型",
+      "dst": "WT:脚手架作业"
+    },
+    {
+      "src": "HT:HT-SJA-001",
+      "relation": "发生于",
+      "dst": "SO:外脚手架"
+    },
+    {
+      "src": "HT:HT-SJA-001",
+      "relation": "发生于",
+      "dst": "SO:附着式升降脚手架"
+    },
+    {
+      "src": "HT:HT-SJA-002",
+      "relation": "作业类型",
+      "dst": "WT:脚手架作业"
+    },
+    {
+      "src": "HT:HT-SJA-002",
+      "relation": "发生于",
+      "dst": "SO:附着式升降脚手架"
+    },
+    {
+      "src": "HT:HT-SJA-003",
+      "relation": "作业类型",
+      "dst": "WT:脚手架作业"
+    },
+    {
+      "src": "HT:HT-SJA-003",
+      "relation": "发生于",
+      "dst": "SO:外脚手架"
+    },
+    {
+      "src": "HT:HT-SJA-003",
+      "relation": "发生于",
+      "dst": "SO:落地脚手架"
+    },
+    {
+      "src": "HT:HT-SJA-004",
+      "relation": "作业类型",
+      "dst": "WT:脚手架作业"
+    },
+    {
+      "src": "HT:HT-SJA-004",
+      "relation": "发生于",
+      "dst": "SO:外脚手架"
+    },
+    {
+      "src": "HT:HT-SJA-004",
+      "relation": "发生于",
+      "dst": "SO:满堂脚手架"
+    },
+    {
+      "src": "HT:HT-JK-001",
+      "relation": "作业类型",
+      "dst": "WT:基坑作业"
+    },
+    {
+      "src": "HT:HT-JK-001",
+      "relation": "发生于",
+      "dst": "SO:基坑工程"
+    },
+    {
+      "src": "HT:HT-JK-001",
+      "relation": "发生于",
+      "dst": "SO:深基坑"
+    },
+    {
+      "src": "HT:HT-JK-002",
+      "relation": "作业类型",
+      "dst": "WT:基坑作业"
+    },
+    {
+      "src": "HT:HT-JK-002",
+      "relation": "发生于",
+      "dst": "SO:基坑工程"
+    },
+    {
+      "src": "HT:HT-JK-003",
+      "relation": "作业类型",
+      "dst": "WT:基坑作业"
+    },
+    {
+      "src": "HT:HT-JK-003",
+      "relation": "发生于",
+      "dst": "SO:深基坑"
+    },
+    {
+      "src": "HT:HT-JK-004",
+      "relation": "作业类型",
+      "dst": "WT:基坑作业"
+    },
+    {
+      "src": "HT:HT-JK-004",
+      "relation": "发生于",
+      "dst": "SO:基坑工程"
+    },
+    {
+      "src": "HT:HT-JK-004",
+      "relation": "发生于",
+      "dst": "SO:支护结构"
+    },
+    {
+      "src": "HT:HT-QZ-001",
+      "relation": "作业类型",
+      "dst": "WT:起重吊装作业"
+    },
+    {
+      "src": "HT:HT-QZ-001",
+      "relation": "发生于",
+      "dst": "SO:塔式起重机"
+    },
+    {
+      "src": "HT:HT-QZ-001",
+      "relation": "发生于",
+      "dst": "SO:施工升降机"
+    },
+    {
+      "src": "HT:HT-QZ-001",
+      "relation": "发生于",
+      "dst": "SO:物料提升机"
+    },
+    {
+      "src": "HT:HT-QZ-002",
+      "relation": "作业类型",
+      "dst": "WT:起重吊装作业"
+    },
+    {
+      "src": "HT:HT-QZ-002",
+      "relation": "发生于",
+      "dst": "SO:塔式起重机"
+    },
+    {
+      "src": "HT:HT-QZ-002",
+      "relation": "发生于",
+      "dst": "SO:施工升降机"
+    },
+    {
+      "src": "HT:HT-QZ-003",
+      "relation": "作业类型",
+      "dst": "WT:起重吊装作业"
+    },
+    {
+      "src": "HT:HT-QZ-003",
+      "relation": "发生于",
+      "dst": "SO:塔式起重机"
+    },
+    {
+      "src": "HT:HT-QZ-003",
+      "relation": "发生于",
+      "dst": "SO:吊装作业区"
+    },
+    {
+      "src": "HT:HT-QZ-004",
+      "relation": "作业类型",
+      "dst": "WT:起重吊装作业"
+    },
+    {
+      "src": "HT:HT-QZ-004",
+      "relation": "发生于",
+      "dst": "SO:塔式起重机"
+    },
+    {
+      "src": "HT:HT-QZ-004",
+      "relation": "发生于",
+      "dst": "SO:施工升降机"
+    },
+    {
+      "src": "HT:HT-QZ-004",
+      "relation": "发生于",
+      "dst": "SO:物料提升机"
+    },
+    {
+      "src": "HT:HT-XF-001",
+      "relation": "作业类型",
+      "dst": "WT:消防及动火作业"
+    },
+    {
+      "src": "HT:HT-XF-001",
+      "relation": "发生于",
+      "dst": "SO:动火作业区"
+    },
+    {
+      "src": "HT:HT-XF-001",
+      "relation": "发生于",
+      "dst": "SO:焊接作业点"
+    },
+    {
+      "src": "HT:HT-XF-002",
+      "relation": "作业类型",
+      "dst": "WT:消防及动火作业"
+    },
+    {
+      "src": "HT:HT-XF-002",
+      "relation": "发生于",
+      "dst": "SO:动火作业区"
+    },
+    {
+      "src": "HT:HT-XF-002",
+      "relation": "发生于",
+      "dst": "SO:材料堆场"
+    },
+    {
+      "src": "HT:HT-XF-002",
+      "relation": "发生于",
+      "dst": "SO:生活区"
+    },
+    {
+      "src": "HT:HT-XF-003",
+      "relation": "作业类型",
+      "dst": "WT:消防及动火作业"
+    },
+    {
+      "src": "HT:HT-XF-003",
+      "relation": "发生于",
+      "dst": "SO:材料堆场"
+    },
+    {
+      "src": "HT:HT-XF-003",
+      "relation": "发生于",
+      "dst": "SO:易燃品仓库"
+    },
+    {
+      "src": "HT:HT-XF-004",
+      "relation": "作业类型",
+      "dst": "WT:消防及动火作业"
+    },
+    {
+      "src": "HT:HT-XF-004",
+      "relation": "发生于",
+      "dst": "SO:外墙保温作业面"
+    },
+    {
+      "src": "HT:HT-YXKJ-001",
+      "relation": "作业类型",
+      "dst": "WT:有限空间作业"
+    },
+    {
+      "src": "HT:HT-YXKJ-001",
+      "relation": "发生于",
+      "dst": "SO:污水井"
+    },
+    {
+      "src": "HT:HT-YXKJ-001",
+      "relation": "发生于",
+      "dst": "SO:集水坑"
+    },
+    {
+      "src": "HT:HT-YXKJ-001",
+      "relation": "发生于",
+      "dst": "SO:人防工程"
+    },
+    {
+      "src": "HT:HT-GCZY-007",
+      "relation": "作业类型",
+      "dst": "WT:高处作业"
+    },
+    {
+      "src": "HT:HT-GCZY-007",
+      "relation": "发生于",
+      "dst": "SO:外脚手架"
+    },
+    {
+      "src": "HT:HT-GCZY-007",
+      "relation": "发生于",
+      "dst": "SO:屋面"
+    },
+    {
+      "src": "HT:HT-GCZY-007",
+      "relation": "发生于",
+      "dst": "SO:钢结构作业面"
+    },
+    {
+      "src": "HT:HT-GCZY-007",
+      "relation": "发生于",
+      "dst": "SO:洞口"
+    },
+    {
+      "src": "CASE:CASE-001",
+      "relation": "涉及",
+      "dst": "HT:HT-GCZY-001"
+    },
+    {
+      "src": "CASE:CASE-001",
+      "relation": "涉及",
+      "dst": "HT:HT-GCZY-002"
+    },
+    {
+      "src": "CASE:CASE-002",
+      "relation": "涉及",
+      "dst": "HT:HT-LSYD-005"
+    },
+    {
+      "src": "CASE:CASE-002",
+      "relation": "涉及",
+      "dst": "HT:HT-LSYD-004"
+    },
+    {
+      "src": "CASE:CASE-003",
+      "relation": "涉及",
+      "dst": "HT:HT-LSYD-003"
+    },
+    {
+      "src": "CASE:CASE-004",
+      "relation": "涉及",
+      "dst": "HT:HT-JK-002"
+    },
+    {
+      "src": "CASE:CASE-004",
+      "relation": "涉及",
+      "dst": "HT:HT-JK-003"
+    },
+    {
+      "src": "CASE:CASE-005",
+      "relation": "涉及",
+      "dst": "HT:HT-SJA-001"
+    },
+    {
+      "src": "CASE:CASE-006",
+      "relation": "涉及",
+      "dst": "HT:HT-QZ-002"
+    },
+    {
+      "src": "CASE:CASE-007",
+      "relation": "涉及",
+      "dst": "HT:HT-SJA-002"
+    },
+    {
+      "src": "CASE:CASE-008",
+      "relation": "涉及",
+      "dst": "HT:HT-XF-001"
+    },
+    {
+      "src": "CASE:CASE-008",
+      "relation": "涉及",
+      "dst": "HT:HT-XF-002"
+    },
+    {
+      "src": "CASE:CASE-009",
+      "relation": "涉及",
+      "dst": "HT:HT-YXKJ-001"
+    },
+    {
+      "src": "CASE:CASE-010",
+      "relation": "涉及",
+      "dst": "HT:HT-GCZY-006"
+    }
+  ]
+}

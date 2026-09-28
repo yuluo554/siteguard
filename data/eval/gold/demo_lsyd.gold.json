@@ -1,0 +1,493 @@
+{
+  "file": "demo_lsyd.txt",
+  "seed": 42,
+  "corpus": "v2",
+  "records": [
+    {
+      "index": 1,
+      "quote": "1#楼现场临时用电未落实三级配电",
+      "hazard_type_id": "HT-LSYD-001",
+      "hazard_type": "未执行三级配电两级保护",
+      "category": "临时用电",
+      "site_object": "",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 2,
+      "quote": "1#楼钢筋加工棚开关箱一闸多机",
+      "hazard_type_id": "HT-LSYD-002",
+      "hazard_type": "一机一闸一漏未落实",
+      "category": "临时用电",
+      "site_object": "开关箱",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 3,
+      "quote": "2#楼5层配电箱无门无锁",
+      "hazard_type_id": "HT-LSYD-003",
+      "hazard_type": "配电箱无门无锁无防雨",
+      "category": "临时用电",
+      "site_object": "配电箱",
+      "expected_level": "一般风险"
+    },
+    {
+      "index": 5,
+      "quote": "1#楼3层主干电缆拖地敷设",
+      "hazard_type_id": "HT-LSYD-004",
+      "hazard_type": "电缆敷设违规",
+      "category": "临时用电",
+      "site_object": "主干电缆",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 6,
+      "quote": "1#楼钢筋棚开关箱漏电保护器失效",
+      "hazard_type_id": "HT-LSYD-005",
+      "hazard_type": "漏电保护器失效或参数不合格",
+      "category": "临时用电",
+      "site_object": "开关箱",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 7,
+      "quote": "2#楼5层发现非电工私接照明线路",
+      "hazard_type_id": "HT-LSYD-006",
+      "hazard_type": "非电工私接电气",
+      "category": "临时用电",
+      "site_object": "",
+      "expected_level": "一般风险"
+    },
+    {
+      "index": 8,
+      "quote": "1#楼配电系统未采用TN-S接零保护",
+      "hazard_type_id": "HT-LSYD-001",
+      "hazard_type": "未执行三级配电两级保护",
+      "category": "临时用电",
+      "site_object": "",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 10,
+      "quote": "2#楼8层开关箱接多台设备",
+      "hazard_type_id": "HT-LSYD-002",
+      "hazard_type": "一机一闸一漏未落实",
+      "category": "临时用电",
+      "site_object": "开关箱",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 11,
+      "quote": "1#楼室外配电箱无防雨措施",
+      "hazard_type_id": "HT-LSYD-003",
+      "hazard_type": "配电箱无门无锁无防雨",
+      "category": "临时用电",
+      "site_object": "配电箱",
+      "expected_level": "一般风险"
+    },
+    {
+      "index": 12,
+      "quote": "1#楼基坑周边电缆泡水",
+      "hazard_type_id": "HT-LSYD-004",
+      "hazard_type": "电缆敷设违规",
+      "category": "临时用电",
+      "site_object": "",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 13,
+      "quote": "1#楼3层配电箱漏电保护器参数不合格",
+      "hazard_type_id": "HT-LSYD-005",
+      "hazard_type": "漏电保护器失效或参数不合格",
+      "category": "临时用电",
+      "site_object": "配电箱",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 15,
+      "quote": "3#楼木工棚无证电工接线作业",
+      "hazard_type_id": "HT-LSYD-006",
+      "hazard_type": "非电工私接电气",
+      "category": "临时用电",
+      "site_object": "",
+      "expected_level": "一般风险"
+    },
+    {
+      "index": 16,
+      "quote": "3#楼3层分配电箱回路三级配电两级保护未落实",
+      "hazard_type_id": "HT-LSYD-001",
+      "hazard_type": "未执行三级配电两级保护",
+      "category": "临时用电",
+      "site_object": "分配电箱",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 17,
+      "quote": "上午1#楼木工棚一机一闸一漏未落实",
+      "hazard_type_id": "HT-LSYD-002",
+      "hazard_type": "一机一闸一漏未落实",
+      "category": "临时用电",
+      "site_object": "",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 18,
+      "quote": "夜间3#楼3层楼梯间开关箱无锁",
+      "hazard_type_id": "HT-LSYD-003",
+      "hazard_type": "配电箱无门无锁无防雨",
+      "category": "临时用电",
+      "site_object": "开关箱",
+      "expected_level": "一般风险"
+    },
+    {
+      "index": 20,
+      "quote": "下午1#楼生活区私拉乱接电线",
+      "hazard_type_id": "HT-LSYD-004",
+      "hazard_type": "电缆敷设违规",
+      "category": "临时用电",
+      "site_object": "",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 21,
+      "quote": "上午2#楼搅拌机专用箱漏电保护器未检测",
+      "hazard_type_id": "HT-LSYD-005",
+      "hazard_type": "漏电保护器失效或参数不合格",
+      "category": "临时用电",
+      "site_object": "",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 22,
+      "quote": "今晨2#楼现场发现非电工操作配电箱",
+      "hazard_type_id": "HT-LSYD-006",
+      "hazard_type": "非电工私接电气",
+      "category": "临时用电",
+      "site_object": "配电箱",
+      "expected_level": "一般风险"
+    },
+    {
+      "index": 23,
+      "quote": "今晨2#楼总配电箱未落实两级保护",
+      "hazard_type_id": "HT-LSYD-001",
+      "hazard_type": "未执行三级配电两级保护",
+      "category": "临时用电",
+      "site_object": "总配电箱",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 25,
+      "quote": "1#楼15层开关箱一闸多机带3台设备",
+      "hazard_type_id": "HT-LSYD-002",
+      "hazard_type": "一机一闸一漏未落实",
+      "category": "临时用电",
+      "site_object": "开关箱",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 26,
+      "quote": "2#楼3层4台配电箱无门无锁",
+      "hazard_type_id": "HT-LSYD-003",
+      "hazard_type": "配电箱无门无锁无防雨",
+      "category": "临时用电",
+      "site_object": "配电箱",
+      "expected_level": "一般风险"
+    },
+    {
+      "index": 27,
+      "quote": "2#楼5层主干电缆拖地敷设约4米",
+      "hazard_type_id": "HT-LSYD-004",
+      "hazard_type": "电缆敷设违规",
+      "category": "临时用电",
+      "site_object": "主干电缆",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 28,
+      "quote": "3#楼18层4台开关箱漏电保护器不动作",
+      "hazard_type_id": "HT-LSYD-005",
+      "hazard_type": "漏电保护器失效或参数不合格",
+      "category": "临时用电",
+      "site_object": "开关箱",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 30,
+      "quote": "1#楼8层2名非电工私接临时线路",
+      "hazard_type_id": "HT-LSYD-006",
+      "hazard_type": "非电工私接电气",
+      "category": "临时用电",
+      "site_object": "",
+      "expected_level": "一般风险"
+    },
+    {
+      "index": 31,
+      "quote": "3#楼生活区用电未执行三级配电要求",
+      "hazard_type_id": "HT-LSYD-001",
+      "hazard_type": "未执行三级配电两级保护",
+      "category": "临时用电",
+      "site_object": "",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 32,
+      "quote": "2#楼一个开关箱控制2台电焊机",
+      "hazard_type_id": "HT-LSYD-002",
+      "hazard_type": "一机一闸一漏未落实",
+      "category": "临时用电",
+      "site_object": "开关箱",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 33,
+      "quote": "1#楼钢筋棚分配电箱无锁",
+      "hazard_type_id": "HT-LSYD-003",
+      "hazard_type": "配电箱无门无锁无防雨",
+      "category": "临时用电",
+      "site_object": "分配电箱",
+      "expected_level": "一般风险"
+    },
+    {
+      "index": 35,
+      "quote": "1#楼3层楼层电缆老化",
+      "hazard_type_id": "HT-LSYD-004",
+      "hazard_type": "电缆敷设违规",
+      "category": "临时用电",
+      "site_object": "",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 36,
+      "quote": "1#楼3层配电箱漏电保护器缺失",
+      "hazard_type_id": "HT-LSYD-005",
+      "hazard_type": "漏电保护器失效或参数不合格",
+      "category": "临时用电",
+      "site_object": "配电箱",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 37,
+      "quote": "3#楼非电工私接钢筋棚配电箱",
+      "hazard_type_id": "HT-LSYD-006",
+      "hazard_type": "非电工私接电气",
+      "category": "临时用电",
+      "site_object": "配电箱",
+      "expected_level": "一般风险"
+    },
+    {
+      "index": 38,
+      "quote": "3#楼2台设备回路未落实两级保护",
+      "hazard_type_id": "HT-LSYD-001",
+      "hazard_type": "未执行三级配电两级保护",
+      "category": "临时用电",
+      "site_object": "",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 40,
+      "quote": "上午1#楼18层配电箱一闸多机",
+      "hazard_type_id": "HT-LSYD-002",
+      "hazard_type": "一机一闸一漏未落实",
+      "category": "临时用电",
+      "site_object": "配电箱",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 41,
+      "quote": "上午2#楼开关箱无门无锁",
+      "hazard_type_id": "HT-LSYD-003",
+      "hazard_type": "配电箱无门无锁无防雨",
+      "category": "临时用电",
+      "site_object": "开关箱",
+      "expected_level": "一般风险"
+    },
+    {
+      "index": 42,
+      "quote": "下午1#楼宿舍区电线乱拉乱接",
+      "hazard_type_id": "HT-LSYD-004",
+      "hazard_type": "电缆敷设违规",
+      "category": "临时用电",
+      "site_object": "",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 43,
+      "quote": "上午1#楼木工棚开关箱漏电保护器未安装",
+      "hazard_type_id": "HT-LSYD-005",
+      "hazard_type": "漏电保护器失效或参数不合格",
+      "category": "临时用电",
+      "site_object": "开关箱",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 45,
+      "quote": "夜间2#楼无证人员操作用电设备",
+      "hazard_type_id": "HT-LSYD-006",
+      "hazard_type": "非电工私接电气",
+      "category": "临时用电",
+      "site_object": "用电设备",
+      "expected_level": "一般风险"
+    },
+    {
+      "index": 46,
+      "quote": "1#楼现场临时用电未落实三级配电",
+      "hazard_type_id": "HT-LSYD-001",
+      "hazard_type": "未执行三级配电两级保护",
+      "category": "临时用电",
+      "site_object": "",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 47,
+      "quote": "1#楼钢筋加工棚开关箱一闸多机",
+      "hazard_type_id": "HT-LSYD-002",
+      "hazard_type": "一机一闸一漏未落实",
+      "category": "临时用电",
+      "site_object": "开关箱",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 48,
+      "quote": "3#楼18层配电箱无门无锁",
+      "hazard_type_id": "HT-LSYD-003",
+      "hazard_type": "配电箱无门无锁无防雨",
+      "category": "临时用电",
+      "site_object": "配电箱",
+      "expected_level": "一般风险"
+    },
+    {
+      "index": 50,
+      "quote": "3#楼3层主干电缆拖地敷设",
+      "hazard_type_id": "HT-LSYD-004",
+      "hazard_type": "电缆敷设违规",
+      "category": "临时用电",
+      "site_object": "主干电缆",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 51,
+      "quote": "2#楼钢筋棚开关箱漏电保护器失效",
+      "hazard_type_id": "HT-LSYD-005",
+      "hazard_type": "漏电保护器失效或参数不合格",
+      "category": "临时用电",
+      "site_object": "开关箱",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 52,
+      "quote": "2#楼8层发现非电工私接照明线路",
+      "hazard_type_id": "HT-LSYD-006",
+      "hazard_type": "非电工私接电气",
+      "category": "临时用电",
+      "site_object": "",
+      "expected_level": "一般风险"
+    },
+    {
+      "index": 53,
+      "quote": "1#楼配电系统未采用TN-S接零保护",
+      "hazard_type_id": "HT-LSYD-001",
+      "hazard_type": "未执行三级配电两级保护",
+      "category": "临时用电",
+      "site_object": "",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 55,
+      "quote": "2#楼3层开关箱接多台设备",
+      "hazard_type_id": "HT-LSYD-002",
+      "hazard_type": "一机一闸一漏未落实",
+      "category": "临时用电",
+      "site_object": "开关箱",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 56,
+      "quote": "3#楼室外配电箱无防雨措施",
+      "hazard_type_id": "HT-LSYD-003",
+      "hazard_type": "配电箱无门无锁无防雨",
+      "category": "临时用电",
+      "site_object": "配电箱",
+      "expected_level": "一般风险"
+    },
+    {
+      "index": 57,
+      "quote": "1#楼基坑周边电缆泡水",
+      "hazard_type_id": "HT-LSYD-004",
+      "hazard_type": "电缆敷设违规",
+      "category": "临时用电",
+      "site_object": "",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 58,
+      "quote": "3#楼8层配电箱漏电保护器参数不合格",
+      "hazard_type_id": "HT-LSYD-005",
+      "hazard_type": "漏电保护器失效或参数不合格",
+      "category": "临时用电",
+      "site_object": "配电箱",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 60,
+      "quote": "2#楼木工棚无证电工接线作业",
+      "hazard_type_id": "HT-LSYD-006",
+      "hazard_type": "非电工私接电气",
+      "category": "临时用电",
+      "site_object": "",
+      "expected_level": "一般风险"
+    },
+    {
+      "index": 61,
+      "quote": "3#楼15层分配电箱回路三级配电两级保护未落实",
+      "hazard_type_id": "HT-LSYD-001",
+      "hazard_type": "未执行三级配电两级保护",
+      "category": "临时用电",
+      "site_object": "分配电箱",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 62,
+      "quote": "下午3#楼木工棚一机一闸一漏未落实",
+      "hazard_type_id": "HT-LSYD-002",
+      "hazard_type": "一机一闸一漏未落实",
+      "category": "临时用电",
+      "site_object": "",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 63,
+      "quote": "今晨3#楼12层楼梯间开关箱无锁",
+      "hazard_type_id": "HT-LSYD-003",
+      "hazard_type": "配电箱无门无锁无防雨",
+      "category": "临时用电",
+      "site_object": "开关箱",
+      "expected_level": "一般风险"
+    },
+    {
+      "index": 65,
+      "quote": "下午2#楼生活区私拉乱接电线",
+      "hazard_type_id": "HT-LSYD-004",
+      "hazard_type": "电缆敷设违规",
+      "category": "临时用电",
+      "site_object": "",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 66,
+      "quote": "下午3#楼搅拌机专用箱漏电保护器未检测",
+      "hazard_type_id": "HT-LSYD-005",
+      "hazard_type": "漏电保护器失效或参数不合格",
+      "category": "临时用电",
+      "site_object": "",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 67,
+      "quote": "下午3#楼现场发现非电工操作配电箱",
+      "hazard_type_id": "HT-LSYD-006",
+      "hazard_type": "非电工私接电气",
+      "category": "临时用电",
+      "site_object": "配电箱",
+      "expected_level": "一般风险"
+    }
+  ]
+}

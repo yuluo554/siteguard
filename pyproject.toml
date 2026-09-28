@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "siteguard-safety"
+version = "0.1.0"
+description = "融合LLM与知识图谱的施工现场安全风险隐患智能研判系统"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "SiteGuard Contributors" }]
+dependencies = []  # 骨架期零依赖；按里程碑经 optional-dependencies 引入
+
+[project.optional-dependencies]
+llm = ["requests>=2.28"]
+doc = ["python-docx>=0.8.11"]
+kg = ["networkx>=2.6", "pyvis>=0.3.2"]
+vision = ["ultralytics>=8.0"]
+video = ["opencv-python>=4.5"]  # M6 加分项：视频抽帧关键帧（复用 vision 通路，无需新模型）
+web = ["fastapi>=0.95", "uvicorn>=0.20", "httpx>=0.24"]  # httpx：fastapi TestClient 依赖（测试用）
+
+[project.scripts]
+siteguard = "siteguard.cli:main"
+
+[tool.setuptools]
+packages = [
+  "siteguard",
+  "siteguard.ingest",
+  "siteguard.extract",
+  "siteguard.kg",
+  "siteguard.reasoning",
+  "siteguard.retrieval",
+  "siteguard.pipeline",
+  "siteguard.report",
+]

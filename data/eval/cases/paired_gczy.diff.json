@@ -1,0 +1,52 @@
+{
+  "project": "样例住宅楼二期工程",
+  "date": "2026-09-21",
+  "log": "paired_gczy_log.txt",
+  "patrol": "paired_gczy_patrol.txt",
+  "version": 2,
+  "note": "巡查记录版相对施工日志版注入已知差异：missing=漏项 / value=数值不一致 / extra=多报；timestamp 为规范化时间。",
+  "diffs": [
+    {
+      "kind": "missing",
+      "label": "漏项",
+      "timestamp": "2026-09-21 15:47",
+      "index_in_log": 20,
+      "index_in_patrol": null,
+      "log_quote": "3#楼5层外架未挂设安全网",
+      "patrol_quote": null
+    },
+    {
+      "kind": "value",
+      "label": "数值不一致",
+      "field": "quantity",
+      "timestamp": "2026-09-21 16:33",
+      "index_in_log": 22,
+      "index_in_patrol": 21,
+      "log_quote": "3#楼18层移动操作平台超载堆放钢管5捆",
+      "patrol_quote": "3#楼18层移动操作平台超载堆放钢管3捆",
+      "log_value": 5,
+      "patrol_value": 3
+    },
+    {
+      "kind": "value",
+      "label": "数值不一致",
+      "field": "quantity",
+      "timestamp": "2026-09-21 12:20",
+      "index_in_log": 11,
+      "index_in_patrol": 11,
+      "log_quote": "1#楼18层地下室顶板预留洞口未采取防护，共3处",
+      "patrol_quote": "1#楼18层地下室顶板预留洞口未采取防护，共4处",
+      "log_value": 3,
+      "patrol_value": 4
+    },
+    {
+      "kind": "extra",
+      "label": "多报",
+      "timestamp": "2026-09-21 16:56",
+      "index_in_log": null,
+      "index_in_patrol": 22,
+      "log_quote": null,
+      "patrol_quote": "3#楼8层预留洞口未加盖防护盖板"
+    }
+  ]
+}

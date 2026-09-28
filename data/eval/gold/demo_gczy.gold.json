@@ -1,0 +1,493 @@
+{
+  "file": "demo_gczy.txt",
+  "seed": 42,
+  "corpus": "v2",
+  "records": [
+    {
+      "index": 1,
+      "quote": "3#楼3层楼层临边未设置防护栏杆",
+      "hazard_type_id": "HT-GCZY-001",
+      "hazard_type": "临边防护缺失",
+      "category": "高处作业",
+      "site_object": "楼层临边",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 2,
+      "quote": "1#楼5层外脚手架上作业工人未系安全带",
+      "hazard_type_id": "HT-GCZY-002",
+      "hazard_type": "高处作业未系安全带",
+      "category": "高处作业",
+      "site_object": "外脚手架",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 3,
+      "quote": "3#楼18层预留洞口无防护",
+      "hazard_type_id": "HT-GCZY-003",
+      "hazard_type": "洞口防护缺失",
+      "category": "高处作业",
+      "site_object": "预留洞口",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 5,
+      "quote": "1#楼外脚手架安全网破损",
+      "hazard_type_id": "HT-GCZY-004",
+      "hazard_type": "安全网缺失或破损",
+      "category": "高处作业",
+      "site_object": "外脚手架",
+      "expected_level": "一般风险"
+    },
+    {
+      "index": 6,
+      "quote": "3#楼首层安全通道被占用堆放模板",
+      "hazard_type_id": "HT-GCZY-005",
+      "hazard_type": "安全通道不畅通",
+      "category": "高处作业",
+      "site_object": "安全通道",
+      "expected_level": "一般风险"
+    },
+    {
+      "index": 7,
+      "quote": "3#楼18层移动操作平台超载堆放材料",
+      "hazard_type_id": "HT-GCZY-006",
+      "hazard_type": "移动操作平台违规使用",
+      "category": "高处作业",
+      "site_object": "移动操作平台",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 8,
+      "quote": "下午2#楼15层楼梯间临边未安装防护栏杆",
+      "hazard_type_id": "HT-GCZY-001",
+      "hazard_type": "临边防护缺失",
+      "category": "高处作业",
+      "site_object": "",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 10,
+      "quote": "下午3#楼屋面防水作业人员未佩戴安全带",
+      "hazard_type_id": "HT-GCZY-002",
+      "hazard_type": "高处作业未系安全带",
+      "category": "高处作业",
+      "site_object": "屋面",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 11,
+      "quote": "1#楼5层预留洞口未加盖防护盖板",
+      "hazard_type_id": "HT-GCZY-003",
+      "hazard_type": "洞口防护缺失",
+      "category": "高处作业",
+      "site_object": "预留洞口",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 12,
+      "quote": "1#楼12层外架未挂设安全网",
+      "hazard_type_id": "HT-GCZY-004",
+      "hazard_type": "安全网缺失或破损",
+      "category": "高处作业",
+      "site_object": "",
+      "expected_level": "一般风险"
+    },
+    {
+      "index": 13,
+      "quote": "2#楼15层安全通道不畅通",
+      "hazard_type_id": "HT-GCZY-005",
+      "hazard_type": "安全通道不畅通",
+      "category": "高处作业",
+      "site_object": "安全通道",
+      "expected_level": "一般风险"
+    },
+    {
+      "index": 15,
+      "quote": "3#楼3层移动操作平台脚轮未锁",
+      "hazard_type_id": "HT-GCZY-006",
+      "hazard_type": "移动操作平台违规使用",
+      "category": "高处作业",
+      "site_object": "移动操作平台",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 16,
+      "quote": "3#楼屋面临边防护栏杆缺失",
+      "hazard_type_id": "HT-GCZY-001",
+      "hazard_type": "临边防护缺失",
+      "category": "高处作业",
+      "site_object": "屋面临边",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 17,
+      "quote": "3#楼3层钢结构作业面焊接工人安全带未系挂",
+      "hazard_type_id": "HT-GCZY-002",
+      "hazard_type": "高处作业未系安全带",
+      "category": "高处作业",
+      "site_object": "钢结构作业面",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 18,
+      "quote": "2#楼3层电梯井口未设置防护",
+      "hazard_type_id": "HT-GCZY-003",
+      "hazard_type": "洞口防护缺失",
+      "category": "高处作业",
+      "site_object": "电梯井口",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 20,
+      "quote": "2#楼12层楼层临边安全网破损3处",
+      "hazard_type_id": "HT-GCZY-004",
+      "hazard_type": "安全网缺失或破损",
+      "category": "高处作业",
+      "site_object": "楼层临边",
+      "expected_level": "一般风险"
+    },
+    {
+      "index": 21,
+      "quote": "2#楼基坑东侧安全通道堵塞",
+      "hazard_type_id": "HT-GCZY-005",
+      "hazard_type": "安全通道不畅通",
+      "category": "高处作业",
+      "site_object": "安全通道",
+      "expected_level": "一般风险"
+    },
+    {
+      "index": 22,
+      "quote": "今晨3#楼内装修操作平台未固定",
+      "hazard_type_id": "HT-GCZY-006",
+      "hazard_type": "移动操作平台违规使用",
+      "category": "高处作业",
+      "site_object": "操作平台",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 23,
+      "quote": "3#楼18层阳台临边未搭设防护栏杆，共3处",
+      "hazard_type_id": "HT-GCZY-001",
+      "hazard_type": "临边防护缺失",
+      "category": "高处作业",
+      "site_object": "阳台临边",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 25,
+      "quote": "2#楼8层外架拆除作业4名工人未系安全带",
+      "hazard_type_id": "HT-GCZY-002",
+      "hazard_type": "高处作业未系安全带",
+      "category": "高处作业",
+      "site_object": "",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 26,
+      "quote": "今晨1#楼5层楼梯口无防护",
+      "hazard_type_id": "HT-GCZY-003",
+      "hazard_type": "洞口防护缺失",
+      "category": "高处作业",
+      "site_object": "楼梯口",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 27,
+      "quote": "今晨2#楼卸料平台侧面临边未张挂安全网",
+      "hazard_type_id": "HT-GCZY-004",
+      "hazard_type": "安全网缺失或破损",
+      "category": "高处作业",
+      "site_object": "",
+      "expected_level": "一般风险"
+    },
+    {
+      "index": 28,
+      "quote": "3#楼18层3处安全通道未设置",
+      "hazard_type_id": "HT-GCZY-005",
+      "hazard_type": "安全通道不畅通",
+      "category": "高处作业",
+      "site_object": "安全通道",
+      "expected_level": "一般风险"
+    },
+    {
+      "index": 30,
+      "quote": "2#楼18层移动操作平台超载堆放钢管3捆",
+      "hazard_type_id": "HT-GCZY-006",
+      "hazard_type": "移动操作平台违规使用",
+      "category": "高处作业",
+      "site_object": "移动操作平台",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 31,
+      "quote": "2#楼5层临边无防护",
+      "hazard_type_id": "HT-GCZY-001",
+      "hazard_type": "临边防护缺失",
+      "category": "高处作业",
+      "site_object": "",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 32,
+      "quote": "夜间3#楼屋面保温施工人员安全带未挂设",
+      "hazard_type_id": "HT-GCZY-002",
+      "hazard_type": "高处作业未系安全带",
+      "category": "高处作业",
+      "site_object": "屋面",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 33,
+      "quote": "2#楼5层地下室顶板预留洞口未采取防护，共5处",
+      "hazard_type_id": "HT-GCZY-003",
+      "hazard_type": "洞口防护缺失",
+      "category": "高处作业",
+      "site_object": "预留洞口",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 35,
+      "quote": "1#楼3层外脚手架安全网破旧未更换",
+      "hazard_type_id": "HT-GCZY-004",
+      "hazard_type": "安全网缺失或破损",
+      "category": "高处作业",
+      "site_object": "外脚手架",
+      "expected_level": "一般风险"
+    },
+    {
+      "index": 36,
+      "quote": "3#楼地下室安全通道被占用堆放钢管",
+      "hazard_type_id": "HT-GCZY-005",
+      "hazard_type": "安全通道不畅通",
+      "category": "高处作业",
+      "site_object": "安全通道",
+      "expected_level": "一般风险"
+    },
+    {
+      "index": 37,
+      "quote": "2#楼15层操作平台超载",
+      "hazard_type_id": "HT-GCZY-006",
+      "hazard_type": "移动操作平台违规使用",
+      "category": "高处作业",
+      "site_object": "操作平台",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 38,
+      "quote": "今晨3#楼3层楼梯临边未设置防护栏杆",
+      "hazard_type_id": "HT-GCZY-001",
+      "hazard_type": "临边防护缺失",
+      "category": "高处作业",
+      "site_object": "楼梯临边",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 40,
+      "quote": "1#楼8层预留洞口周边支模人员未系安全带",
+      "hazard_type_id": "HT-GCZY-002",
+      "hazard_type": "高处作业未系安全带",
+      "category": "高处作业",
+      "site_object": "洞口",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 41,
+      "quote": "2#楼3层管道井洞口无防护盖板",
+      "hazard_type_id": "HT-GCZY-003",
+      "hazard_type": "洞口防护缺失",
+      "category": "高处作业",
+      "site_object": "",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 42,
+      "quote": "下午3#楼3层楼层临边安全网缺失",
+      "hazard_type_id": "HT-GCZY-004",
+      "hazard_type": "安全网缺失或破损",
+      "category": "高处作业",
+      "site_object": "楼层临边",
+      "expected_level": "一般风险"
+    },
+    {
+      "index": 43,
+      "quote": "上午1#楼首层通道被占用",
+      "hazard_type_id": "HT-GCZY-005",
+      "hazard_type": "安全通道不畅通",
+      "category": "高处作业",
+      "site_object": "首层通道",
+      "expected_level": "一般风险"
+    },
+    {
+      "index": 45,
+      "quote": "今晨2#楼12层移动操作平台作业时未固定",
+      "hazard_type_id": "HT-GCZY-006",
+      "hazard_type": "移动操作平台违规使用",
+      "category": "高处作业",
+      "site_object": "移动操作平台",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 46,
+      "quote": "2#楼8层楼层临边未设置防护栏杆",
+      "hazard_type_id": "HT-GCZY-001",
+      "hazard_type": "临边防护缺失",
+      "category": "高处作业",
+      "site_object": "楼层临边",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 47,
+      "quote": "1#楼15层外脚手架上作业工人未系安全带",
+      "hazard_type_id": "HT-GCZY-002",
+      "hazard_type": "高处作业未系安全带",
+      "category": "高处作业",
+      "site_object": "外脚手架",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 48,
+      "quote": "3#楼12层预留洞口无防护",
+      "hazard_type_id": "HT-GCZY-003",
+      "hazard_type": "洞口防护缺失",
+      "category": "高处作业",
+      "site_object": "预留洞口",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 50,
+      "quote": "3#楼外脚手架安全网破损",
+      "hazard_type_id": "HT-GCZY-004",
+      "hazard_type": "安全网缺失或破损",
+      "category": "高处作业",
+      "site_object": "外脚手架",
+      "expected_level": "一般风险"
+    },
+    {
+      "index": 51,
+      "quote": "3#楼首层安全通道被占用堆放模板",
+      "hazard_type_id": "HT-GCZY-005",
+      "hazard_type": "安全通道不畅通",
+      "category": "高处作业",
+      "site_object": "安全通道",
+      "expected_level": "一般风险"
+    },
+    {
+      "index": 52,
+      "quote": "3#楼18层移动操作平台超载堆放材料",
+      "hazard_type_id": "HT-GCZY-006",
+      "hazard_type": "移动操作平台违规使用",
+      "category": "高处作业",
+      "site_object": "移动操作平台",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 53,
+      "quote": "下午2#楼18层楼梯间临边未安装防护栏杆",
+      "hazard_type_id": "HT-GCZY-001",
+      "hazard_type": "临边防护缺失",
+      "category": "高处作业",
+      "site_object": "",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 55,
+      "quote": "上午2#楼屋面防水作业人员未佩戴安全带",
+      "hazard_type_id": "HT-GCZY-002",
+      "hazard_type": "高处作业未系安全带",
+      "category": "高处作业",
+      "site_object": "屋面",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 56,
+      "quote": "1#楼8层预留洞口未加盖防护盖板",
+      "hazard_type_id": "HT-GCZY-003",
+      "hazard_type": "洞口防护缺失",
+      "category": "高处作业",
+      "site_object": "预留洞口",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 57,
+      "quote": "3#楼5层外架未挂设安全网",
+      "hazard_type_id": "HT-GCZY-004",
+      "hazard_type": "安全网缺失或破损",
+      "category": "高处作业",
+      "site_object": "",
+      "expected_level": "一般风险"
+    },
+    {
+      "index": 58,
+      "quote": "3#楼18层安全通道不畅通",
+      "hazard_type_id": "HT-GCZY-005",
+      "hazard_type": "安全通道不畅通",
+      "category": "高处作业",
+      "site_object": "安全通道",
+      "expected_level": "一般风险"
+    },
+    {
+      "index": 60,
+      "quote": "1#楼8层移动操作平台脚轮未锁",
+      "hazard_type_id": "HT-GCZY-006",
+      "hazard_type": "移动操作平台违规使用",
+      "category": "高处作业",
+      "site_object": "移动操作平台",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 61,
+      "quote": "2#楼屋面临边防护栏杆缺失",
+      "hazard_type_id": "HT-GCZY-001",
+      "hazard_type": "临边防护缺失",
+      "category": "高处作业",
+      "site_object": "屋面临边",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 62,
+      "quote": "3#楼5层钢结构作业面焊接工人安全带未系挂",
+      "hazard_type_id": "HT-GCZY-002",
+      "hazard_type": "高处作业未系安全带",
+      "category": "高处作业",
+      "site_object": "钢结构作业面",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 63,
+      "quote": "2#楼12层电梯井口未设置防护",
+      "hazard_type_id": "HT-GCZY-003",
+      "hazard_type": "洞口防护缺失",
+      "category": "高处作业",
+      "site_object": "电梯井口",
+      "expected_level": "较大风险"
+    },
+    {
+      "index": 65,
+      "quote": "3#楼12层楼层临边安全网破损5处",
+      "hazard_type_id": "HT-GCZY-004",
+      "hazard_type": "安全网缺失或破损",
+      "category": "高处作业",
+      "site_object": "楼层临边",
+      "expected_level": "一般风险"
+    },
+    {
+      "index": 66,
+      "quote": "2#楼基坑东侧安全通道堵塞",
+      "hazard_type_id": "HT-GCZY-005",
+      "hazard_type": "安全通道不畅通",
+      "category": "高处作业",
+      "site_object": "安全通道",
+      "expected_level": "一般风险"
+    },
+    {
+      "index": 67,
+      "quote": "下午1#楼内装修操作平台未固定",
+      "hazard_type_id": "HT-GCZY-006",
+      "hazard_type": "移动操作平台违规使用",
+      "category": "高处作业",
+      "site_object": "操作平台",
+      "expected_level": "较大风险"
+    }
+  ]
+}

@@ -1,0 +1,367 @@
+{
+  "meta": {
+    "version": "0.3.0",
+    "note": "受控词表 v2（M2）：由两大演示场景 12 类扩充至 8 大类 30 类（新增脚手架/基坑工程/起重机械/消防安全/有限空间类，对齐 plan/03 §5 预算）。新增类别暂不进演示语料（生成器按场景类别过滤），但词表/规则库/条文库/阈值表已能支撑研判。patterns 与 datagen 生成器模板配套演进，改任一侧必须 datagen --force 后重跑 eval（误报 0 硬约束）。",
+    "disclaimer": "条款编号为受控标注，以官方文本为准；建质规〔2022〕2号条目为官方原文摘录（sha256 见 data/README.md 台账）。"
+  },
+  "categories": ["高处作业", "临时用电", "脚手架", "基坑工程", "起重机械", "消防安全", "有限空间", "其他"],
+  "risk_levels": ["低风险", "一般风险", "较大风险", "重大风险"],
+  "hazard_types": [
+    {
+      "id": "HT-GCZY-001",
+      "name": "临边防护缺失",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_objects": ["楼层临边", "屋面临边", "楼梯临边", "阳台临边"],
+      "patterns": ["临边.{0,10}未(设置|安装|搭设)防护栏杆", "防护栏杆(缺失|未设置|未安装)", "临边无防护"],
+      "base_level": "较大风险",
+      "measure_ids": ["ME-GCZY-001"],
+      "clause_refs": [{"standard": "JGJ 80-2016", "clause": "4.1.2"}]
+    },
+    {
+      "id": "HT-GCZY-002",
+      "name": "高处作业未系安全带",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_objects": ["外脚手架", "屋面", "钢结构作业面", "洞口"],
+      "patterns": ["未(系|佩戴|挂设)安全带", "安全带(未系|未佩戴|未挂设)"],
+      "base_level": "较大风险",
+      "measure_ids": ["ME-GCZY-002"],
+      "clause_refs": [{"standard": "JGJ 80-2016", "clause": "4.5.1"}]
+    },
+    {
+      "id": "HT-GCZY-003",
+      "name": "洞口防护缺失",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_objects": ["电梯井口", "预留洞口", "楼梯口"],
+      "patterns": ["洞口.{0,10}未(设置|加盖|采取)防护", "预留洞口无防护", "洞口无防护(设施|盖板)?", "(电梯井口|楼梯口).{0,10}未(设置|加盖|采取)防护", "(电梯井口|楼梯口)无防护"],
+      "base_level": "较大风险",
+      "measure_ids": ["ME-GCZY-003"],
+      "clause_refs": [{"standard": "JGJ 80-2016", "clause": "4.2.1"}]
+    },
+    {
+      "id": "HT-GCZY-004",
+      "name": "安全网缺失或破损",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_objects": ["外脚手架", "楼层临边"],
+      "patterns": ["安全网(缺失|破损|未挂设|破旧)", "未(挂设|张挂)安全网"],
+      "base_level": "一般风险",
+      "measure_ids": ["ME-GCZY-004"],
+      "clause_refs": [{"standard": "JGJ 59-2011", "clause": "3.13"}]
+    },
+    {
+      "id": "HT-GCZY-005",
+      "name": "安全通道不畅通",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_objects": ["安全通道", "首层通道"],
+      "patterns": ["安全通道(不畅通|被占用|堵塞|未设置)", "首层通道(不畅通|被占用|堵塞|未设置)"],
+      "base_level": "一般风险",
+      "measure_ids": ["ME-GCZY-005"],
+      "clause_refs": [{"standard": "JGJ 59-2011", "clause": "3.13"}]
+    },
+    {
+      "id": "HT-GCZY-006",
+      "name": "移动操作平台违规使用",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_objects": ["移动操作平台", "操作平台"],
+      "patterns": ["移动操作平台.{0,10}(超载|轮(未锁|未固定)|不稳|未固定)", "操作平台(超载|未固定|轮未锁)"],
+      "base_level": "较大风险",
+      "measure_ids": ["ME-GCZY-006"],
+      "clause_refs": [{"standard": "JGJ 80-2016", "clause": "5.3.1"}]
+    },
+    {
+      "id": "HT-LSYD-001",
+      "name": "未执行三级配电两级保护",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_objects": ["配电室", "总配电箱", "分配电箱"],
+      "patterns": ["未(执行|落实)三级配电", "未采用TN-S", "三级配电两级保护未落实", "未落实两级保护"],
+      "base_level": "较大风险",
+      "measure_ids": ["ME-LSYD-001"],
+      "clause_refs": [{"standard": "JGJ 46-2005", "clause": "5.1.1"}]
+    },
+    {
+      "id": "HT-LSYD-002",
+      "name": "一机一闸一漏未落实",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_objects": ["开关箱", "配电箱"],
+      "patterns": ["一闸多机", "(开关箱|配电箱).{0,8}(接|带|控制)多台设备", "一机一闸一漏未落实", "一个开关箱.{0,6}控制(两台|2台|多台)"],
+      "base_level": "较大风险",
+      "measure_ids": ["ME-LSYD-002"],
+      "clause_refs": [{"standard": "JGJ 46-2005", "clause": "8.1.3"}]
+    },
+    {
+      "id": "HT-LSYD-003",
+      "name": "配电箱无门无锁无防雨",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_objects": ["开关箱", "配电箱", "分配电箱"],
+      "patterns": ["配电箱.{0,10}(无门|无锁|无防雨|门锁损坏)", "开关箱.{0,10}(无门|无锁|无防雨)"],
+      "base_level": "一般风险",
+      "measure_ids": ["ME-LSYD-003"],
+      "clause_refs": [{"standard": "JGJ 46-2005", "clause": "8.3.2"}],
+      "note": "M1勘误：原挂 8.1.10（检查表合并表述），箱门配锁成分订正挂接 8.3.2"
+    },
+    {
+      "id": "HT-LSYD-004",
+      "name": "电缆敷设违规",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_objects": ["电缆线路", "主干电缆"],
+      "patterns": ["电缆(拖地|泡水|破损|老化|被碾压)", "(私拉乱接|电线乱拉乱接)"],
+      "base_level": "较大风险",
+      "measure_ids": ["ME-LSYD-004"],
+      "clause_refs": [{"standard": "JGJ 46-2005", "clause": "7.2.3"}]
+    },
+    {
+      "id": "HT-LSYD-005",
+      "name": "漏电保护器失效或参数不合格",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_objects": ["开关箱", "配电箱"],
+      "patterns": ["漏电保护器(失效|参数不合格|未安装|缺失|不动作|未检测)"],
+      "base_level": "较大风险",
+      "measure_ids": ["ME-LSYD-005"],
+      "clause_refs": [{"standard": "JGJ 46-2005", "clause": "8.2.10"}]
+    },
+    {
+      "id": "HT-LSYD-006",
+      "name": "非电工私接电气",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_objects": ["配电箱", "用电设备"],
+      "patterns": ["(非电工|无证人员?|无证电工).{0,8}(私接|接线|作业|操作)", "非电工私接"],
+      "base_level": "一般风险",
+      "measure_ids": ["ME-LSYD-006"],
+      "clause_refs": [{"standard": "JGJ 46-2005", "clause": "3.2.1"}]
+    },
+    {
+      "id": "HT-LSYD-007",
+      "name": "特殊环境照明未用安全电压",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_objects": ["隧道作业面", "地下室", "人防工程"],
+      "patterns": ["(隧道|人防工程|地下室|高温|导电灰尘|潮湿).{0,12}照明.{0,10}未.{0,8}安全电压"],
+      "base_level": "较大风险",
+      "measure_ids": ["ME-LSYD-007"],
+      "clause_refs": [{"standard": "建质规〔2022〕2号", "clause": "第十条"}]
+    },
+    {
+      "id": "HT-SJA-001",
+      "name": "连墙件缺失或未设置",
+      "category": "脚手架",
+      "work_type": "脚手架作业",
+      "site_objects": ["外脚手架", "附着式升降脚手架"],
+      "patterns": ["未(设置|安装|补设)连墙件", "连墙件(整层缺失|缺失|被拆除)"],
+      "base_level": "较大风险",
+      "measure_ids": ["ME-SJA-001"],
+      "clause_refs": [{"standard": "建质规〔2022〕2号", "clause": "第七条（二）"}]
+    },
+    {
+      "id": "HT-SJA-002",
+      "name": "附着式升降脚手架未经验收投入使用",
+      "category": "脚手架",
+      "work_type": "脚手架作业",
+      "site_objects": ["附着式升降脚手架"],
+      "patterns": ["附着式升降脚手架.{0,10}未(经验收|验收合格)"],
+      "base_level": "较大风险",
+      "measure_ids": ["ME-SJA-002"],
+      "clause_refs": [{"standard": "建质规〔2022〕2号", "clause": "第七条（三）"}]
+    },
+    {
+      "id": "HT-SJA-003",
+      "name": "脚手架基础沉降或架体变形",
+      "category": "脚手架",
+      "work_type": "脚手架作业",
+      "site_objects": ["外脚手架", "落地脚手架"],
+      "patterns": ["脚手架.{0,8}基础(沉降|不均匀沉降)", "脚手架.{0,8}架体(变形|倾斜|扭曲)"],
+      "base_level": "较大风险",
+      "measure_ids": ["ME-SJA-004"],
+      "clause_refs": [{"standard": "建质规〔2022〕2号", "clause": "第七条（一）"}]
+    },
+    {
+      "id": "HT-SJA-004",
+      "name": "脚手板铺设不合规",
+      "category": "脚手架",
+      "work_type": "脚手架作业",
+      "site_objects": ["外脚手架", "满堂脚手架"],
+      "patterns": ["脚手板(未满铺|不满铺|未绑扎|缺失)", "脚手板铺设(不牢|不严)"],
+      "base_level": "一般风险",
+      "measure_ids": ["ME-SJA-004"],
+      "clause_refs": [],
+      "note": "条款挂接留 M3 条文扩充（JGJ 59-2011 脚手架评分表条目待核验）"
+    },
+    {
+      "id": "HT-JK-001",
+      "name": "基坑工程未编制专项施工方案",
+      "category": "基坑工程",
+      "work_type": "基坑作业",
+      "site_objects": ["基坑工程", "深基坑"],
+      "patterns": ["基坑.{0,10}未(编制|落实)专项施工方案", "基坑.{0,8}未(编制|审核)专项方案"],
+      "base_level": "较大风险",
+      "measure_ids": ["ME-JK-001"],
+      "clause_refs": [{"standard": "建质规〔2022〕2号", "clause": "第四条（四）"}]
+    },
+    {
+      "id": "HT-JK-002",
+      "name": "基坑土方超挖",
+      "category": "基坑工程",
+      "work_type": "基坑作业",
+      "site_objects": ["基坑工程"],
+      "patterns": ["基坑.{0,6}超挖", "土方超挖"],
+      "base_level": "较大风险",
+      "measure_ids": ["ME-JK-002"],
+      "clause_refs": [{"standard": "建质规〔2022〕2号", "clause": "第五条（二）"}]
+    },
+    {
+      "id": "HT-JK-003",
+      "name": "深基坑未进行第三方监测",
+      "category": "基坑工程",
+      "work_type": "基坑作业",
+      "site_objects": ["深基坑"],
+      "patterns": ["深基坑.{0,12}未(进行|实施|开展)第三方监测", "深基坑.{0,8}无第三方监测"],
+      "base_level": "较大风险",
+      "measure_ids": ["ME-JK-003"],
+      "clause_refs": [{"standard": "建质规〔2022〕2号", "clause": "第五条（三）"}]
+    },
+    {
+      "id": "HT-JK-004",
+      "name": "基坑坍塌风险预兆未处置",
+      "category": "基坑工程",
+      "work_type": "基坑作业",
+      "site_objects": ["基坑工程", "支护结构"],
+      "patterns": ["基坑侧壁.{0,8}(漏水|流土)", "基坑底部.{0,6}管涌", "(支护结构|周边建筑物).{0,10}变形值?超过.{0,8}控制值", "桩间土.{0,8}孔洞"],
+      "base_level": "较大风险",
+      "measure_ids": ["ME-JK-004"],
+      "clause_refs": [
+        {"standard": "建质规〔2022〕2号", "clause": "第五条（四）1"},
+        {"standard": "建质规〔2022〕2号", "clause": "第五条（四）2"},
+        {"standard": "建质规〔2022〕2号", "clause": "第五条（四）3"},
+        {"standard": "建质规〔2022〕2号", "clause": "第五条（四）4"}
+      ]
+    },
+    {
+      "id": "HT-QZ-001",
+      "name": "起重机械未经验收合格使用",
+      "category": "起重机械",
+      "work_type": "起重吊装作业",
+      "site_objects": ["塔式起重机", "施工升降机", "物料提升机"],
+      "patterns": ["(塔式起重机|塔吊|施工升降机|物料提升机).{0,14}未(经验收|验收合格|办理使用登记)"],
+      "base_level": "较大风险",
+      "measure_ids": ["ME-QZ-001"],
+      "clause_refs": [{"standard": "建质规〔2022〕2号", "clause": "第八条（一）"}]
+    },
+    {
+      "id": "HT-QZ-002",
+      "name": "起重机械安全装置失效或被拆除",
+      "category": "起重机械",
+      "work_type": "起重吊装作业",
+      "site_objects": ["塔式起重机", "施工升降机"],
+      "patterns": ["(塔吊|塔式起重机|施工升降机|物料提升机|起重机械).{0,12}(安全装置|限位|保险).{0,6}(失效|缺失|不齐全|被拆除)"],
+      "base_level": "较大风险",
+      "measure_ids": ["ME-QZ-002"],
+      "clause_refs": [{"standard": "建质规〔2022〕2号", "clause": "第八条（五）"}]
+    },
+    {
+      "id": "HT-QZ-003",
+      "name": "违规超载吊装",
+      "category": "起重机械",
+      "work_type": "起重吊装作业",
+      "site_objects": ["塔式起重机", "吊装作业区"],
+      "patterns": ["(超载|超力矩)(吊装|起吊)", "吊装.{0,6}超载"],
+      "base_level": "较大风险",
+      "measure_ids": ["ME-QZ-003"],
+      "clause_refs": [],
+      "note": "条款挂接留 M3（吊装令/十不吊管理条款待核验）"
+    },
+    {
+      "id": "HT-QZ-004",
+      "name": "起重机械维保缺失",
+      "category": "起重机械",
+      "work_type": "起重吊装作业",
+      "site_objects": ["塔式起重机", "施工升降机", "物料提升机"],
+      "patterns": ["起重机械.{0,8}(未|无)(定期维保|维保记录|月检)"],
+      "base_level": "一般风险",
+      "measure_ids": ["ME-QZ-003"],
+      "clause_refs": [],
+      "note": "条款挂接留 M3（起重机械维保条款待核验）"
+    },
+    {
+      "id": "HT-XF-001",
+      "name": "动火作业未审批",
+      "category": "消防安全",
+      "work_type": "消防及动火作业",
+      "site_objects": ["动火作业区", "焊接作业点"],
+      "patterns": ["动火作业.{0,10}未(办理|履行|执行).{0,4}(审批|手续)", "动火.{0,6}无(审批|看火人)", "无证动火"],
+      "base_level": "较大风险",
+      "measure_ids": ["ME-XF-001"],
+      "clause_refs": [],
+      "note": "条款挂接留 M3（动火管理条款待核验）"
+    },
+    {
+      "id": "HT-XF-002",
+      "name": "灭火器材缺失或失效",
+      "category": "消防安全",
+      "work_type": "消防及动火作业",
+      "site_objects": ["动火作业区", "材料堆场", "生活区"],
+      "patterns": ["灭火(器|器材)(缺失|失效|过期|压力不足|配备不足)", "消防器材(缺失|失效|过期)"],
+      "base_level": "一般风险",
+      "measure_ids": ["ME-XF-002"],
+      "clause_refs": [],
+      "note": "条款挂接留 M3（消防器材配置条款待核验）"
+    },
+    {
+      "id": "HT-XF-003",
+      "name": "易燃材料违规堆放",
+      "category": "消防安全",
+      "work_type": "消防及动火作业",
+      "site_objects": ["材料堆场", "易燃品仓库"],
+      "patterns": ["易燃(材料|物品|制品).{0,10}(违规堆放|未分类存放|靠近火源|堆放在动火区)"],
+      "base_level": "较大风险",
+      "measure_ids": ["ME-XF-002"],
+      "clause_refs": [],
+      "note": "条款挂接留 M3（易燃材料存放条款待核验）"
+    },
+    {
+      "id": "HT-XF-004",
+      "name": "保温材料燃烧性能不符",
+      "category": "消防安全",
+      "work_type": "消防及动火作业",
+      "site_objects": ["外墙保温作业面"],
+      "patterns": ["保温材料.{0,10}燃烧性能.{0,6}(不符|不达标|不合格)"],
+      "base_level": "较大风险",
+      "measure_ids": ["ME-XF-003"],
+      "clause_refs": [{"standard": "建质规〔2022〕2号", "clause": "第十四条"}]
+    },
+    {
+      "id": "HT-YXKJ-001",
+      "name": "有限空间作业违规",
+      "category": "有限空间",
+      "work_type": "有限空间作业",
+      "site_objects": ["污水井", "集水坑", "人防工程"],
+      "patterns": ["有限空间.{0,8}作业.{0,10}未(履行|落实|执行|审批)", "有限空间.{0,6}无专人监护", "有限空间.{0,10}未(通风|检测|先通风)"],
+      "base_level": "较大风险",
+      "measure_ids": ["ME-YXKJ-001"],
+      "clause_refs": [
+        {"standard": "建质规〔2022〕2号", "clause": "第十一条（一）"},
+        {"standard": "建质规〔2022〕2号", "clause": "第十一条（二）"}
+      ]
+    },
+    {
+      "id": "HT-GCZY-007",
+      "name": "未佩戴安全帽",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_objects": ["外脚手架", "屋面", "钢结构作业面", "洞口"],
+      "patterns": ["未(佩戴|戴|系)安全帽", "安全帽(未佩戴|未戴|未系)"],
+      "base_level": "较大风险",
+      "measure_ids": ["ME-GCZY-007"],
+      "clause_refs": []
+    }
+  ]
+}

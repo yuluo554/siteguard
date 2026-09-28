@@ -1,0 +1,168 @@
+{
+  "metric": "hazard_extraction_micro",
+  "corpus": "v2",
+  "files": [
+    {
+      "file": "data/samples/text/demo_gczy.txt",
+      "gold_count": 54,
+      "pred_count": 54,
+      "tp": 54,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "level_accuracy": 1.0,
+      "field_stats": {
+        "hazard_type": {
+          "tp": 54,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "category": {
+          "tp": 54,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "site_object": {
+          "tp": 46,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "end_to_end": {
+        "detected": 54,
+        "gold_count": 54,
+        "detection_rate": 1.0,
+        "false_positives": 0,
+        "pred_count": 54,
+        "false_positive_rate": 0.0
+      },
+      "warnings": []
+    },
+    {
+      "file": "data/samples/text/demo_lsyd.txt",
+      "gold_count": 54,
+      "pred_count": 54,
+      "tp": 54,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "level_accuracy": 1.0,
+      "field_stats": {
+        "hazard_type": {
+          "tp": 54,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "category": {
+          "tp": 54,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "site_object": {
+          "tp": 33,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "end_to_end": {
+        "detected": 54,
+        "gold_count": 54,
+        "detection_rate": 1.0,
+        "false_positives": 0,
+        "pred_count": 54,
+        "false_positive_rate": 0.0
+      },
+      "warnings": []
+    }
+  ],
+  "micro": {
+    "tp": 108,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "field_level": {
+    "hazard_type": {
+      "tp": 108,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "category": {
+      "tp": 108,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "site_object": {
+      "tp": 79,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  },
+  "end_to_end": {
+    "detected": 108,
+    "gold_count": 108,
+    "detection_rate": 1.0,
+    "false_positives": 0,
+    "pred_count": 108,
+    "false_positive_rate": 0.0
+  },
+  "paired": [
+    {
+      "case": "gczy",
+      "gold_diffs": 4,
+      "detected": 4,
+      "hits": 4,
+      "missed": [],
+      "false": []
+    },
+    {
+      "case": "lsyd",
+      "gold_diffs": 4,
+      "detected": 4,
+      "hits": 4,
+      "missed": [],
+      "false": []
+    }
+  ],
+  "target": {
+    "f1": 0.9,
+    "fp": 0,
+    "field_f1": 0.9,
+    "e2e_detection": 0.9,
+    "e2e_fpr": 0
+  },
+  "note": "零 API 依赖；样例/真值/配对差异由 siteguard.datagen 生成（seed=42，corpus v2）；字段级指标在 (index, hazard_type_id) 对齐命中对上统计。"
+}

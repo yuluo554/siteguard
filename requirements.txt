@@ -1,0 +1,18 @@
+# SiteGuard 依赖策略：骨架期（M0）零第三方依赖。
+# 按里程碑开启对应可选依赖（见 pyproject.toml [project.optional-dependencies]），
+# 国内安装使用清华镜像：pip install -i https://pypi.tuna.tsinghua.edu.cn/simple <pkg>
+#
+# M1~M2 知识与 LLM 兜底：
+# python-docx>=0.8.11          # docx 解析与报告导出
+# requests>=2.28               # DashScope OpenAI 兼容接口调用
+#
+# M3 图谱可视化：
+# networkx>=2.6
+# pyvis>=0.3.2
+#
+# M4 多模态（加分项）：
+# ultralytics>=8.0             # YOLO 推理（SHWD 安全帽检测）
+#
+# M5 Web 面板：
+# fastapi>=0.95
+# uvicorn>=0.20

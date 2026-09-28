@@ -1,0 +1,27 @@
+{
+  "stats": {
+    "node_count": 187,
+    "edge_count": 238,
+    "nodes_by_type": {
+      "RiskLevel": 4,
+      "Category": 8,
+      "Regulation": 54,
+      "Measure": 29,
+      "HazardType": 31,
+      "WorkType": 7,
+      "SiteObject": 44,
+      "Case": 10
+    },
+    "edges_by_relation": {
+      "风险分级": 31,
+      "属于": 31,
+      "整改用": 31,
+      "应依据": 28,
+      "作业类型": 31,
+      "发生于": 72,
+      "涉及": 14
+    }
+  },
+  "target_min_nodes": 100,
+  "note": "种子图谱（M3）：185 节点，pyvis 离线交互 HTML 由 build-kg 同步产出"
+}

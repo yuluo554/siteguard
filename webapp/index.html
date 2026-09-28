@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SiteGuard · 施工现场安全风险隐患智能研判</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+  <h1>SiteGuard<span class="sub">融合 LLM 与知识图谱的施工现场安全风险隐患智能研判</span></h1>
+</header>
+<main>
+  <section id="input-panel" class="panel">
+    <h2>1 · 输入施工日志 / 安全巡查记录</h2>
+    <div class="row">
+      <span class="label">载入示例场景：</span>
+      <div id="scenario-buttons" class="btn-row"></div>
+    </div>
+    <div class="row">
+      <span class="label">或上传文件（.txt / .docx）：</span>
+      <input type="file" id="file-input" accept=".txt,.docx">
+    </div>
+    <textarea id="log-text" rows="10"
+      placeholder="粘贴施工日志 / 安全巡查记录文本，点击上方按钮载入示例，或选择文件上传…"></textarea>
+    <div class="row">
+      <button id="analyze-btn" type="button">开始研判</button>
+      <span id="status" class="status"></span>
+    </div>
+  </section>
+
+  <section id="result-panel" class="panel" hidden>
+    <h2>2 · 研判结果</h2>
+    <div id="summary" class="summary"></div>
+    <div id="cards"></div>
+    <div id="warnings-box"></div>
+    <h3>报告下载</h3>
+    <div id="downloads" class="btn-row"></div>
+  </section>
+</main>
+<footer>
+  结论由规则引擎生成，风险等级与条款依据可溯源（条款锚点联动知识图谱
+  <a href="/kg/kg.html" target="_blank" rel="noopener">kg.html</a>）；
+  本页零外链 CDN，可断网演示。种子条款以官方文本为准。
+</footer>
+<script src="/static/app.js"></script>
+</body>
+</html>

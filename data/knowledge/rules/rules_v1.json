@@ -1,0 +1,147 @@
+{
+  "meta": {
+    "version": "1.1.0",
+    "note": "规则库 v1（M2，plan/03 §4）：四级判定改为数据驱动。major_patterns/severity_words 由 reasoning/risk_level.py 迁移至此（模块常量保留为兜底默认值，迁移一致性由 tests/test_rules_library.py 校验）；overrides 依据《房屋市政工程生产安全重大事故隐患判定标准（2022版）》官方原文（建质规〔2022〕2号，住建部 docx 附件，sha256 见 data/README.md 台账）；threshold_rules 将阈值表接入 judge 数值判定；base_rules 与词表 hazard_types.json 一一对应（patterns 单一来源在词表，规则库不重复）。",
+    "disclaimer": "规则命中词形为工程自研正则；条款依据以官方文本为准。规则改动必须重跑 datagen --force 与 eval（误报 0 硬约束）。"
+  },
+  "major_patterns": [
+    "塔吊.{0,10}(限位|保险)装置(失效|缺失)",
+    "(深基坑|高支模).{0,12}未(编制|组织).{0,8}(专项施工方案|专家论证)",
+    "(施工升降机|物料提升机).{0,8}超载(运行)?"
+  ],
+  "severity_words": ["坠亡", "伤亡", "死亡", "触电身亡", "坠落伤人", "高坠事故"],
+  "overrides": [
+    {
+      "override_id": "OV-2022-004-4",
+      "name": "危大工程未编制/未审核专项施工方案或未按规定组织专家论证",
+      "match": {"any_of": ["未(编制|审核)专项施工方案", "未按规定组织专家论证", "未组织专家论证", "专项施工方案未(经审核|按规定审核)"]},
+      "std_id": "建质规〔2022〕2号", "clause": "第四条（四）", "level": "重大风险"
+    },
+    {
+      "override_id": "OV-2022-005-2",
+      "name": "基坑土方超挖且未采取有效措施",
+      "match": {"any_of": ["基坑.{0,8}超挖", "土方超挖"]},
+      "std_id": "建质规〔2022〕2号", "clause": "第五条（二）", "level": "重大风险"
+    },
+    {
+      "override_id": "OV-2022-005-3",
+      "name": "深基坑施工未进行第三方监测",
+      "match": {"any_of": ["深基坑.{0,12}未(进行|实施|开展)第三方监测", "深基坑.{0,8}无第三方监测"]},
+      "std_id": "建质规〔2022〕2号", "clause": "第五条（三）", "level": "重大风险"
+    },
+    {
+      "override_id": "OV-2022-005-4",
+      "name": "基坑坍塌风险预兆未及时处理",
+      "match": {"any_of": ["基坑侧壁.{0,8}(漏水|流土)", "基坑底部.{0,6}管涌", "(支护结构|周边建筑物).{0,10}变形值?超过.{0,8}控制值", "桩间土.{0,8}孔洞"]},
+      "std_id": "建质规〔2022〕2号", "clause": "第五条（四）", "level": "重大风险"
+    },
+    {
+      "override_id": "OV-2022-007-2",
+      "name": "脚手架未设置连墙件或连墙件整层缺失",
+      "match": {"any_of": ["未(设置|安装|补设)连墙件", "连墙件(整层缺失|缺失|被拆除)"]},
+      "std_id": "建质规〔2022〕2号", "clause": "第七条（二）", "level": "重大风险"
+    },
+    {
+      "override_id": "OV-2022-007-3",
+      "name": "附着式升降脚手架未经验收合格即投入使用",
+      "match": {"any_of": ["附着式升降脚手架.{0,10}未(经验收|验收合格)"]},
+      "std_id": "建质规〔2022〕2号", "clause": "第七条（三）", "level": "重大风险"
+    },
+    {
+      "override_id": "OV-2022-007-4",
+      "name": "附着式升降脚手架防倾覆/防坠落/同步升降控制装置失效或被拆除",
+      "match": {"any_of": ["附着式升降脚手架.{0,16}(防倾覆|防坠落|同步升降).{0,6}(失效|被拆除|不符合)"]},
+      "std_id": "建质规〔2022〕2号", "clause": "第七条（四）", "level": "重大风险"
+    },
+    {
+      "override_id": "OV-2022-007-5",
+      "name": "附着式升降脚手架架体悬臂高度超限（文本通路，数值通路走 TH-SJA-001/002）",
+      "match": {"any_of": ["悬臂高度.{0,8}超过.{0,8}架体高度", "悬臂高度.{0,6}大于6米"]},
+      "std_id": "建质规〔2022〕2号", "clause": "第七条（五）", "level": "重大风险"
+    },
+    {
+      "override_id": "OV-2022-008-1",
+      "name": "起重机械未经验收合格即投入使用或未办理使用登记",
+      "match": {"any_of": ["(塔式起重机|塔吊|施工升降机|物料提升机).{0,14}未(经验收|验收合格|办理使用登记)"]},
+      "std_id": "建质规〔2022〕2号", "clause": "第八条（一）", "level": "重大风险"
+    },
+    {
+      "override_id": "OV-2022-008-5",
+      "name": "建筑起重机械安全装置不齐全、失效或被违规拆除",
+      "match": {"any_of": ["(塔吊|塔式起重机|施工升降机|物料提升机|起重机械).{0,12}(安全装置|限位|保险).{0,6}(失效|缺失|不齐全|被拆除)"]},
+      "std_id": "建质规〔2022〕2号", "clause": "第八条（五）", "level": "重大风险"
+    },
+    {
+      "override_id": "OV-2022-009-3",
+      "name": "悬挑式操作平台搁置点/拉结点/支撑点未设置在稳定主体结构",
+      "match": {"any_of": ["悬挑式操作平台.{0,20}未(设置在|搁置在|搭设在).{0,8}主体结构"]},
+      "std_id": "建质规〔2022〕2号", "clause": "第九条（三）", "level": "重大风险"
+    },
+    {
+      "override_id": "OV-2022-010",
+      "name": "特殊作业环境照明未按规定使用安全电压",
+      "match": {"any_of": ["(隧道|人防工程|地下室|高温|导电灰尘|潮湿).{0,12}照明.{0,10}未.{0,8}安全电压"]},
+      "std_id": "建质规〔2022〕2号", "clause": "第十条", "level": "重大风险"
+    },
+    {
+      "override_id": "OV-2022-011",
+      "name": "有限空间作业未审批/未通风检测/无专人监护",
+      "match": {"any_of": ["有限空间.{0,16}未(履行|落实|执行)", "有限空间.{0,10}无专人监护", "有限空间.{0,12}未(通风|检测)"]},
+      "std_id": "建质规〔2022〕2号", "clause": "第十一条", "level": "重大风险"
+    },
+    {
+      "override_id": "OV-2022-012",
+      "name": "拆除施工作业顺序不符合规范和施工方案要求",
+      "match": {"any_of": ["拆除.{0,10}顺序.{0,8}不(符|符合)"]},
+      "std_id": "建质规〔2022〕2号", "clause": "第十二条", "level": "重大风险"
+    },
+    {
+      "override_id": "OV-2022-013",
+      "name": "暗挖工程带水施工/涌水涌沙坍塌预兆未处理",
+      "match": {"any_of": ["暗挖.{0,10}带水施工", "(涌水|涌沙).{0,12}未(及时|采取)"]},
+      "std_id": "建质规〔2022〕2号", "clause": "第十三条", "level": "重大风险"
+    }
+  ],
+  "threshold_rules": [
+    {"rule_id": "RT-GCZY-001", "threshold_id": "TH-GCZY-001", "hazard_type_ids": ["HT-GCZY-001"], "level_on_violation": "较大风险"},
+    {"rule_id": "RT-GCZY-002", "threshold_id": "TH-GCZY-002", "hazard_type_ids": ["HT-GCZY-003"], "level_on_violation": "较大风险"},
+    {"rule_id": "RT-LSYD-001", "threshold_id": "TH-LSYD-001", "hazard_type_ids": ["HT-LSYD-005"], "level_on_violation": "较大风险"},
+    {"rule_id": "RT-LSYD-002", "threshold_id": "TH-LSYD-002", "hazard_type_ids": ["HT-LSYD-005"], "level_on_violation": "较大风险"},
+    {"rule_id": "RT-LSYD-003", "threshold_id": "TH-LSYD-003", "hazard_type_ids": [], "level_on_violation": "一般风险", "note": "配电箱装设高度类隐患类型留 M3 词表扩充后挂接"},
+    {"rule_id": "RT-SJA-001", "threshold_id": "TH-SJA-001", "hazard_type_ids": ["HT-SJA-002"], "level_on_violation": "重大风险"},
+    {"rule_id": "RT-SJA-002", "threshold_id": "TH-SJA-002", "hazard_type_ids": ["HT-SJA-002"], "level_on_violation": "重大风险"}
+  ],
+  "base_rules": [
+    {"rule_id": "RL-GCZY-001", "hazard_type_id": "HT-GCZY-001", "base_level": "较大风险"},
+    {"rule_id": "RL-GCZY-002", "hazard_type_id": "HT-GCZY-002", "base_level": "较大风险"},
+    {"rule_id": "RL-GCZY-003", "hazard_type_id": "HT-GCZY-003", "base_level": "较大风险"},
+    {"rule_id": "RL-GCZY-004", "hazard_type_id": "HT-GCZY-004", "base_level": "一般风险"},
+    {"rule_id": "RL-GCZY-005", "hazard_type_id": "HT-GCZY-005", "base_level": "一般风险"},
+    {"rule_id": "RL-GCZY-006", "hazard_type_id": "HT-GCZY-006", "base_level": "较大风险"},
+    {"rule_id": "RL-LSYD-001", "hazard_type_id": "HT-LSYD-001", "base_level": "较大风险"},
+    {"rule_id": "RL-LSYD-002", "hazard_type_id": "HT-LSYD-002", "base_level": "较大风险"},
+    {"rule_id": "RL-LSYD-003", "hazard_type_id": "HT-LSYD-003", "base_level": "一般风险"},
+    {"rule_id": "RL-LSYD-004", "hazard_type_id": "HT-LSYD-004", "base_level": "较大风险"},
+    {"rule_id": "RL-LSYD-005", "hazard_type_id": "HT-LSYD-005", "base_level": "较大风险"},
+    {"rule_id": "RL-LSYD-006", "hazard_type_id": "HT-LSYD-006", "base_level": "一般风险"},
+    {"rule_id": "RL-LSYD-007", "hazard_type_id": "HT-LSYD-007", "base_level": "较大风险"},
+    {"rule_id": "RL-SJA-001", "hazard_type_id": "HT-SJA-001", "base_level": "较大风险"},
+    {"rule_id": "RL-SJA-002", "hazard_type_id": "HT-SJA-002", "base_level": "较大风险"},
+    {"rule_id": "RL-SJA-003", "hazard_type_id": "HT-SJA-003", "base_level": "较大风险"},
+    {"rule_id": "RL-SJA-004", "hazard_type_id": "HT-SJA-004", "base_level": "一般风险"},
+    {"rule_id": "RL-JK-001", "hazard_type_id": "HT-JK-001", "base_level": "较大风险"},
+    {"rule_id": "RL-JK-002", "hazard_type_id": "HT-JK-002", "base_level": "较大风险"},
+    {"rule_id": "RL-JK-003", "hazard_type_id": "HT-JK-003", "base_level": "较大风险"},
+    {"rule_id": "RL-JK-004", "hazard_type_id": "HT-JK-004", "base_level": "较大风险"},
+    {"rule_id": "RL-QZ-001", "hazard_type_id": "HT-QZ-001", "base_level": "较大风险"},
+    {"rule_id": "RL-QZ-002", "hazard_type_id": "HT-QZ-002", "base_level": "较大风险"},
+    {"rule_id": "RL-QZ-003", "hazard_type_id": "HT-QZ-003", "base_level": "较大风险"},
+    {"rule_id": "RL-QZ-004", "hazard_type_id": "HT-QZ-004", "base_level": "一般风险"},
+    {"rule_id": "RL-XF-001", "hazard_type_id": "HT-XF-001", "base_level": "较大风险"},
+    {"rule_id": "RL-XF-002", "hazard_type_id": "HT-XF-002", "base_level": "一般风险"},
+    {"rule_id": "RL-XF-003", "hazard_type_id": "HT-XF-003", "base_level": "较大风险"},
+    {"rule_id": "RL-XF-004", "hazard_type_id": "HT-XF-004", "base_level": "较大风险"},
+    {"rule_id": "RL-YXKJ-001", "hazard_type_id": "HT-YXKJ-001", "base_level": "较大风险"},
+    {"rule_id": "RL-GCZY-007", "hazard_type_id": "HT-GCZY-007", "base_level": "较大风险"}
+  ]
+}

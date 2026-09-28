@@ -1,0 +1,2887 @@
+{
+  "tool": "SiteGuard",
+  "version": "0.1.0",
+  "source_file": "data/samples/text/demo_lsyd.txt",
+  "record_count": 67,
+  "hazard_count": 54,
+  "cards": [
+    {
+      "card_id": "HC-00001",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 1
+      },
+      "quote": "1#楼现场临时用电未落实三级配电",
+      "extractor": "rules",
+      "hazard_type": "未执行三级配电两级保护",
+      "hazard_type_id": "HT-LSYD-001",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "",
+      "attrs": {},
+      "evidence": {
+        "record_index": 1
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00001",
+        "hazard_type_id": "HT-LSYD-001",
+        "hazard_type": "未执行三级配电两级保护",
+        "category": "临时用电",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-LSYD-001",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "5.1.1",
+            "quote": "在施工现场专用变压器的供电的TN-S接零保护系统中，电气设备的金属外壳必须与保护零线连接。",
+            "kg_node": "REG:JGJ 46-2005#5.1.1",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%235.1.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "按TN-S接零保护系统与三级配电两级保护要求整改配电系统，改造方案经审核后实施，整改期间该回路停用。（依据 JGJ 46-2005 5.1.1）",
+            "source": "ME-LSYD-001"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00002",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 2
+      },
+      "quote": "1#楼钢筋加工棚开关箱一闸多机",
+      "extractor": "rules",
+      "hazard_type": "一机一闸一漏未落实",
+      "hazard_type_id": "HT-LSYD-002",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "开关箱",
+      "attrs": {},
+      "evidence": {
+        "record_index": 2
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00002",
+        "hazard_type_id": "HT-LSYD-002",
+        "hazard_type": "一机一闸一漏未落实",
+        "category": "临时用电",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-LSYD-002",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "8.1.3",
+            "quote": "每台用电设备必须有各自专用的开关箱，严禁一个开关箱直接控制两台及两台以上用电设备。",
+            "kg_node": "REG:JGJ 46-2005#8.1.3",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%238.1.3"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "严格执行一机一闸一漏，为每台设备配置专用开关箱，拆除一闸多机接线并复查全部开关箱。（依据 JGJ 46-2005 8.1.3）",
+            "source": "ME-LSYD-002"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00003",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 3
+      },
+      "quote": "2#楼5层配电箱无门无锁",
+      "extractor": "rules",
+      "hazard_type": "配电箱无门无锁无防雨",
+      "hazard_type_id": "HT-LSYD-003",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "配电箱",
+      "attrs": {},
+      "evidence": {
+        "record_index": 3
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00003",
+        "hazard_type_id": "HT-LSYD-003",
+        "hazard_type": "配电箱无门无锁无防雨",
+        "category": "临时用电",
+        "risk_level": "一般风险",
+        "base_level": "一般风险",
+        "rule_id": "RL-LSYD-003",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "8.3.2",
+            "quote": "配电箱、开关箱箱门应配锁，并应由专人负责。",
+            "kg_node": "REG:JGJ 46-2005#8.3.2",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%238.3.2"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "为配电箱补装箱门与门锁并落实防雨措施，箱前操作通道保持畅通，明确责任人挂牌管理。（依据 JGJ 46-2005 8.3.2）",
+            "source": "ME-LSYD-003"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00004",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 5
+      },
+      "quote": "1#楼3层主干电缆拖地敷设",
+      "extractor": "rules",
+      "hazard_type": "电缆敷设违规",
+      "hazard_type_id": "HT-LSYD-004",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "主干电缆",
+      "attrs": {},
+      "evidence": {
+        "record_index": 5
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00004",
+        "hazard_type_id": "HT-LSYD-004",
+        "hazard_type": "电缆敷设违规",
+        "category": "临时用电",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-LSYD-004",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "7.2.3",
+            "quote": "电缆线路应采用埋地或架空敷设，严禁沿地面明设，并应避免机械损伤和介质腐蚀。",
+            "kg_node": "REG:JGJ 46-2005#7.2.3",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%237.2.3"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "破损电缆立即更换，架空或穿管埋地敷设，消除拖地泡水与私拉乱接，全面排查现场线路。（依据 JGJ 46-2005 7.2.3）",
+            "source": "ME-LSYD-004"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00005",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 6
+      },
+      "quote": "1#楼钢筋棚开关箱漏电保护器失效",
+      "extractor": "rules",
+      "hazard_type": "漏电保护器失效或参数不合格",
+      "hazard_type_id": "HT-LSYD-005",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "开关箱",
+      "attrs": {},
+      "evidence": {
+        "record_index": 6
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00005",
+        "hazard_type_id": "HT-LSYD-005",
+        "hazard_type": "漏电保护器失效或参数不合格",
+        "category": "临时用电",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-LSYD-005",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "8.2.10",
+            "quote": "开关箱中漏电保护器的额定漏电动作电流不应大于30mA，额定漏电动作时间不应大于0.1s。",
+            "kg_node": "REG:JGJ 46-2005#8.2.10",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%238.2.10"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "更换合格漏电保护器（额定动作电流不大于30mA、动作时间不大于0.1s），检测记录留存并定期试验。（依据 JGJ 46-2005 8.2.10）",
+            "source": "ME-LSYD-005"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00006",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 7
+      },
+      "quote": "2#楼5层发现非电工私接照明线路",
+      "extractor": "rules",
+      "hazard_type": "非电工私接电气",
+      "hazard_type_id": "HT-LSYD-006",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "",
+      "attrs": {},
+      "evidence": {
+        "record_index": 7
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00006",
+        "hazard_type_id": "HT-LSYD-006",
+        "hazard_type": "非电工私接电气",
+        "category": "临时用电",
+        "risk_level": "一般风险",
+        "base_level": "一般风险",
+        "rule_id": "RL-LSYD-006",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "3.2.1",
+            "quote": "电工必须经过按国家现行标准考核合格后，持证上岗工作；其他用电人员必须通过相关教育培训和技术交底，考核合格后方可上岗工作。",
+            "kg_node": "REG:JGJ 46-2005#3.2.1",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%233.2.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "立即停止非电工人员接线行为，电气作业必须由持证电工执行，对相关人员进行安全教育并考核。（依据 JGJ 46-2005 3.2.1）",
+            "source": "ME-LSYD-006"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00007",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 8
+      },
+      "quote": "1#楼配电系统未采用TN-S接零保护",
+      "extractor": "rules",
+      "hazard_type": "未执行三级配电两级保护",
+      "hazard_type_id": "HT-LSYD-001",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "",
+      "attrs": {},
+      "evidence": {
+        "record_index": 8
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00007",
+        "hazard_type_id": "HT-LSYD-001",
+        "hazard_type": "未执行三级配电两级保护",
+        "category": "临时用电",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-LSYD-001",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "5.1.1",
+            "quote": "在施工现场专用变压器的供电的TN-S接零保护系统中，电气设备的金属外壳必须与保护零线连接。",
+            "kg_node": "REG:JGJ 46-2005#5.1.1",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%235.1.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "按TN-S接零保护系统与三级配电两级保护要求整改配电系统，改造方案经审核后实施，整改期间该回路停用。（依据 JGJ 46-2005 5.1.1）",
+            "source": "ME-LSYD-001"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00008",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 10
+      },
+      "quote": "2#楼8层开关箱接多台设备",
+      "extractor": "rules",
+      "hazard_type": "一机一闸一漏未落实",
+      "hazard_type_id": "HT-LSYD-002",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "开关箱",
+      "attrs": {},
+      "evidence": {
+        "record_index": 10
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00008",
+        "hazard_type_id": "HT-LSYD-002",
+        "hazard_type": "一机一闸一漏未落实",
+        "category": "临时用电",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-LSYD-002",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "8.1.3",
+            "quote": "每台用电设备必须有各自专用的开关箱，严禁一个开关箱直接控制两台及两台以上用电设备。",
+            "kg_node": "REG:JGJ 46-2005#8.1.3",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%238.1.3"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "严格执行一机一闸一漏，为每台设备配置专用开关箱，拆除一闸多机接线并复查全部开关箱。（依据 JGJ 46-2005 8.1.3）",
+            "source": "ME-LSYD-002"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00009",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 11
+      },
+      "quote": "1#楼室外配电箱无防雨措施",
+      "extractor": "rules",
+      "hazard_type": "配电箱无门无锁无防雨",
+      "hazard_type_id": "HT-LSYD-003",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "配电箱",
+      "attrs": {},
+      "evidence": {
+        "record_index": 11
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00009",
+        "hazard_type_id": "HT-LSYD-003",
+        "hazard_type": "配电箱无门无锁无防雨",
+        "category": "临时用电",
+        "risk_level": "一般风险",
+        "base_level": "一般风险",
+        "rule_id": "RL-LSYD-003",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "8.3.2",
+            "quote": "配电箱、开关箱箱门应配锁，并应由专人负责。",
+            "kg_node": "REG:JGJ 46-2005#8.3.2",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%238.3.2"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "为配电箱补装箱门与门锁并落实防雨措施，箱前操作通道保持畅通，明确责任人挂牌管理。（依据 JGJ 46-2005 8.3.2）",
+            "source": "ME-LSYD-003"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00010",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 12
+      },
+      "quote": "1#楼基坑周边电缆泡水",
+      "extractor": "rules",
+      "hazard_type": "电缆敷设违规",
+      "hazard_type_id": "HT-LSYD-004",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "",
+      "attrs": {},
+      "evidence": {
+        "record_index": 12
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00010",
+        "hazard_type_id": "HT-LSYD-004",
+        "hazard_type": "电缆敷设违规",
+        "category": "临时用电",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-LSYD-004",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "7.2.3",
+            "quote": "电缆线路应采用埋地或架空敷设，严禁沿地面明设，并应避免机械损伤和介质腐蚀。",
+            "kg_node": "REG:JGJ 46-2005#7.2.3",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%237.2.3"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "破损电缆立即更换，架空或穿管埋地敷设，消除拖地泡水与私拉乱接，全面排查现场线路。（依据 JGJ 46-2005 7.2.3）",
+            "source": "ME-LSYD-004"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00011",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 13
+      },
+      "quote": "1#楼3层配电箱漏电保护器参数不合格",
+      "extractor": "rules",
+      "hazard_type": "漏电保护器失效或参数不合格",
+      "hazard_type_id": "HT-LSYD-005",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "配电箱",
+      "attrs": {},
+      "evidence": {
+        "record_index": 13
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00011",
+        "hazard_type_id": "HT-LSYD-005",
+        "hazard_type": "漏电保护器失效或参数不合格",
+        "category": "临时用电",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-LSYD-005",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "8.2.10",
+            "quote": "开关箱中漏电保护器的额定漏电动作电流不应大于30mA，额定漏电动作时间不应大于0.1s。",
+            "kg_node": "REG:JGJ 46-2005#8.2.10",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%238.2.10"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "更换合格漏电保护器（额定动作电流不大于30mA、动作时间不大于0.1s），检测记录留存并定期试验。（依据 JGJ 46-2005 8.2.10）",
+            "source": "ME-LSYD-005"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00012",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 15
+      },
+      "quote": "3#楼木工棚无证电工接线作业",
+      "extractor": "rules",
+      "hazard_type": "非电工私接电气",
+      "hazard_type_id": "HT-LSYD-006",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "",
+      "attrs": {},
+      "evidence": {
+        "record_index": 15
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00012",
+        "hazard_type_id": "HT-LSYD-006",
+        "hazard_type": "非电工私接电气",
+        "category": "临时用电",
+        "risk_level": "一般风险",
+        "base_level": "一般风险",
+        "rule_id": "RL-LSYD-006",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "3.2.1",
+            "quote": "电工必须经过按国家现行标准考核合格后，持证上岗工作；其他用电人员必须通过相关教育培训和技术交底，考核合格后方可上岗工作。",
+            "kg_node": "REG:JGJ 46-2005#3.2.1",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%233.2.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "立即停止非电工人员接线行为，电气作业必须由持证电工执行，对相关人员进行安全教育并考核。（依据 JGJ 46-2005 3.2.1）",
+            "source": "ME-LSYD-006"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00013",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 16
+      },
+      "quote": "3#楼3层分配电箱回路三级配电两级保护未落实",
+      "extractor": "rules",
+      "hazard_type": "未执行三级配电两级保护",
+      "hazard_type_id": "HT-LSYD-001",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "分配电箱",
+      "attrs": {},
+      "evidence": {
+        "record_index": 16
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00013",
+        "hazard_type_id": "HT-LSYD-001",
+        "hazard_type": "未执行三级配电两级保护",
+        "category": "临时用电",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-LSYD-001",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "5.1.1",
+            "quote": "在施工现场专用变压器的供电的TN-S接零保护系统中，电气设备的金属外壳必须与保护零线连接。",
+            "kg_node": "REG:JGJ 46-2005#5.1.1",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%235.1.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "按TN-S接零保护系统与三级配电两级保护要求整改配电系统，改造方案经审核后实施，整改期间该回路停用。（依据 JGJ 46-2005 5.1.1）",
+            "source": "ME-LSYD-001"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00014",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 17
+      },
+      "quote": "上午1#楼木工棚一机一闸一漏未落实",
+      "extractor": "rules",
+      "hazard_type": "一机一闸一漏未落实",
+      "hazard_type_id": "HT-LSYD-002",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "",
+      "attrs": {},
+      "evidence": {
+        "record_index": 17
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00014",
+        "hazard_type_id": "HT-LSYD-002",
+        "hazard_type": "一机一闸一漏未落实",
+        "category": "临时用电",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-LSYD-002",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "8.1.3",
+            "quote": "每台用电设备必须有各自专用的开关箱，严禁一个开关箱直接控制两台及两台以上用电设备。",
+            "kg_node": "REG:JGJ 46-2005#8.1.3",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%238.1.3"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "严格执行一机一闸一漏，为每台设备配置专用开关箱，拆除一闸多机接线并复查全部开关箱。（依据 JGJ 46-2005 8.1.3）",
+            "source": "ME-LSYD-002"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00015",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 18
+      },
+      "quote": "夜间3#楼3层楼梯间开关箱无锁",
+      "extractor": "rules",
+      "hazard_type": "配电箱无门无锁无防雨",
+      "hazard_type_id": "HT-LSYD-003",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "开关箱",
+      "attrs": {},
+      "evidence": {
+        "record_index": 18
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00015",
+        "hazard_type_id": "HT-LSYD-003",
+        "hazard_type": "配电箱无门无锁无防雨",
+        "category": "临时用电",
+        "risk_level": "一般风险",
+        "base_level": "一般风险",
+        "rule_id": "RL-LSYD-003",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "8.3.2",
+            "quote": "配电箱、开关箱箱门应配锁，并应由专人负责。",
+            "kg_node": "REG:JGJ 46-2005#8.3.2",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%238.3.2"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "为配电箱补装箱门与门锁并落实防雨措施，箱前操作通道保持畅通，明确责任人挂牌管理。（依据 JGJ 46-2005 8.3.2）",
+            "source": "ME-LSYD-003"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00016",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 20
+      },
+      "quote": "下午1#楼生活区私拉乱接电线",
+      "extractor": "rules",
+      "hazard_type": "电缆敷设违规",
+      "hazard_type_id": "HT-LSYD-004",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "",
+      "attrs": {},
+      "evidence": {
+        "record_index": 20
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00016",
+        "hazard_type_id": "HT-LSYD-004",
+        "hazard_type": "电缆敷设违规",
+        "category": "临时用电",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-LSYD-004",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "7.2.3",
+            "quote": "电缆线路应采用埋地或架空敷设，严禁沿地面明设，并应避免机械损伤和介质腐蚀。",
+            "kg_node": "REG:JGJ 46-2005#7.2.3",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%237.2.3"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "破损电缆立即更换，架空或穿管埋地敷设，消除拖地泡水与私拉乱接，全面排查现场线路。（依据 JGJ 46-2005 7.2.3）",
+            "source": "ME-LSYD-004"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00017",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 21
+      },
+      "quote": "上午2#楼搅拌机专用箱漏电保护器未检测",
+      "extractor": "rules",
+      "hazard_type": "漏电保护器失效或参数不合格",
+      "hazard_type_id": "HT-LSYD-005",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "",
+      "attrs": {},
+      "evidence": {
+        "record_index": 21
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00017",
+        "hazard_type_id": "HT-LSYD-005",
+        "hazard_type": "漏电保护器失效或参数不合格",
+        "category": "临时用电",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-LSYD-005",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "8.2.10",
+            "quote": "开关箱中漏电保护器的额定漏电动作电流不应大于30mA，额定漏电动作时间不应大于0.1s。",
+            "kg_node": "REG:JGJ 46-2005#8.2.10",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%238.2.10"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "更换合格漏电保护器（额定动作电流不大于30mA、动作时间不大于0.1s），检测记录留存并定期试验。（依据 JGJ 46-2005 8.2.10）",
+            "source": "ME-LSYD-005"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00018",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 22
+      },
+      "quote": "今晨2#楼现场发现非电工操作配电箱",
+      "extractor": "rules",
+      "hazard_type": "非电工私接电气",
+      "hazard_type_id": "HT-LSYD-006",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "配电箱",
+      "attrs": {},
+      "evidence": {
+        "record_index": 22
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00018",
+        "hazard_type_id": "HT-LSYD-006",
+        "hazard_type": "非电工私接电气",
+        "category": "临时用电",
+        "risk_level": "一般风险",
+        "base_level": "一般风险",
+        "rule_id": "RL-LSYD-006",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "3.2.1",
+            "quote": "电工必须经过按国家现行标准考核合格后，持证上岗工作；其他用电人员必须通过相关教育培训和技术交底，考核合格后方可上岗工作。",
+            "kg_node": "REG:JGJ 46-2005#3.2.1",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%233.2.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "立即停止非电工人员接线行为，电气作业必须由持证电工执行，对相关人员进行安全教育并考核。（依据 JGJ 46-2005 3.2.1）",
+            "source": "ME-LSYD-006"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00019",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 23
+      },
+      "quote": "今晨2#楼总配电箱未落实两级保护",
+      "extractor": "rules",
+      "hazard_type": "未执行三级配电两级保护",
+      "hazard_type_id": "HT-LSYD-001",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "总配电箱",
+      "attrs": {},
+      "evidence": {
+        "record_index": 23
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00019",
+        "hazard_type_id": "HT-LSYD-001",
+        "hazard_type": "未执行三级配电两级保护",
+        "category": "临时用电",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-LSYD-001",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "5.1.1",
+            "quote": "在施工现场专用变压器的供电的TN-S接零保护系统中，电气设备的金属外壳必须与保护零线连接。",
+            "kg_node": "REG:JGJ 46-2005#5.1.1",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%235.1.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "按TN-S接零保护系统与三级配电两级保护要求整改配电系统，改造方案经审核后实施，整改期间该回路停用。（依据 JGJ 46-2005 5.1.1）",
+            "source": "ME-LSYD-001"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00020",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 25
+      },
+      "quote": "1#楼15层开关箱一闸多机带3台设备",
+      "extractor": "rules",
+      "hazard_type": "一机一闸一漏未落实",
+      "hazard_type_id": "HT-LSYD-002",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "开关箱",
+      "attrs": {},
+      "evidence": {
+        "record_index": 25
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00020",
+        "hazard_type_id": "HT-LSYD-002",
+        "hazard_type": "一机一闸一漏未落实",
+        "category": "临时用电",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-LSYD-002",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "8.1.3",
+            "quote": "每台用电设备必须有各自专用的开关箱，严禁一个开关箱直接控制两台及两台以上用电设备。",
+            "kg_node": "REG:JGJ 46-2005#8.1.3",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%238.1.3"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "严格执行一机一闸一漏，为每台设备配置专用开关箱，拆除一闸多机接线并复查全部开关箱。（依据 JGJ 46-2005 8.1.3）",
+            "source": "ME-LSYD-002"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00021",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 26
+      },
+      "quote": "2#楼3层4台配电箱无门无锁",
+      "extractor": "rules",
+      "hazard_type": "配电箱无门无锁无防雨",
+      "hazard_type_id": "HT-LSYD-003",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "配电箱",
+      "attrs": {},
+      "evidence": {
+        "record_index": 26
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00021",
+        "hazard_type_id": "HT-LSYD-003",
+        "hazard_type": "配电箱无门无锁无防雨",
+        "category": "临时用电",
+        "risk_level": "一般风险",
+        "base_level": "一般风险",
+        "rule_id": "RL-LSYD-003",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "8.3.2",
+            "quote": "配电箱、开关箱箱门应配锁，并应由专人负责。",
+            "kg_node": "REG:JGJ 46-2005#8.3.2",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%238.3.2"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "为配电箱补装箱门与门锁并落实防雨措施，箱前操作通道保持畅通，明确责任人挂牌管理。（依据 JGJ 46-2005 8.3.2）",
+            "source": "ME-LSYD-003"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00022",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 27
+      },
+      "quote": "2#楼5层主干电缆拖地敷设约4米",
+      "extractor": "rules",
+      "hazard_type": "电缆敷设违规",
+      "hazard_type_id": "HT-LSYD-004",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "主干电缆",
+      "attrs": {},
+      "evidence": {
+        "record_index": 27
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00022",
+        "hazard_type_id": "HT-LSYD-004",
+        "hazard_type": "电缆敷设违规",
+        "category": "临时用电",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-LSYD-004",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "7.2.3",
+            "quote": "电缆线路应采用埋地或架空敷设，严禁沿地面明设，并应避免机械损伤和介质腐蚀。",
+            "kg_node": "REG:JGJ 46-2005#7.2.3",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%237.2.3"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "破损电缆立即更换，架空或穿管埋地敷设，消除拖地泡水与私拉乱接，全面排查现场线路。（依据 JGJ 46-2005 7.2.3）",
+            "source": "ME-LSYD-004"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00023",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 28
+      },
+      "quote": "3#楼18层4台开关箱漏电保护器不动作",
+      "extractor": "rules",
+      "hazard_type": "漏电保护器失效或参数不合格",
+      "hazard_type_id": "HT-LSYD-005",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "开关箱",
+      "attrs": {},
+      "evidence": {
+        "record_index": 28
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00023",
+        "hazard_type_id": "HT-LSYD-005",
+        "hazard_type": "漏电保护器失效或参数不合格",
+        "category": "临时用电",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-LSYD-005",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "8.2.10",
+            "quote": "开关箱中漏电保护器的额定漏电动作电流不应大于30mA，额定漏电动作时间不应大于0.1s。",
+            "kg_node": "REG:JGJ 46-2005#8.2.10",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%238.2.10"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "更换合格漏电保护器（额定动作电流不大于30mA、动作时间不大于0.1s），检测记录留存并定期试验。（依据 JGJ 46-2005 8.2.10）",
+            "source": "ME-LSYD-005"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00024",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 30
+      },
+      "quote": "1#楼8层2名非电工私接临时线路",
+      "extractor": "rules",
+      "hazard_type": "非电工私接电气",
+      "hazard_type_id": "HT-LSYD-006",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "",
+      "attrs": {},
+      "evidence": {
+        "record_index": 30
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00024",
+        "hazard_type_id": "HT-LSYD-006",
+        "hazard_type": "非电工私接电气",
+        "category": "临时用电",
+        "risk_level": "一般风险",
+        "base_level": "一般风险",
+        "rule_id": "RL-LSYD-006",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "3.2.1",
+            "quote": "电工必须经过按国家现行标准考核合格后，持证上岗工作；其他用电人员必须通过相关教育培训和技术交底，考核合格后方可上岗工作。",
+            "kg_node": "REG:JGJ 46-2005#3.2.1",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%233.2.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "立即停止非电工人员接线行为，电气作业必须由持证电工执行，对相关人员进行安全教育并考核。（依据 JGJ 46-2005 3.2.1）",
+            "source": "ME-LSYD-006"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00025",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 31
+      },
+      "quote": "3#楼生活区用电未执行三级配电要求",
+      "extractor": "rules",
+      "hazard_type": "未执行三级配电两级保护",
+      "hazard_type_id": "HT-LSYD-001",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "",
+      "attrs": {},
+      "evidence": {
+        "record_index": 31
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00025",
+        "hazard_type_id": "HT-LSYD-001",
+        "hazard_type": "未执行三级配电两级保护",
+        "category": "临时用电",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-LSYD-001",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "5.1.1",
+            "quote": "在施工现场专用变压器的供电的TN-S接零保护系统中，电气设备的金属外壳必须与保护零线连接。",
+            "kg_node": "REG:JGJ 46-2005#5.1.1",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%235.1.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "按TN-S接零保护系统与三级配电两级保护要求整改配电系统，改造方案经审核后实施，整改期间该回路停用。（依据 JGJ 46-2005 5.1.1）",
+            "source": "ME-LSYD-001"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00026",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 32
+      },
+      "quote": "2#楼一个开关箱控制2台电焊机",
+      "extractor": "rules",
+      "hazard_type": "一机一闸一漏未落实",
+      "hazard_type_id": "HT-LSYD-002",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "开关箱",
+      "attrs": {},
+      "evidence": {
+        "record_index": 32
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00026",
+        "hazard_type_id": "HT-LSYD-002",
+        "hazard_type": "一机一闸一漏未落实",
+        "category": "临时用电",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-LSYD-002",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "8.1.3",
+            "quote": "每台用电设备必须有各自专用的开关箱，严禁一个开关箱直接控制两台及两台以上用电设备。",
+            "kg_node": "REG:JGJ 46-2005#8.1.3",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%238.1.3"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "严格执行一机一闸一漏，为每台设备配置专用开关箱，拆除一闸多机接线并复查全部开关箱。（依据 JGJ 46-2005 8.1.3）",
+            "source": "ME-LSYD-002"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00027",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 33
+      },
+      "quote": "1#楼钢筋棚分配电箱无锁",
+      "extractor": "rules",
+      "hazard_type": "配电箱无门无锁无防雨",
+      "hazard_type_id": "HT-LSYD-003",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "分配电箱",
+      "attrs": {},
+      "evidence": {
+        "record_index": 33
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00027",
+        "hazard_type_id": "HT-LSYD-003",
+        "hazard_type": "配电箱无门无锁无防雨",
+        "category": "临时用电",
+        "risk_level": "一般风险",
+        "base_level": "一般风险",
+        "rule_id": "RL-LSYD-003",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "8.3.2",
+            "quote": "配电箱、开关箱箱门应配锁，并应由专人负责。",
+            "kg_node": "REG:JGJ 46-2005#8.3.2",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%238.3.2"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "为配电箱补装箱门与门锁并落实防雨措施，箱前操作通道保持畅通，明确责任人挂牌管理。（依据 JGJ 46-2005 8.3.2）",
+            "source": "ME-LSYD-003"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00028",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 35
+      },
+      "quote": "1#楼3层楼层电缆老化",
+      "extractor": "rules",
+      "hazard_type": "电缆敷设违规",
+      "hazard_type_id": "HT-LSYD-004",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "",
+      "attrs": {},
+      "evidence": {
+        "record_index": 35
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00028",
+        "hazard_type_id": "HT-LSYD-004",
+        "hazard_type": "电缆敷设违规",
+        "category": "临时用电",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-LSYD-004",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "7.2.3",
+            "quote": "电缆线路应采用埋地或架空敷设，严禁沿地面明设，并应避免机械损伤和介质腐蚀。",
+            "kg_node": "REG:JGJ 46-2005#7.2.3",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%237.2.3"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "破损电缆立即更换，架空或穿管埋地敷设，消除拖地泡水与私拉乱接，全面排查现场线路。（依据 JGJ 46-2005 7.2.3）",
+            "source": "ME-LSYD-004"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00029",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 36
+      },
+      "quote": "1#楼3层配电箱漏电保护器缺失",
+      "extractor": "rules",
+      "hazard_type": "漏电保护器失效或参数不合格",
+      "hazard_type_id": "HT-LSYD-005",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "配电箱",
+      "attrs": {},
+      "evidence": {
+        "record_index": 36
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00029",
+        "hazard_type_id": "HT-LSYD-005",
+        "hazard_type": "漏电保护器失效或参数不合格",
+        "category": "临时用电",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-LSYD-005",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "8.2.10",
+            "quote": "开关箱中漏电保护器的额定漏电动作电流不应大于30mA，额定漏电动作时间不应大于0.1s。",
+            "kg_node": "REG:JGJ 46-2005#8.2.10",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%238.2.10"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "更换合格漏电保护器（额定动作电流不大于30mA、动作时间不大于0.1s），检测记录留存并定期试验。（依据 JGJ 46-2005 8.2.10）",
+            "source": "ME-LSYD-005"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00030",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 37
+      },
+      "quote": "3#楼非电工私接钢筋棚配电箱",
+      "extractor": "rules",
+      "hazard_type": "非电工私接电气",
+      "hazard_type_id": "HT-LSYD-006",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "配电箱",
+      "attrs": {},
+      "evidence": {
+        "record_index": 37
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00030",
+        "hazard_type_id": "HT-LSYD-006",
+        "hazard_type": "非电工私接电气",
+        "category": "临时用电",
+        "risk_level": "一般风险",
+        "base_level": "一般风险",
+        "rule_id": "RL-LSYD-006",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "3.2.1",
+            "quote": "电工必须经过按国家现行标准考核合格后，持证上岗工作；其他用电人员必须通过相关教育培训和技术交底，考核合格后方可上岗工作。",
+            "kg_node": "REG:JGJ 46-2005#3.2.1",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%233.2.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "立即停止非电工人员接线行为，电气作业必须由持证电工执行，对相关人员进行安全教育并考核。（依据 JGJ 46-2005 3.2.1）",
+            "source": "ME-LSYD-006"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00031",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 38
+      },
+      "quote": "3#楼2台设备回路未落实两级保护",
+      "extractor": "rules",
+      "hazard_type": "未执行三级配电两级保护",
+      "hazard_type_id": "HT-LSYD-001",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "",
+      "attrs": {},
+      "evidence": {
+        "record_index": 38
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00031",
+        "hazard_type_id": "HT-LSYD-001",
+        "hazard_type": "未执行三级配电两级保护",
+        "category": "临时用电",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-LSYD-001",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "5.1.1",
+            "quote": "在施工现场专用变压器的供电的TN-S接零保护系统中，电气设备的金属外壳必须与保护零线连接。",
+            "kg_node": "REG:JGJ 46-2005#5.1.1",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%235.1.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "按TN-S接零保护系统与三级配电两级保护要求整改配电系统，改造方案经审核后实施，整改期间该回路停用。（依据 JGJ 46-2005 5.1.1）",
+            "source": "ME-LSYD-001"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00032",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 40
+      },
+      "quote": "上午1#楼18层配电箱一闸多机",
+      "extractor": "rules",
+      "hazard_type": "一机一闸一漏未落实",
+      "hazard_type_id": "HT-LSYD-002",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "配电箱",
+      "attrs": {},
+      "evidence": {
+        "record_index": 40
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00032",
+        "hazard_type_id": "HT-LSYD-002",
+        "hazard_type": "一机一闸一漏未落实",
+        "category": "临时用电",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-LSYD-002",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "8.1.3",
+            "quote": "每台用电设备必须有各自专用的开关箱，严禁一个开关箱直接控制两台及两台以上用电设备。",
+            "kg_node": "REG:JGJ 46-2005#8.1.3",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%238.1.3"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "严格执行一机一闸一漏，为每台设备配置专用开关箱，拆除一闸多机接线并复查全部开关箱。（依据 JGJ 46-2005 8.1.3）",
+            "source": "ME-LSYD-002"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00033",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 41
+      },
+      "quote": "上午2#楼开关箱无门无锁",
+      "extractor": "rules",
+      "hazard_type": "配电箱无门无锁无防雨",
+      "hazard_type_id": "HT-LSYD-003",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "开关箱",
+      "attrs": {},
+      "evidence": {
+        "record_index": 41
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00033",
+        "hazard_type_id": "HT-LSYD-003",
+        "hazard_type": "配电箱无门无锁无防雨",
+        "category": "临时用电",
+        "risk_level": "一般风险",
+        "base_level": "一般风险",
+        "rule_id": "RL-LSYD-003",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "8.3.2",
+            "quote": "配电箱、开关箱箱门应配锁，并应由专人负责。",
+            "kg_node": "REG:JGJ 46-2005#8.3.2",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%238.3.2"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "为配电箱补装箱门与门锁并落实防雨措施，箱前操作通道保持畅通，明确责任人挂牌管理。（依据 JGJ 46-2005 8.3.2）",
+            "source": "ME-LSYD-003"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00034",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 42
+      },
+      "quote": "下午1#楼宿舍区电线乱拉乱接",
+      "extractor": "rules",
+      "hazard_type": "电缆敷设违规",
+      "hazard_type_id": "HT-LSYD-004",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "",
+      "attrs": {},
+      "evidence": {
+        "record_index": 42
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00034",
+        "hazard_type_id": "HT-LSYD-004",
+        "hazard_type": "电缆敷设违规",
+        "category": "临时用电",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-LSYD-004",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "7.2.3",
+            "quote": "电缆线路应采用埋地或架空敷设，严禁沿地面明设，并应避免机械损伤和介质腐蚀。",
+            "kg_node": "REG:JGJ 46-2005#7.2.3",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%237.2.3"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "破损电缆立即更换，架空或穿管埋地敷设，消除拖地泡水与私拉乱接，全面排查现场线路。（依据 JGJ 46-2005 7.2.3）",
+            "source": "ME-LSYD-004"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00035",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 43
+      },
+      "quote": "上午1#楼木工棚开关箱漏电保护器未安装",
+      "extractor": "rules",
+      "hazard_type": "漏电保护器失效或参数不合格",
+      "hazard_type_id": "HT-LSYD-005",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "开关箱",
+      "attrs": {},
+      "evidence": {
+        "record_index": 43
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00035",
+        "hazard_type_id": "HT-LSYD-005",
+        "hazard_type": "漏电保护器失效或参数不合格",
+        "category": "临时用电",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-LSYD-005",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "8.2.10",
+            "quote": "开关箱中漏电保护器的额定漏电动作电流不应大于30mA，额定漏电动作时间不应大于0.1s。",
+            "kg_node": "REG:JGJ 46-2005#8.2.10",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%238.2.10"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "更换合格漏电保护器（额定动作电流不大于30mA、动作时间不大于0.1s），检测记录留存并定期试验。（依据 JGJ 46-2005 8.2.10）",
+            "source": "ME-LSYD-005"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00036",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 45
+      },
+      "quote": "夜间2#楼无证人员操作用电设备",
+      "extractor": "rules",
+      "hazard_type": "非电工私接电气",
+      "hazard_type_id": "HT-LSYD-006",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "用电设备",
+      "attrs": {},
+      "evidence": {
+        "record_index": 45
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00036",
+        "hazard_type_id": "HT-LSYD-006",
+        "hazard_type": "非电工私接电气",
+        "category": "临时用电",
+        "risk_level": "一般风险",
+        "base_level": "一般风险",
+        "rule_id": "RL-LSYD-006",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "3.2.1",
+            "quote": "电工必须经过按国家现行标准考核合格后，持证上岗工作；其他用电人员必须通过相关教育培训和技术交底，考核合格后方可上岗工作。",
+            "kg_node": "REG:JGJ 46-2005#3.2.1",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%233.2.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "立即停止非电工人员接线行为，电气作业必须由持证电工执行，对相关人员进行安全教育并考核。（依据 JGJ 46-2005 3.2.1）",
+            "source": "ME-LSYD-006"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00037",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 46
+      },
+      "quote": "1#楼现场临时用电未落实三级配电",
+      "extractor": "rules",
+      "hazard_type": "未执行三级配电两级保护",
+      "hazard_type_id": "HT-LSYD-001",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "",
+      "attrs": {},
+      "evidence": {
+        "record_index": 46
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00037",
+        "hazard_type_id": "HT-LSYD-001",
+        "hazard_type": "未执行三级配电两级保护",
+        "category": "临时用电",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-LSYD-001",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "5.1.1",
+            "quote": "在施工现场专用变压器的供电的TN-S接零保护系统中，电气设备的金属外壳必须与保护零线连接。",
+            "kg_node": "REG:JGJ 46-2005#5.1.1",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%235.1.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "按TN-S接零保护系统与三级配电两级保护要求整改配电系统，改造方案经审核后实施，整改期间该回路停用。（依据 JGJ 46-2005 5.1.1）",
+            "source": "ME-LSYD-001"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00038",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 47
+      },
+      "quote": "1#楼钢筋加工棚开关箱一闸多机",
+      "extractor": "rules",
+      "hazard_type": "一机一闸一漏未落实",
+      "hazard_type_id": "HT-LSYD-002",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "开关箱",
+      "attrs": {},
+      "evidence": {
+        "record_index": 47
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00038",
+        "hazard_type_id": "HT-LSYD-002",
+        "hazard_type": "一机一闸一漏未落实",
+        "category": "临时用电",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-LSYD-002",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "8.1.3",
+            "quote": "每台用电设备必须有各自专用的开关箱，严禁一个开关箱直接控制两台及两台以上用电设备。",
+            "kg_node": "REG:JGJ 46-2005#8.1.3",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%238.1.3"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "严格执行一机一闸一漏，为每台设备配置专用开关箱，拆除一闸多机接线并复查全部开关箱。（依据 JGJ 46-2005 8.1.3）",
+            "source": "ME-LSYD-002"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00039",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 48
+      },
+      "quote": "3#楼18层配电箱无门无锁",
+      "extractor": "rules",
+      "hazard_type": "配电箱无门无锁无防雨",
+      "hazard_type_id": "HT-LSYD-003",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "配电箱",
+      "attrs": {},
+      "evidence": {
+        "record_index": 48
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00039",
+        "hazard_type_id": "HT-LSYD-003",
+        "hazard_type": "配电箱无门无锁无防雨",
+        "category": "临时用电",
+        "risk_level": "一般风险",
+        "base_level": "一般风险",
+        "rule_id": "RL-LSYD-003",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "8.3.2",
+            "quote": "配电箱、开关箱箱门应配锁，并应由专人负责。",
+            "kg_node": "REG:JGJ 46-2005#8.3.2",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%238.3.2"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "为配电箱补装箱门与门锁并落实防雨措施，箱前操作通道保持畅通，明确责任人挂牌管理。（依据 JGJ 46-2005 8.3.2）",
+            "source": "ME-LSYD-003"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00040",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 50
+      },
+      "quote": "3#楼3层主干电缆拖地敷设",
+      "extractor": "rules",
+      "hazard_type": "电缆敷设违规",
+      "hazard_type_id": "HT-LSYD-004",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "主干电缆",
+      "attrs": {},
+      "evidence": {
+        "record_index": 50
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00040",
+        "hazard_type_id": "HT-LSYD-004",
+        "hazard_type": "电缆敷设违规",
+        "category": "临时用电",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-LSYD-004",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "7.2.3",
+            "quote": "电缆线路应采用埋地或架空敷设，严禁沿地面明设，并应避免机械损伤和介质腐蚀。",
+            "kg_node": "REG:JGJ 46-2005#7.2.3",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%237.2.3"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "破损电缆立即更换，架空或穿管埋地敷设，消除拖地泡水与私拉乱接，全面排查现场线路。（依据 JGJ 46-2005 7.2.3）",
+            "source": "ME-LSYD-004"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00041",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 51
+      },
+      "quote": "2#楼钢筋棚开关箱漏电保护器失效",
+      "extractor": "rules",
+      "hazard_type": "漏电保护器失效或参数不合格",
+      "hazard_type_id": "HT-LSYD-005",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "开关箱",
+      "attrs": {},
+      "evidence": {
+        "record_index": 51
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00041",
+        "hazard_type_id": "HT-LSYD-005",
+        "hazard_type": "漏电保护器失效或参数不合格",
+        "category": "临时用电",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-LSYD-005",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "8.2.10",
+            "quote": "开关箱中漏电保护器的额定漏电动作电流不应大于30mA，额定漏电动作时间不应大于0.1s。",
+            "kg_node": "REG:JGJ 46-2005#8.2.10",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%238.2.10"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "更换合格漏电保护器（额定动作电流不大于30mA、动作时间不大于0.1s），检测记录留存并定期试验。（依据 JGJ 46-2005 8.2.10）",
+            "source": "ME-LSYD-005"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00042",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 52
+      },
+      "quote": "2#楼8层发现非电工私接照明线路",
+      "extractor": "rules",
+      "hazard_type": "非电工私接电气",
+      "hazard_type_id": "HT-LSYD-006",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "",
+      "attrs": {},
+      "evidence": {
+        "record_index": 52
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00042",
+        "hazard_type_id": "HT-LSYD-006",
+        "hazard_type": "非电工私接电气",
+        "category": "临时用电",
+        "risk_level": "一般风险",
+        "base_level": "一般风险",
+        "rule_id": "RL-LSYD-006",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "3.2.1",
+            "quote": "电工必须经过按国家现行标准考核合格后，持证上岗工作；其他用电人员必须通过相关教育培训和技术交底，考核合格后方可上岗工作。",
+            "kg_node": "REG:JGJ 46-2005#3.2.1",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%233.2.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "立即停止非电工人员接线行为，电气作业必须由持证电工执行，对相关人员进行安全教育并考核。（依据 JGJ 46-2005 3.2.1）",
+            "source": "ME-LSYD-006"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00043",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 53
+      },
+      "quote": "1#楼配电系统未采用TN-S接零保护",
+      "extractor": "rules",
+      "hazard_type": "未执行三级配电两级保护",
+      "hazard_type_id": "HT-LSYD-001",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "",
+      "attrs": {},
+      "evidence": {
+        "record_index": 53
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00043",
+        "hazard_type_id": "HT-LSYD-001",
+        "hazard_type": "未执行三级配电两级保护",
+        "category": "临时用电",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-LSYD-001",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "5.1.1",
+            "quote": "在施工现场专用变压器的供电的TN-S接零保护系统中，电气设备的金属外壳必须与保护零线连接。",
+            "kg_node": "REG:JGJ 46-2005#5.1.1",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%235.1.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "按TN-S接零保护系统与三级配电两级保护要求整改配电系统，改造方案经审核后实施，整改期间该回路停用。（依据 JGJ 46-2005 5.1.1）",
+            "source": "ME-LSYD-001"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00044",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 55
+      },
+      "quote": "2#楼3层开关箱接多台设备",
+      "extractor": "rules",
+      "hazard_type": "一机一闸一漏未落实",
+      "hazard_type_id": "HT-LSYD-002",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "开关箱",
+      "attrs": {},
+      "evidence": {
+        "record_index": 55
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00044",
+        "hazard_type_id": "HT-LSYD-002",
+        "hazard_type": "一机一闸一漏未落实",
+        "category": "临时用电",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-LSYD-002",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "8.1.3",
+            "quote": "每台用电设备必须有各自专用的开关箱，严禁一个开关箱直接控制两台及两台以上用电设备。",
+            "kg_node": "REG:JGJ 46-2005#8.1.3",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%238.1.3"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "严格执行一机一闸一漏，为每台设备配置专用开关箱，拆除一闸多机接线并复查全部开关箱。（依据 JGJ 46-2005 8.1.3）",
+            "source": "ME-LSYD-002"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00045",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 56
+      },
+      "quote": "3#楼室外配电箱无防雨措施",
+      "extractor": "rules",
+      "hazard_type": "配电箱无门无锁无防雨",
+      "hazard_type_id": "HT-LSYD-003",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "配电箱",
+      "attrs": {},
+      "evidence": {
+        "record_index": 56
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00045",
+        "hazard_type_id": "HT-LSYD-003",
+        "hazard_type": "配电箱无门无锁无防雨",
+        "category": "临时用电",
+        "risk_level": "一般风险",
+        "base_level": "一般风险",
+        "rule_id": "RL-LSYD-003",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "8.3.2",
+            "quote": "配电箱、开关箱箱门应配锁，并应由专人负责。",
+            "kg_node": "REG:JGJ 46-2005#8.3.2",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%238.3.2"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "为配电箱补装箱门与门锁并落实防雨措施，箱前操作通道保持畅通，明确责任人挂牌管理。（依据 JGJ 46-2005 8.3.2）",
+            "source": "ME-LSYD-003"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00046",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 57
+      },
+      "quote": "1#楼基坑周边电缆泡水",
+      "extractor": "rules",
+      "hazard_type": "电缆敷设违规",
+      "hazard_type_id": "HT-LSYD-004",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "",
+      "attrs": {},
+      "evidence": {
+        "record_index": 57
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00046",
+        "hazard_type_id": "HT-LSYD-004",
+        "hazard_type": "电缆敷设违规",
+        "category": "临时用电",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-LSYD-004",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "7.2.3",
+            "quote": "电缆线路应采用埋地或架空敷设，严禁沿地面明设，并应避免机械损伤和介质腐蚀。",
+            "kg_node": "REG:JGJ 46-2005#7.2.3",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%237.2.3"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "破损电缆立即更换，架空或穿管埋地敷设，消除拖地泡水与私拉乱接，全面排查现场线路。（依据 JGJ 46-2005 7.2.3）",
+            "source": "ME-LSYD-004"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00047",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 58
+      },
+      "quote": "3#楼8层配电箱漏电保护器参数不合格",
+      "extractor": "rules",
+      "hazard_type": "漏电保护器失效或参数不合格",
+      "hazard_type_id": "HT-LSYD-005",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "配电箱",
+      "attrs": {},
+      "evidence": {
+        "record_index": 58
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00047",
+        "hazard_type_id": "HT-LSYD-005",
+        "hazard_type": "漏电保护器失效或参数不合格",
+        "category": "临时用电",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-LSYD-005",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "8.2.10",
+            "quote": "开关箱中漏电保护器的额定漏电动作电流不应大于30mA，额定漏电动作时间不应大于0.1s。",
+            "kg_node": "REG:JGJ 46-2005#8.2.10",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%238.2.10"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "更换合格漏电保护器（额定动作电流不大于30mA、动作时间不大于0.1s），检测记录留存并定期试验。（依据 JGJ 46-2005 8.2.10）",
+            "source": "ME-LSYD-005"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00048",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 60
+      },
+      "quote": "2#楼木工棚无证电工接线作业",
+      "extractor": "rules",
+      "hazard_type": "非电工私接电气",
+      "hazard_type_id": "HT-LSYD-006",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "",
+      "attrs": {},
+      "evidence": {
+        "record_index": 60
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00048",
+        "hazard_type_id": "HT-LSYD-006",
+        "hazard_type": "非电工私接电气",
+        "category": "临时用电",
+        "risk_level": "一般风险",
+        "base_level": "一般风险",
+        "rule_id": "RL-LSYD-006",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "3.2.1",
+            "quote": "电工必须经过按国家现行标准考核合格后，持证上岗工作；其他用电人员必须通过相关教育培训和技术交底，考核合格后方可上岗工作。",
+            "kg_node": "REG:JGJ 46-2005#3.2.1",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%233.2.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "立即停止非电工人员接线行为，电气作业必须由持证电工执行，对相关人员进行安全教育并考核。（依据 JGJ 46-2005 3.2.1）",
+            "source": "ME-LSYD-006"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00049",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 61
+      },
+      "quote": "3#楼15层分配电箱回路三级配电两级保护未落实",
+      "extractor": "rules",
+      "hazard_type": "未执行三级配电两级保护",
+      "hazard_type_id": "HT-LSYD-001",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "分配电箱",
+      "attrs": {},
+      "evidence": {
+        "record_index": 61
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00049",
+        "hazard_type_id": "HT-LSYD-001",
+        "hazard_type": "未执行三级配电两级保护",
+        "category": "临时用电",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-LSYD-001",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "5.1.1",
+            "quote": "在施工现场专用变压器的供电的TN-S接零保护系统中，电气设备的金属外壳必须与保护零线连接。",
+            "kg_node": "REG:JGJ 46-2005#5.1.1",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%235.1.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "按TN-S接零保护系统与三级配电两级保护要求整改配电系统，改造方案经审核后实施，整改期间该回路停用。（依据 JGJ 46-2005 5.1.1）",
+            "source": "ME-LSYD-001"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00050",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 62
+      },
+      "quote": "下午3#楼木工棚一机一闸一漏未落实",
+      "extractor": "rules",
+      "hazard_type": "一机一闸一漏未落实",
+      "hazard_type_id": "HT-LSYD-002",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "",
+      "attrs": {},
+      "evidence": {
+        "record_index": 62
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00050",
+        "hazard_type_id": "HT-LSYD-002",
+        "hazard_type": "一机一闸一漏未落实",
+        "category": "临时用电",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-LSYD-002",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "8.1.3",
+            "quote": "每台用电设备必须有各自专用的开关箱，严禁一个开关箱直接控制两台及两台以上用电设备。",
+            "kg_node": "REG:JGJ 46-2005#8.1.3",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%238.1.3"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "严格执行一机一闸一漏，为每台设备配置专用开关箱，拆除一闸多机接线并复查全部开关箱。（依据 JGJ 46-2005 8.1.3）",
+            "source": "ME-LSYD-002"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00051",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 63
+      },
+      "quote": "今晨3#楼12层楼梯间开关箱无锁",
+      "extractor": "rules",
+      "hazard_type": "配电箱无门无锁无防雨",
+      "hazard_type_id": "HT-LSYD-003",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "开关箱",
+      "attrs": {},
+      "evidence": {
+        "record_index": 63
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00051",
+        "hazard_type_id": "HT-LSYD-003",
+        "hazard_type": "配电箱无门无锁无防雨",
+        "category": "临时用电",
+        "risk_level": "一般风险",
+        "base_level": "一般风险",
+        "rule_id": "RL-LSYD-003",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "8.3.2",
+            "quote": "配电箱、开关箱箱门应配锁，并应由专人负责。",
+            "kg_node": "REG:JGJ 46-2005#8.3.2",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%238.3.2"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "为配电箱补装箱门与门锁并落实防雨措施，箱前操作通道保持畅通，明确责任人挂牌管理。（依据 JGJ 46-2005 8.3.2）",
+            "source": "ME-LSYD-003"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00052",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 65
+      },
+      "quote": "下午2#楼生活区私拉乱接电线",
+      "extractor": "rules",
+      "hazard_type": "电缆敷设违规",
+      "hazard_type_id": "HT-LSYD-004",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "",
+      "attrs": {},
+      "evidence": {
+        "record_index": 65
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00052",
+        "hazard_type_id": "HT-LSYD-004",
+        "hazard_type": "电缆敷设违规",
+        "category": "临时用电",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-LSYD-004",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "7.2.3",
+            "quote": "电缆线路应采用埋地或架空敷设，严禁沿地面明设，并应避免机械损伤和介质腐蚀。",
+            "kg_node": "REG:JGJ 46-2005#7.2.3",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%237.2.3"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "破损电缆立即更换，架空或穿管埋地敷设，消除拖地泡水与私拉乱接，全面排查现场线路。（依据 JGJ 46-2005 7.2.3）",
+            "source": "ME-LSYD-004"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00053",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 66
+      },
+      "quote": "下午3#楼搅拌机专用箱漏电保护器未检测",
+      "extractor": "rules",
+      "hazard_type": "漏电保护器失效或参数不合格",
+      "hazard_type_id": "HT-LSYD-005",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "",
+      "attrs": {},
+      "evidence": {
+        "record_index": 66
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00053",
+        "hazard_type_id": "HT-LSYD-005",
+        "hazard_type": "漏电保护器失效或参数不合格",
+        "category": "临时用电",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-LSYD-005",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "8.2.10",
+            "quote": "开关箱中漏电保护器的额定漏电动作电流不应大于30mA，额定漏电动作时间不应大于0.1s。",
+            "kg_node": "REG:JGJ 46-2005#8.2.10",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%238.2.10"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "更换合格漏电保护器（额定动作电流不大于30mA、动作时间不大于0.1s），检测记录留存并定期试验。（依据 JGJ 46-2005 8.2.10）",
+            "source": "ME-LSYD-005"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00054",
+      "source": {
+        "file": "data/samples/text/demo_lsyd.txt",
+        "record_index": 67
+      },
+      "quote": "下午3#楼现场发现非电工操作配电箱",
+      "extractor": "rules",
+      "hazard_type": "非电工私接电气",
+      "hazard_type_id": "HT-LSYD-006",
+      "category": "临时用电",
+      "work_type": "临时用电",
+      "site_object": "配电箱",
+      "attrs": {},
+      "evidence": {
+        "record_index": 67
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00054",
+        "hazard_type_id": "HT-LSYD-006",
+        "hazard_type": "非电工私接电气",
+        "category": "临时用电",
+        "risk_level": "一般风险",
+        "base_level": "一般风险",
+        "rule_id": "RL-LSYD-006",
+        "clause_refs": [
+          {
+            "standard": "JGJ 46-2005",
+            "clause": "3.2.1",
+            "quote": "电工必须经过按国家现行标准考核合格后，持证上岗工作；其他用电人员必须通过相关教育培训和技术交底，考核合格后方可上岗工作。",
+            "kg_node": "REG:JGJ 46-2005#3.2.1",
+            "anchor": "kg.html#REG%3AJGJ%2046-2005%233.2.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "立即停止非电工人员接线行为，电气作业必须由持证电工执行，对相关人员进行安全教育并考核。（依据 JGJ 46-2005 3.2.1）",
+            "source": "ME-LSYD-006"
+          }
+        ]
+      }
+    }
+  ],
+  "warnings": [],
+  "timings": [
+    {
+      "step": "parse",
+      "seconds": 0.001,
+      "ok": true
+    },
+    {
+      "step": "extract_rules",
+      "seconds": 0.002,
+      "ok": true
+    }
+  ],
+  "settings": {
+    "disable_llm": true
+  }
+}

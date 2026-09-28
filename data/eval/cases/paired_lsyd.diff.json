@@ -1,0 +1,52 @@
+{
+  "project": "样例住宅楼二期工程",
+  "date": "2026-09-21",
+  "log": "paired_lsyd_log.txt",
+  "patrol": "paired_lsyd_patrol.txt",
+  "version": 2,
+  "note": "巡查记录版相对施工日志版注入已知差异：missing=漏项 / value=数值不一致 / extra=多报；timestamp 为规范化时间。",
+  "diffs": [
+    {
+      "kind": "missing",
+      "label": "漏项",
+      "timestamp": "2026-09-21 09:16",
+      "index_in_log": 3,
+      "index_in_patrol": null,
+      "log_quote": "上午1#楼5层楼梯间开关箱无锁",
+      "patrol_quote": null
+    },
+    {
+      "kind": "value",
+      "label": "数值不一致",
+      "field": "quantity",
+      "timestamp": "2026-09-21 16:33",
+      "index_in_log": 22,
+      "index_in_patrol": 21,
+      "log_quote": "1#楼12层2名非电工私接临时线路",
+      "patrol_quote": "1#楼12层5名非电工私接临时线路",
+      "log_value": 2,
+      "patrol_value": 5
+    },
+    {
+      "kind": "value",
+      "label": "数值不一致",
+      "field": "quantity",
+      "timestamp": "2026-09-21 10:02",
+      "index_in_log": 5,
+      "index_in_patrol": 4,
+      "log_quote": "3#楼5层主干电缆拖地敷设约5米",
+      "patrol_quote": "3#楼5层主干电缆拖地敷设约2米",
+      "log_value": 5,
+      "patrol_value": 2
+    },
+    {
+      "kind": "extra",
+      "label": "多报",
+      "timestamp": "2026-09-21 16:56",
+      "index_in_log": null,
+      "index_in_patrol": 22,
+      "log_quote": null,
+      "patrol_quote": "1#楼5层发现非电工私接照明线路"
+    }
+  ]
+}

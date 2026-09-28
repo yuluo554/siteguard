@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+
+# 环境与密钥（脱敏审查第一步：跟踪文件里绝不出现）
+.env
+.env.*
+config/settings.json
+
+# 运行产物与缓存
+*.log
+.pytest_cache/
+.coverage
+htmlcov/
+
+# 大体积数据（台账见 data/README.md）；M4 起放行 SHWD 抽样小图（逐张登记台账）
+data/samples/images/*
+!data/samples/images/.gitkeep
+!data/samples/images/shwd_*.jpg
+
+# 个人材料占位：真实项目数据本地保留，不入库
+data/private/
+data/samples/text/private_*.txt
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# Web 面板运行产物（演示现场生成，不入仓）
+examples/web_output/

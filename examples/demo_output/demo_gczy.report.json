@@ -1,0 +1,2887 @@
+{
+  "tool": "SiteGuard",
+  "version": "0.1.0",
+  "source_file": "data/samples/text/demo_gczy.txt",
+  "record_count": 67,
+  "hazard_count": 54,
+  "cards": [
+    {
+      "card_id": "HC-00001",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 1
+      },
+      "quote": "3#楼3层楼层临边未设置防护栏杆",
+      "extractor": "rules",
+      "hazard_type": "临边防护缺失",
+      "hazard_type_id": "HT-GCZY-001",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "楼层临边",
+      "attrs": {},
+      "evidence": {
+        "record_index": 1
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00001",
+        "hazard_type_id": "HT-GCZY-001",
+        "hazard_type": "临边防护缺失",
+        "category": "高处作业",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-GCZY-001",
+        "clause_refs": [
+          {
+            "standard": "JGJ 80-2016",
+            "clause": "4.1.2",
+            "quote": "临边作业时，应在临边设置防护栏杆，并采用密目式安全立网或工具式栏板封闭。",
+            "kg_node": "REG:JGJ 80-2016#4.1.2",
+            "anchor": "kg.html#REG%3AJGJ%2080-2016%234.1.2"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "立即按规范在临边部位设置定型化防护栏杆（上杆1.2m、下杆0.6m）并挂设密目安全网，验收合格后方可作业。（依据 JGJ 80-2016 4.1.2）",
+            "source": "ME-GCZY-001"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00002",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 2
+      },
+      "quote": "1#楼5层外脚手架上作业工人未系安全带",
+      "extractor": "rules",
+      "hazard_type": "高处作业未系安全带",
+      "hazard_type_id": "HT-GCZY-002",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "外脚手架",
+      "attrs": {},
+      "evidence": {
+        "record_index": 2
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00002",
+        "hazard_type_id": "HT-GCZY-002",
+        "hazard_type": "高处作业未系安全带",
+        "category": "高处作业",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-GCZY-002",
+        "clause_refs": [
+          {
+            "standard": "JGJ 80-2016",
+            "clause": "4.5.1",
+            "quote": "高处作业人员应按规定正确使用安全带，安全带应高挂低用。",
+            "kg_node": "REG:JGJ 80-2016#4.5.1",
+            "anchor": "kg.html#REG%3AJGJ%2080-2016%234.5.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "责令高处作业人员立即系挂符合要求的安全带并做到高挂低用，班前交底再次确认，未整改前停止相关部位作业。（依据 JGJ 80-2016 4.5.1）",
+            "source": "ME-GCZY-002"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00003",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 3
+      },
+      "quote": "3#楼18层预留洞口无防护",
+      "extractor": "rules",
+      "hazard_type": "洞口防护缺失",
+      "hazard_type_id": "HT-GCZY-003",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "预留洞口",
+      "attrs": {},
+      "evidence": {
+        "record_index": 3
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00003",
+        "hazard_type_id": "HT-GCZY-003",
+        "hazard_type": "洞口防护缺失",
+        "category": "高处作业",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-GCZY-003",
+        "clause_refs": [
+          {
+            "standard": "JGJ 80-2016",
+            "clause": "4.2.1",
+            "quote": "楼梯口、电梯井口、预留洞口等处应按规范设置防护设施。",
+            "kg_node": "REG:JGJ 80-2016#4.2.1",
+            "anchor": "kg.html#REG%3AJGJ%2080-2016%234.2.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "对洞口加盖固定盖板并设置警示标识，短边尺寸大于一定值时按规范设置防护栏杆，专人复查销项。（依据 JGJ 80-2016 4.2.1）",
+            "source": "ME-GCZY-003"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00004",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 5
+      },
+      "quote": "1#楼外脚手架安全网破损",
+      "extractor": "rules",
+      "hazard_type": "安全网缺失或破损",
+      "hazard_type_id": "HT-GCZY-004",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "外脚手架",
+      "attrs": {},
+      "evidence": {
+        "record_index": 5
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00004",
+        "hazard_type_id": "HT-GCZY-004",
+        "hazard_type": "安全网缺失或破损",
+        "category": "高处作业",
+        "risk_level": "一般风险",
+        "base_level": "一般风险",
+        "rule_id": "RL-GCZY-004",
+        "clause_refs": [
+          {
+            "standard": "JGJ 59-2011",
+            "clause": "3.13",
+            "quote": "高处作业检查评分表：安全网、临边与洞口防护、安全通道、操作平台等为检查评定项目。",
+            "kg_node": "REG:JGJ 59-2011#3.13",
+            "anchor": "kg.html#REG%3AJGJ%2059-2011%233.13"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "更换或补挂破损缺失的安全网，确保架体外侧密目网封闭严密，每周组织一次巡检。（依据 JGJ 59-2011 3.13）",
+            "source": "ME-GCZY-004"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00005",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 6
+      },
+      "quote": "3#楼首层安全通道被占用堆放模板",
+      "extractor": "rules",
+      "hazard_type": "安全通道不畅通",
+      "hazard_type_id": "HT-GCZY-005",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "安全通道",
+      "attrs": {},
+      "evidence": {
+        "record_index": 6
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00005",
+        "hazard_type_id": "HT-GCZY-005",
+        "hazard_type": "安全通道不畅通",
+        "category": "高处作业",
+        "risk_level": "一般风险",
+        "base_level": "一般风险",
+        "rule_id": "RL-GCZY-005",
+        "clause_refs": [
+          {
+            "standard": "JGJ 59-2011",
+            "clause": "3.13",
+            "quote": "高处作业检查评分表：安全网、临边与洞口防护、安全通道、操作平台等为检查评定项目。",
+            "kg_node": "REG:JGJ 59-2011#3.13",
+            "anchor": "kg.html#REG%3AJGJ%2059-2011%233.13"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "清理安全通道内堆放材料，恢复通道畅通并保持照明与标识完好，纳入日常巡查清单。（依据 JGJ 59-2011 3.13）",
+            "source": "ME-GCZY-005"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00006",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 7
+      },
+      "quote": "3#楼18层移动操作平台超载堆放材料",
+      "extractor": "rules",
+      "hazard_type": "移动操作平台违规使用",
+      "hazard_type_id": "HT-GCZY-006",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "移动操作平台",
+      "attrs": {},
+      "evidence": {
+        "record_index": 7
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00006",
+        "hazard_type_id": "HT-GCZY-006",
+        "hazard_type": "移动操作平台违规使用",
+        "category": "高处作业",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-GCZY-006",
+        "clause_refs": [
+          {
+            "standard": "JGJ 80-2016",
+            "clause": "5.3.1",
+            "quote": "移动式操作平台应按设计荷载使用，脚轮应锁定，作业时不得晃动移位。",
+            "kg_node": "REG:JGJ 80-2016#5.3.1",
+            "anchor": "kg.html#REG%3AJGJ%2080-2016%235.3.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "移动操作平台立即停止使用，锁定脚轮、核实配重与荷载，验收合格并挂牌后方可重新投入使用。（依据 JGJ 80-2016 5.3.1）",
+            "source": "ME-GCZY-006"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00007",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 8
+      },
+      "quote": "下午2#楼15层楼梯间临边未安装防护栏杆",
+      "extractor": "rules",
+      "hazard_type": "临边防护缺失",
+      "hazard_type_id": "HT-GCZY-001",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "",
+      "attrs": {},
+      "evidence": {
+        "record_index": 8
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00007",
+        "hazard_type_id": "HT-GCZY-001",
+        "hazard_type": "临边防护缺失",
+        "category": "高处作业",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-GCZY-001",
+        "clause_refs": [
+          {
+            "standard": "JGJ 80-2016",
+            "clause": "4.1.2",
+            "quote": "临边作业时，应在临边设置防护栏杆，并采用密目式安全立网或工具式栏板封闭。",
+            "kg_node": "REG:JGJ 80-2016#4.1.2",
+            "anchor": "kg.html#REG%3AJGJ%2080-2016%234.1.2"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "立即按规范在临边部位设置定型化防护栏杆（上杆1.2m、下杆0.6m）并挂设密目安全网，验收合格后方可作业。（依据 JGJ 80-2016 4.1.2）",
+            "source": "ME-GCZY-001"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00008",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 10
+      },
+      "quote": "下午3#楼屋面防水作业人员未佩戴安全带",
+      "extractor": "rules",
+      "hazard_type": "高处作业未系安全带",
+      "hazard_type_id": "HT-GCZY-002",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "屋面",
+      "attrs": {},
+      "evidence": {
+        "record_index": 10
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00008",
+        "hazard_type_id": "HT-GCZY-002",
+        "hazard_type": "高处作业未系安全带",
+        "category": "高处作业",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-GCZY-002",
+        "clause_refs": [
+          {
+            "standard": "JGJ 80-2016",
+            "clause": "4.5.1",
+            "quote": "高处作业人员应按规定正确使用安全带，安全带应高挂低用。",
+            "kg_node": "REG:JGJ 80-2016#4.5.1",
+            "anchor": "kg.html#REG%3AJGJ%2080-2016%234.5.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "责令高处作业人员立即系挂符合要求的安全带并做到高挂低用，班前交底再次确认，未整改前停止相关部位作业。（依据 JGJ 80-2016 4.5.1）",
+            "source": "ME-GCZY-002"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00009",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 11
+      },
+      "quote": "1#楼5层预留洞口未加盖防护盖板",
+      "extractor": "rules",
+      "hazard_type": "洞口防护缺失",
+      "hazard_type_id": "HT-GCZY-003",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "预留洞口",
+      "attrs": {},
+      "evidence": {
+        "record_index": 11
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00009",
+        "hazard_type_id": "HT-GCZY-003",
+        "hazard_type": "洞口防护缺失",
+        "category": "高处作业",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-GCZY-003",
+        "clause_refs": [
+          {
+            "standard": "JGJ 80-2016",
+            "clause": "4.2.1",
+            "quote": "楼梯口、电梯井口、预留洞口等处应按规范设置防护设施。",
+            "kg_node": "REG:JGJ 80-2016#4.2.1",
+            "anchor": "kg.html#REG%3AJGJ%2080-2016%234.2.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "对洞口加盖固定盖板并设置警示标识，短边尺寸大于一定值时按规范设置防护栏杆，专人复查销项。（依据 JGJ 80-2016 4.2.1）",
+            "source": "ME-GCZY-003"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00010",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 12
+      },
+      "quote": "1#楼12层外架未挂设安全网",
+      "extractor": "rules",
+      "hazard_type": "安全网缺失或破损",
+      "hazard_type_id": "HT-GCZY-004",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "",
+      "attrs": {},
+      "evidence": {
+        "record_index": 12
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00010",
+        "hazard_type_id": "HT-GCZY-004",
+        "hazard_type": "安全网缺失或破损",
+        "category": "高处作业",
+        "risk_level": "一般风险",
+        "base_level": "一般风险",
+        "rule_id": "RL-GCZY-004",
+        "clause_refs": [
+          {
+            "standard": "JGJ 59-2011",
+            "clause": "3.13",
+            "quote": "高处作业检查评分表：安全网、临边与洞口防护、安全通道、操作平台等为检查评定项目。",
+            "kg_node": "REG:JGJ 59-2011#3.13",
+            "anchor": "kg.html#REG%3AJGJ%2059-2011%233.13"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "更换或补挂破损缺失的安全网，确保架体外侧密目网封闭严密，每周组织一次巡检。（依据 JGJ 59-2011 3.13）",
+            "source": "ME-GCZY-004"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00011",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 13
+      },
+      "quote": "2#楼15层安全通道不畅通",
+      "extractor": "rules",
+      "hazard_type": "安全通道不畅通",
+      "hazard_type_id": "HT-GCZY-005",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "安全通道",
+      "attrs": {},
+      "evidence": {
+        "record_index": 13
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00011",
+        "hazard_type_id": "HT-GCZY-005",
+        "hazard_type": "安全通道不畅通",
+        "category": "高处作业",
+        "risk_level": "一般风险",
+        "base_level": "一般风险",
+        "rule_id": "RL-GCZY-005",
+        "clause_refs": [
+          {
+            "standard": "JGJ 59-2011",
+            "clause": "3.13",
+            "quote": "高处作业检查评分表：安全网、临边与洞口防护、安全通道、操作平台等为检查评定项目。",
+            "kg_node": "REG:JGJ 59-2011#3.13",
+            "anchor": "kg.html#REG%3AJGJ%2059-2011%233.13"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "清理安全通道内堆放材料，恢复通道畅通并保持照明与标识完好，纳入日常巡查清单。（依据 JGJ 59-2011 3.13）",
+            "source": "ME-GCZY-005"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00012",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 15
+      },
+      "quote": "3#楼3层移动操作平台脚轮未锁",
+      "extractor": "rules",
+      "hazard_type": "移动操作平台违规使用",
+      "hazard_type_id": "HT-GCZY-006",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "移动操作平台",
+      "attrs": {},
+      "evidence": {
+        "record_index": 15
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00012",
+        "hazard_type_id": "HT-GCZY-006",
+        "hazard_type": "移动操作平台违规使用",
+        "category": "高处作业",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-GCZY-006",
+        "clause_refs": [
+          {
+            "standard": "JGJ 80-2016",
+            "clause": "5.3.1",
+            "quote": "移动式操作平台应按设计荷载使用，脚轮应锁定，作业时不得晃动移位。",
+            "kg_node": "REG:JGJ 80-2016#5.3.1",
+            "anchor": "kg.html#REG%3AJGJ%2080-2016%235.3.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "移动操作平台立即停止使用，锁定脚轮、核实配重与荷载，验收合格并挂牌后方可重新投入使用。（依据 JGJ 80-2016 5.3.1）",
+            "source": "ME-GCZY-006"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00013",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 16
+      },
+      "quote": "3#楼屋面临边防护栏杆缺失",
+      "extractor": "rules",
+      "hazard_type": "临边防护缺失",
+      "hazard_type_id": "HT-GCZY-001",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "屋面临边",
+      "attrs": {},
+      "evidence": {
+        "record_index": 16
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00013",
+        "hazard_type_id": "HT-GCZY-001",
+        "hazard_type": "临边防护缺失",
+        "category": "高处作业",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-GCZY-001",
+        "clause_refs": [
+          {
+            "standard": "JGJ 80-2016",
+            "clause": "4.1.2",
+            "quote": "临边作业时，应在临边设置防护栏杆，并采用密目式安全立网或工具式栏板封闭。",
+            "kg_node": "REG:JGJ 80-2016#4.1.2",
+            "anchor": "kg.html#REG%3AJGJ%2080-2016%234.1.2"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "立即按规范在临边部位设置定型化防护栏杆（上杆1.2m、下杆0.6m）并挂设密目安全网，验收合格后方可作业。（依据 JGJ 80-2016 4.1.2）",
+            "source": "ME-GCZY-001"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00014",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 17
+      },
+      "quote": "3#楼3层钢结构作业面焊接工人安全带未系挂",
+      "extractor": "rules",
+      "hazard_type": "高处作业未系安全带",
+      "hazard_type_id": "HT-GCZY-002",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "钢结构作业面",
+      "attrs": {},
+      "evidence": {
+        "record_index": 17
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00014",
+        "hazard_type_id": "HT-GCZY-002",
+        "hazard_type": "高处作业未系安全带",
+        "category": "高处作业",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-GCZY-002",
+        "clause_refs": [
+          {
+            "standard": "JGJ 80-2016",
+            "clause": "4.5.1",
+            "quote": "高处作业人员应按规定正确使用安全带，安全带应高挂低用。",
+            "kg_node": "REG:JGJ 80-2016#4.5.1",
+            "anchor": "kg.html#REG%3AJGJ%2080-2016%234.5.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "责令高处作业人员立即系挂符合要求的安全带并做到高挂低用，班前交底再次确认，未整改前停止相关部位作业。（依据 JGJ 80-2016 4.5.1）",
+            "source": "ME-GCZY-002"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00015",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 18
+      },
+      "quote": "2#楼3层电梯井口未设置防护",
+      "extractor": "rules",
+      "hazard_type": "洞口防护缺失",
+      "hazard_type_id": "HT-GCZY-003",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "电梯井口",
+      "attrs": {},
+      "evidence": {
+        "record_index": 18
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00015",
+        "hazard_type_id": "HT-GCZY-003",
+        "hazard_type": "洞口防护缺失",
+        "category": "高处作业",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-GCZY-003",
+        "clause_refs": [
+          {
+            "standard": "JGJ 80-2016",
+            "clause": "4.2.1",
+            "quote": "楼梯口、电梯井口、预留洞口等处应按规范设置防护设施。",
+            "kg_node": "REG:JGJ 80-2016#4.2.1",
+            "anchor": "kg.html#REG%3AJGJ%2080-2016%234.2.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "对洞口加盖固定盖板并设置警示标识，短边尺寸大于一定值时按规范设置防护栏杆，专人复查销项。（依据 JGJ 80-2016 4.2.1）",
+            "source": "ME-GCZY-003"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00016",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 20
+      },
+      "quote": "2#楼12层楼层临边安全网破损3处",
+      "extractor": "rules",
+      "hazard_type": "安全网缺失或破损",
+      "hazard_type_id": "HT-GCZY-004",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "楼层临边",
+      "attrs": {},
+      "evidence": {
+        "record_index": 20
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00016",
+        "hazard_type_id": "HT-GCZY-004",
+        "hazard_type": "安全网缺失或破损",
+        "category": "高处作业",
+        "risk_level": "一般风险",
+        "base_level": "一般风险",
+        "rule_id": "RL-GCZY-004",
+        "clause_refs": [
+          {
+            "standard": "JGJ 59-2011",
+            "clause": "3.13",
+            "quote": "高处作业检查评分表：安全网、临边与洞口防护、安全通道、操作平台等为检查评定项目。",
+            "kg_node": "REG:JGJ 59-2011#3.13",
+            "anchor": "kg.html#REG%3AJGJ%2059-2011%233.13"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "更换或补挂破损缺失的安全网，确保架体外侧密目网封闭严密，每周组织一次巡检。（依据 JGJ 59-2011 3.13）",
+            "source": "ME-GCZY-004"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00017",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 21
+      },
+      "quote": "2#楼基坑东侧安全通道堵塞",
+      "extractor": "rules",
+      "hazard_type": "安全通道不畅通",
+      "hazard_type_id": "HT-GCZY-005",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "安全通道",
+      "attrs": {},
+      "evidence": {
+        "record_index": 21
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00017",
+        "hazard_type_id": "HT-GCZY-005",
+        "hazard_type": "安全通道不畅通",
+        "category": "高处作业",
+        "risk_level": "一般风险",
+        "base_level": "一般风险",
+        "rule_id": "RL-GCZY-005",
+        "clause_refs": [
+          {
+            "standard": "JGJ 59-2011",
+            "clause": "3.13",
+            "quote": "高处作业检查评分表：安全网、临边与洞口防护、安全通道、操作平台等为检查评定项目。",
+            "kg_node": "REG:JGJ 59-2011#3.13",
+            "anchor": "kg.html#REG%3AJGJ%2059-2011%233.13"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "清理安全通道内堆放材料，恢复通道畅通并保持照明与标识完好，纳入日常巡查清单。（依据 JGJ 59-2011 3.13）",
+            "source": "ME-GCZY-005"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00018",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 22
+      },
+      "quote": "今晨3#楼内装修操作平台未固定",
+      "extractor": "rules",
+      "hazard_type": "移动操作平台违规使用",
+      "hazard_type_id": "HT-GCZY-006",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "操作平台",
+      "attrs": {},
+      "evidence": {
+        "record_index": 22
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00018",
+        "hazard_type_id": "HT-GCZY-006",
+        "hazard_type": "移动操作平台违规使用",
+        "category": "高处作业",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-GCZY-006",
+        "clause_refs": [
+          {
+            "standard": "JGJ 80-2016",
+            "clause": "5.3.1",
+            "quote": "移动式操作平台应按设计荷载使用，脚轮应锁定，作业时不得晃动移位。",
+            "kg_node": "REG:JGJ 80-2016#5.3.1",
+            "anchor": "kg.html#REG%3AJGJ%2080-2016%235.3.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "移动操作平台立即停止使用，锁定脚轮、核实配重与荷载，验收合格并挂牌后方可重新投入使用。（依据 JGJ 80-2016 5.3.1）",
+            "source": "ME-GCZY-006"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00019",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 23
+      },
+      "quote": "3#楼18层阳台临边未搭设防护栏杆，共3处",
+      "extractor": "rules",
+      "hazard_type": "临边防护缺失",
+      "hazard_type_id": "HT-GCZY-001",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "阳台临边",
+      "attrs": {},
+      "evidence": {
+        "record_index": 23
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00019",
+        "hazard_type_id": "HT-GCZY-001",
+        "hazard_type": "临边防护缺失",
+        "category": "高处作业",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-GCZY-001",
+        "clause_refs": [
+          {
+            "standard": "JGJ 80-2016",
+            "clause": "4.1.2",
+            "quote": "临边作业时，应在临边设置防护栏杆，并采用密目式安全立网或工具式栏板封闭。",
+            "kg_node": "REG:JGJ 80-2016#4.1.2",
+            "anchor": "kg.html#REG%3AJGJ%2080-2016%234.1.2"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "立即按规范在临边部位设置定型化防护栏杆（上杆1.2m、下杆0.6m）并挂设密目安全网，验收合格后方可作业。（依据 JGJ 80-2016 4.1.2）",
+            "source": "ME-GCZY-001"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00020",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 25
+      },
+      "quote": "2#楼8层外架拆除作业4名工人未系安全带",
+      "extractor": "rules",
+      "hazard_type": "高处作业未系安全带",
+      "hazard_type_id": "HT-GCZY-002",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "",
+      "attrs": {},
+      "evidence": {
+        "record_index": 25
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00020",
+        "hazard_type_id": "HT-GCZY-002",
+        "hazard_type": "高处作业未系安全带",
+        "category": "高处作业",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-GCZY-002",
+        "clause_refs": [
+          {
+            "standard": "JGJ 80-2016",
+            "clause": "4.5.1",
+            "quote": "高处作业人员应按规定正确使用安全带，安全带应高挂低用。",
+            "kg_node": "REG:JGJ 80-2016#4.5.1",
+            "anchor": "kg.html#REG%3AJGJ%2080-2016%234.5.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "责令高处作业人员立即系挂符合要求的安全带并做到高挂低用，班前交底再次确认，未整改前停止相关部位作业。（依据 JGJ 80-2016 4.5.1）",
+            "source": "ME-GCZY-002"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00021",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 26
+      },
+      "quote": "今晨1#楼5层楼梯口无防护",
+      "extractor": "rules",
+      "hazard_type": "洞口防护缺失",
+      "hazard_type_id": "HT-GCZY-003",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "楼梯口",
+      "attrs": {},
+      "evidence": {
+        "record_index": 26
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00021",
+        "hazard_type_id": "HT-GCZY-003",
+        "hazard_type": "洞口防护缺失",
+        "category": "高处作业",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-GCZY-003",
+        "clause_refs": [
+          {
+            "standard": "JGJ 80-2016",
+            "clause": "4.2.1",
+            "quote": "楼梯口、电梯井口、预留洞口等处应按规范设置防护设施。",
+            "kg_node": "REG:JGJ 80-2016#4.2.1",
+            "anchor": "kg.html#REG%3AJGJ%2080-2016%234.2.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "对洞口加盖固定盖板并设置警示标识，短边尺寸大于一定值时按规范设置防护栏杆，专人复查销项。（依据 JGJ 80-2016 4.2.1）",
+            "source": "ME-GCZY-003"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00022",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 27
+      },
+      "quote": "今晨2#楼卸料平台侧面临边未张挂安全网",
+      "extractor": "rules",
+      "hazard_type": "安全网缺失或破损",
+      "hazard_type_id": "HT-GCZY-004",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "",
+      "attrs": {},
+      "evidence": {
+        "record_index": 27
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00022",
+        "hazard_type_id": "HT-GCZY-004",
+        "hazard_type": "安全网缺失或破损",
+        "category": "高处作业",
+        "risk_level": "一般风险",
+        "base_level": "一般风险",
+        "rule_id": "RL-GCZY-004",
+        "clause_refs": [
+          {
+            "standard": "JGJ 59-2011",
+            "clause": "3.13",
+            "quote": "高处作业检查评分表：安全网、临边与洞口防护、安全通道、操作平台等为检查评定项目。",
+            "kg_node": "REG:JGJ 59-2011#3.13",
+            "anchor": "kg.html#REG%3AJGJ%2059-2011%233.13"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "更换或补挂破损缺失的安全网，确保架体外侧密目网封闭严密，每周组织一次巡检。（依据 JGJ 59-2011 3.13）",
+            "source": "ME-GCZY-004"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00023",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 28
+      },
+      "quote": "3#楼18层3处安全通道未设置",
+      "extractor": "rules",
+      "hazard_type": "安全通道不畅通",
+      "hazard_type_id": "HT-GCZY-005",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "安全通道",
+      "attrs": {},
+      "evidence": {
+        "record_index": 28
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00023",
+        "hazard_type_id": "HT-GCZY-005",
+        "hazard_type": "安全通道不畅通",
+        "category": "高处作业",
+        "risk_level": "一般风险",
+        "base_level": "一般风险",
+        "rule_id": "RL-GCZY-005",
+        "clause_refs": [
+          {
+            "standard": "JGJ 59-2011",
+            "clause": "3.13",
+            "quote": "高处作业检查评分表：安全网、临边与洞口防护、安全通道、操作平台等为检查评定项目。",
+            "kg_node": "REG:JGJ 59-2011#3.13",
+            "anchor": "kg.html#REG%3AJGJ%2059-2011%233.13"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "清理安全通道内堆放材料，恢复通道畅通并保持照明与标识完好，纳入日常巡查清单。（依据 JGJ 59-2011 3.13）",
+            "source": "ME-GCZY-005"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00024",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 30
+      },
+      "quote": "2#楼18层移动操作平台超载堆放钢管3捆",
+      "extractor": "rules",
+      "hazard_type": "移动操作平台违规使用",
+      "hazard_type_id": "HT-GCZY-006",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "移动操作平台",
+      "attrs": {},
+      "evidence": {
+        "record_index": 30
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00024",
+        "hazard_type_id": "HT-GCZY-006",
+        "hazard_type": "移动操作平台违规使用",
+        "category": "高处作业",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-GCZY-006",
+        "clause_refs": [
+          {
+            "standard": "JGJ 80-2016",
+            "clause": "5.3.1",
+            "quote": "移动式操作平台应按设计荷载使用，脚轮应锁定，作业时不得晃动移位。",
+            "kg_node": "REG:JGJ 80-2016#5.3.1",
+            "anchor": "kg.html#REG%3AJGJ%2080-2016%235.3.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "移动操作平台立即停止使用，锁定脚轮、核实配重与荷载，验收合格并挂牌后方可重新投入使用。（依据 JGJ 80-2016 5.3.1）",
+            "source": "ME-GCZY-006"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00025",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 31
+      },
+      "quote": "2#楼5层临边无防护",
+      "extractor": "rules",
+      "hazard_type": "临边防护缺失",
+      "hazard_type_id": "HT-GCZY-001",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "",
+      "attrs": {},
+      "evidence": {
+        "record_index": 31
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00025",
+        "hazard_type_id": "HT-GCZY-001",
+        "hazard_type": "临边防护缺失",
+        "category": "高处作业",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-GCZY-001",
+        "clause_refs": [
+          {
+            "standard": "JGJ 80-2016",
+            "clause": "4.1.2",
+            "quote": "临边作业时，应在临边设置防护栏杆，并采用密目式安全立网或工具式栏板封闭。",
+            "kg_node": "REG:JGJ 80-2016#4.1.2",
+            "anchor": "kg.html#REG%3AJGJ%2080-2016%234.1.2"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "立即按规范在临边部位设置定型化防护栏杆（上杆1.2m、下杆0.6m）并挂设密目安全网，验收合格后方可作业。（依据 JGJ 80-2016 4.1.2）",
+            "source": "ME-GCZY-001"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00026",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 32
+      },
+      "quote": "夜间3#楼屋面保温施工人员安全带未挂设",
+      "extractor": "rules",
+      "hazard_type": "高处作业未系安全带",
+      "hazard_type_id": "HT-GCZY-002",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "屋面",
+      "attrs": {},
+      "evidence": {
+        "record_index": 32
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00026",
+        "hazard_type_id": "HT-GCZY-002",
+        "hazard_type": "高处作业未系安全带",
+        "category": "高处作业",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-GCZY-002",
+        "clause_refs": [
+          {
+            "standard": "JGJ 80-2016",
+            "clause": "4.5.1",
+            "quote": "高处作业人员应按规定正确使用安全带，安全带应高挂低用。",
+            "kg_node": "REG:JGJ 80-2016#4.5.1",
+            "anchor": "kg.html#REG%3AJGJ%2080-2016%234.5.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "责令高处作业人员立即系挂符合要求的安全带并做到高挂低用，班前交底再次确认，未整改前停止相关部位作业。（依据 JGJ 80-2016 4.5.1）",
+            "source": "ME-GCZY-002"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00027",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 33
+      },
+      "quote": "2#楼5层地下室顶板预留洞口未采取防护，共5处",
+      "extractor": "rules",
+      "hazard_type": "洞口防护缺失",
+      "hazard_type_id": "HT-GCZY-003",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "预留洞口",
+      "attrs": {},
+      "evidence": {
+        "record_index": 33
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00027",
+        "hazard_type_id": "HT-GCZY-003",
+        "hazard_type": "洞口防护缺失",
+        "category": "高处作业",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-GCZY-003",
+        "clause_refs": [
+          {
+            "standard": "JGJ 80-2016",
+            "clause": "4.2.1",
+            "quote": "楼梯口、电梯井口、预留洞口等处应按规范设置防护设施。",
+            "kg_node": "REG:JGJ 80-2016#4.2.1",
+            "anchor": "kg.html#REG%3AJGJ%2080-2016%234.2.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "对洞口加盖固定盖板并设置警示标识，短边尺寸大于一定值时按规范设置防护栏杆，专人复查销项。（依据 JGJ 80-2016 4.2.1）",
+            "source": "ME-GCZY-003"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00028",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 35
+      },
+      "quote": "1#楼3层外脚手架安全网破旧未更换",
+      "extractor": "rules",
+      "hazard_type": "安全网缺失或破损",
+      "hazard_type_id": "HT-GCZY-004",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "外脚手架",
+      "attrs": {},
+      "evidence": {
+        "record_index": 35
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00028",
+        "hazard_type_id": "HT-GCZY-004",
+        "hazard_type": "安全网缺失或破损",
+        "category": "高处作业",
+        "risk_level": "一般风险",
+        "base_level": "一般风险",
+        "rule_id": "RL-GCZY-004",
+        "clause_refs": [
+          {
+            "standard": "JGJ 59-2011",
+            "clause": "3.13",
+            "quote": "高处作业检查评分表：安全网、临边与洞口防护、安全通道、操作平台等为检查评定项目。",
+            "kg_node": "REG:JGJ 59-2011#3.13",
+            "anchor": "kg.html#REG%3AJGJ%2059-2011%233.13"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "更换或补挂破损缺失的安全网，确保架体外侧密目网封闭严密，每周组织一次巡检。（依据 JGJ 59-2011 3.13）",
+            "source": "ME-GCZY-004"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00029",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 36
+      },
+      "quote": "3#楼地下室安全通道被占用堆放钢管",
+      "extractor": "rules",
+      "hazard_type": "安全通道不畅通",
+      "hazard_type_id": "HT-GCZY-005",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "安全通道",
+      "attrs": {},
+      "evidence": {
+        "record_index": 36
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00029",
+        "hazard_type_id": "HT-GCZY-005",
+        "hazard_type": "安全通道不畅通",
+        "category": "高处作业",
+        "risk_level": "一般风险",
+        "base_level": "一般风险",
+        "rule_id": "RL-GCZY-005",
+        "clause_refs": [
+          {
+            "standard": "JGJ 59-2011",
+            "clause": "3.13",
+            "quote": "高处作业检查评分表：安全网、临边与洞口防护、安全通道、操作平台等为检查评定项目。",
+            "kg_node": "REG:JGJ 59-2011#3.13",
+            "anchor": "kg.html#REG%3AJGJ%2059-2011%233.13"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "清理安全通道内堆放材料，恢复通道畅通并保持照明与标识完好，纳入日常巡查清单。（依据 JGJ 59-2011 3.13）",
+            "source": "ME-GCZY-005"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00030",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 37
+      },
+      "quote": "2#楼15层操作平台超载",
+      "extractor": "rules",
+      "hazard_type": "移动操作平台违规使用",
+      "hazard_type_id": "HT-GCZY-006",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "操作平台",
+      "attrs": {},
+      "evidence": {
+        "record_index": 37
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00030",
+        "hazard_type_id": "HT-GCZY-006",
+        "hazard_type": "移动操作平台违规使用",
+        "category": "高处作业",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-GCZY-006",
+        "clause_refs": [
+          {
+            "standard": "JGJ 80-2016",
+            "clause": "5.3.1",
+            "quote": "移动式操作平台应按设计荷载使用，脚轮应锁定，作业时不得晃动移位。",
+            "kg_node": "REG:JGJ 80-2016#5.3.1",
+            "anchor": "kg.html#REG%3AJGJ%2080-2016%235.3.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "移动操作平台立即停止使用，锁定脚轮、核实配重与荷载，验收合格并挂牌后方可重新投入使用。（依据 JGJ 80-2016 5.3.1）",
+            "source": "ME-GCZY-006"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00031",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 38
+      },
+      "quote": "今晨3#楼3层楼梯临边未设置防护栏杆",
+      "extractor": "rules",
+      "hazard_type": "临边防护缺失",
+      "hazard_type_id": "HT-GCZY-001",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "楼梯临边",
+      "attrs": {},
+      "evidence": {
+        "record_index": 38
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00031",
+        "hazard_type_id": "HT-GCZY-001",
+        "hazard_type": "临边防护缺失",
+        "category": "高处作业",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-GCZY-001",
+        "clause_refs": [
+          {
+            "standard": "JGJ 80-2016",
+            "clause": "4.1.2",
+            "quote": "临边作业时，应在临边设置防护栏杆，并采用密目式安全立网或工具式栏板封闭。",
+            "kg_node": "REG:JGJ 80-2016#4.1.2",
+            "anchor": "kg.html#REG%3AJGJ%2080-2016%234.1.2"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "立即按规范在临边部位设置定型化防护栏杆（上杆1.2m、下杆0.6m）并挂设密目安全网，验收合格后方可作业。（依据 JGJ 80-2016 4.1.2）",
+            "source": "ME-GCZY-001"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00032",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 40
+      },
+      "quote": "1#楼8层预留洞口周边支模人员未系安全带",
+      "extractor": "rules",
+      "hazard_type": "高处作业未系安全带",
+      "hazard_type_id": "HT-GCZY-002",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "洞口",
+      "attrs": {},
+      "evidence": {
+        "record_index": 40
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00032",
+        "hazard_type_id": "HT-GCZY-002",
+        "hazard_type": "高处作业未系安全带",
+        "category": "高处作业",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-GCZY-002",
+        "clause_refs": [
+          {
+            "standard": "JGJ 80-2016",
+            "clause": "4.5.1",
+            "quote": "高处作业人员应按规定正确使用安全带，安全带应高挂低用。",
+            "kg_node": "REG:JGJ 80-2016#4.5.1",
+            "anchor": "kg.html#REG%3AJGJ%2080-2016%234.5.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "责令高处作业人员立即系挂符合要求的安全带并做到高挂低用，班前交底再次确认，未整改前停止相关部位作业。（依据 JGJ 80-2016 4.5.1）",
+            "source": "ME-GCZY-002"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00033",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 41
+      },
+      "quote": "2#楼3层管道井洞口无防护盖板",
+      "extractor": "rules",
+      "hazard_type": "洞口防护缺失",
+      "hazard_type_id": "HT-GCZY-003",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "",
+      "attrs": {},
+      "evidence": {
+        "record_index": 41
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00033",
+        "hazard_type_id": "HT-GCZY-003",
+        "hazard_type": "洞口防护缺失",
+        "category": "高处作业",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-GCZY-003",
+        "clause_refs": [
+          {
+            "standard": "JGJ 80-2016",
+            "clause": "4.2.1",
+            "quote": "楼梯口、电梯井口、预留洞口等处应按规范设置防护设施。",
+            "kg_node": "REG:JGJ 80-2016#4.2.1",
+            "anchor": "kg.html#REG%3AJGJ%2080-2016%234.2.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "对洞口加盖固定盖板并设置警示标识，短边尺寸大于一定值时按规范设置防护栏杆，专人复查销项。（依据 JGJ 80-2016 4.2.1）",
+            "source": "ME-GCZY-003"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00034",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 42
+      },
+      "quote": "下午3#楼3层楼层临边安全网缺失",
+      "extractor": "rules",
+      "hazard_type": "安全网缺失或破损",
+      "hazard_type_id": "HT-GCZY-004",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "楼层临边",
+      "attrs": {},
+      "evidence": {
+        "record_index": 42
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00034",
+        "hazard_type_id": "HT-GCZY-004",
+        "hazard_type": "安全网缺失或破损",
+        "category": "高处作业",
+        "risk_level": "一般风险",
+        "base_level": "一般风险",
+        "rule_id": "RL-GCZY-004",
+        "clause_refs": [
+          {
+            "standard": "JGJ 59-2011",
+            "clause": "3.13",
+            "quote": "高处作业检查评分表：安全网、临边与洞口防护、安全通道、操作平台等为检查评定项目。",
+            "kg_node": "REG:JGJ 59-2011#3.13",
+            "anchor": "kg.html#REG%3AJGJ%2059-2011%233.13"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "更换或补挂破损缺失的安全网，确保架体外侧密目网封闭严密，每周组织一次巡检。（依据 JGJ 59-2011 3.13）",
+            "source": "ME-GCZY-004"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00035",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 43
+      },
+      "quote": "上午1#楼首层通道被占用",
+      "extractor": "rules",
+      "hazard_type": "安全通道不畅通",
+      "hazard_type_id": "HT-GCZY-005",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "首层通道",
+      "attrs": {},
+      "evidence": {
+        "record_index": 43
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00035",
+        "hazard_type_id": "HT-GCZY-005",
+        "hazard_type": "安全通道不畅通",
+        "category": "高处作业",
+        "risk_level": "一般风险",
+        "base_level": "一般风险",
+        "rule_id": "RL-GCZY-005",
+        "clause_refs": [
+          {
+            "standard": "JGJ 59-2011",
+            "clause": "3.13",
+            "quote": "高处作业检查评分表：安全网、临边与洞口防护、安全通道、操作平台等为检查评定项目。",
+            "kg_node": "REG:JGJ 59-2011#3.13",
+            "anchor": "kg.html#REG%3AJGJ%2059-2011%233.13"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "清理安全通道内堆放材料，恢复通道畅通并保持照明与标识完好，纳入日常巡查清单。（依据 JGJ 59-2011 3.13）",
+            "source": "ME-GCZY-005"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00036",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 45
+      },
+      "quote": "今晨2#楼12层移动操作平台作业时未固定",
+      "extractor": "rules",
+      "hazard_type": "移动操作平台违规使用",
+      "hazard_type_id": "HT-GCZY-006",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "移动操作平台",
+      "attrs": {},
+      "evidence": {
+        "record_index": 45
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00036",
+        "hazard_type_id": "HT-GCZY-006",
+        "hazard_type": "移动操作平台违规使用",
+        "category": "高处作业",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-GCZY-006",
+        "clause_refs": [
+          {
+            "standard": "JGJ 80-2016",
+            "clause": "5.3.1",
+            "quote": "移动式操作平台应按设计荷载使用，脚轮应锁定，作业时不得晃动移位。",
+            "kg_node": "REG:JGJ 80-2016#5.3.1",
+            "anchor": "kg.html#REG%3AJGJ%2080-2016%235.3.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "移动操作平台立即停止使用，锁定脚轮、核实配重与荷载，验收合格并挂牌后方可重新投入使用。（依据 JGJ 80-2016 5.3.1）",
+            "source": "ME-GCZY-006"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00037",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 46
+      },
+      "quote": "2#楼8层楼层临边未设置防护栏杆",
+      "extractor": "rules",
+      "hazard_type": "临边防护缺失",
+      "hazard_type_id": "HT-GCZY-001",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "楼层临边",
+      "attrs": {},
+      "evidence": {
+        "record_index": 46
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00037",
+        "hazard_type_id": "HT-GCZY-001",
+        "hazard_type": "临边防护缺失",
+        "category": "高处作业",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-GCZY-001",
+        "clause_refs": [
+          {
+            "standard": "JGJ 80-2016",
+            "clause": "4.1.2",
+            "quote": "临边作业时，应在临边设置防护栏杆，并采用密目式安全立网或工具式栏板封闭。",
+            "kg_node": "REG:JGJ 80-2016#4.1.2",
+            "anchor": "kg.html#REG%3AJGJ%2080-2016%234.1.2"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "立即按规范在临边部位设置定型化防护栏杆（上杆1.2m、下杆0.6m）并挂设密目安全网，验收合格后方可作业。（依据 JGJ 80-2016 4.1.2）",
+            "source": "ME-GCZY-001"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00038",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 47
+      },
+      "quote": "1#楼15层外脚手架上作业工人未系安全带",
+      "extractor": "rules",
+      "hazard_type": "高处作业未系安全带",
+      "hazard_type_id": "HT-GCZY-002",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "外脚手架",
+      "attrs": {},
+      "evidence": {
+        "record_index": 47
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00038",
+        "hazard_type_id": "HT-GCZY-002",
+        "hazard_type": "高处作业未系安全带",
+        "category": "高处作业",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-GCZY-002",
+        "clause_refs": [
+          {
+            "standard": "JGJ 80-2016",
+            "clause": "4.5.1",
+            "quote": "高处作业人员应按规定正确使用安全带，安全带应高挂低用。",
+            "kg_node": "REG:JGJ 80-2016#4.5.1",
+            "anchor": "kg.html#REG%3AJGJ%2080-2016%234.5.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "责令高处作业人员立即系挂符合要求的安全带并做到高挂低用，班前交底再次确认，未整改前停止相关部位作业。（依据 JGJ 80-2016 4.5.1）",
+            "source": "ME-GCZY-002"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00039",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 48
+      },
+      "quote": "3#楼12层预留洞口无防护",
+      "extractor": "rules",
+      "hazard_type": "洞口防护缺失",
+      "hazard_type_id": "HT-GCZY-003",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "预留洞口",
+      "attrs": {},
+      "evidence": {
+        "record_index": 48
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00039",
+        "hazard_type_id": "HT-GCZY-003",
+        "hazard_type": "洞口防护缺失",
+        "category": "高处作业",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-GCZY-003",
+        "clause_refs": [
+          {
+            "standard": "JGJ 80-2016",
+            "clause": "4.2.1",
+            "quote": "楼梯口、电梯井口、预留洞口等处应按规范设置防护设施。",
+            "kg_node": "REG:JGJ 80-2016#4.2.1",
+            "anchor": "kg.html#REG%3AJGJ%2080-2016%234.2.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "对洞口加盖固定盖板并设置警示标识，短边尺寸大于一定值时按规范设置防护栏杆，专人复查销项。（依据 JGJ 80-2016 4.2.1）",
+            "source": "ME-GCZY-003"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00040",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 50
+      },
+      "quote": "3#楼外脚手架安全网破损",
+      "extractor": "rules",
+      "hazard_type": "安全网缺失或破损",
+      "hazard_type_id": "HT-GCZY-004",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "外脚手架",
+      "attrs": {},
+      "evidence": {
+        "record_index": 50
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00040",
+        "hazard_type_id": "HT-GCZY-004",
+        "hazard_type": "安全网缺失或破损",
+        "category": "高处作业",
+        "risk_level": "一般风险",
+        "base_level": "一般风险",
+        "rule_id": "RL-GCZY-004",
+        "clause_refs": [
+          {
+            "standard": "JGJ 59-2011",
+            "clause": "3.13",
+            "quote": "高处作业检查评分表：安全网、临边与洞口防护、安全通道、操作平台等为检查评定项目。",
+            "kg_node": "REG:JGJ 59-2011#3.13",
+            "anchor": "kg.html#REG%3AJGJ%2059-2011%233.13"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "更换或补挂破损缺失的安全网，确保架体外侧密目网封闭严密，每周组织一次巡检。（依据 JGJ 59-2011 3.13）",
+            "source": "ME-GCZY-004"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00041",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 51
+      },
+      "quote": "3#楼首层安全通道被占用堆放模板",
+      "extractor": "rules",
+      "hazard_type": "安全通道不畅通",
+      "hazard_type_id": "HT-GCZY-005",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "安全通道",
+      "attrs": {},
+      "evidence": {
+        "record_index": 51
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00041",
+        "hazard_type_id": "HT-GCZY-005",
+        "hazard_type": "安全通道不畅通",
+        "category": "高处作业",
+        "risk_level": "一般风险",
+        "base_level": "一般风险",
+        "rule_id": "RL-GCZY-005",
+        "clause_refs": [
+          {
+            "standard": "JGJ 59-2011",
+            "clause": "3.13",
+            "quote": "高处作业检查评分表：安全网、临边与洞口防护、安全通道、操作平台等为检查评定项目。",
+            "kg_node": "REG:JGJ 59-2011#3.13",
+            "anchor": "kg.html#REG%3AJGJ%2059-2011%233.13"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "清理安全通道内堆放材料，恢复通道畅通并保持照明与标识完好，纳入日常巡查清单。（依据 JGJ 59-2011 3.13）",
+            "source": "ME-GCZY-005"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00042",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 52
+      },
+      "quote": "3#楼18层移动操作平台超载堆放材料",
+      "extractor": "rules",
+      "hazard_type": "移动操作平台违规使用",
+      "hazard_type_id": "HT-GCZY-006",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "移动操作平台",
+      "attrs": {},
+      "evidence": {
+        "record_index": 52
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00042",
+        "hazard_type_id": "HT-GCZY-006",
+        "hazard_type": "移动操作平台违规使用",
+        "category": "高处作业",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-GCZY-006",
+        "clause_refs": [
+          {
+            "standard": "JGJ 80-2016",
+            "clause": "5.3.1",
+            "quote": "移动式操作平台应按设计荷载使用，脚轮应锁定，作业时不得晃动移位。",
+            "kg_node": "REG:JGJ 80-2016#5.3.1",
+            "anchor": "kg.html#REG%3AJGJ%2080-2016%235.3.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "移动操作平台立即停止使用，锁定脚轮、核实配重与荷载，验收合格并挂牌后方可重新投入使用。（依据 JGJ 80-2016 5.3.1）",
+            "source": "ME-GCZY-006"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00043",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 53
+      },
+      "quote": "下午2#楼18层楼梯间临边未安装防护栏杆",
+      "extractor": "rules",
+      "hazard_type": "临边防护缺失",
+      "hazard_type_id": "HT-GCZY-001",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "",
+      "attrs": {},
+      "evidence": {
+        "record_index": 53
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00043",
+        "hazard_type_id": "HT-GCZY-001",
+        "hazard_type": "临边防护缺失",
+        "category": "高处作业",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-GCZY-001",
+        "clause_refs": [
+          {
+            "standard": "JGJ 80-2016",
+            "clause": "4.1.2",
+            "quote": "临边作业时，应在临边设置防护栏杆，并采用密目式安全立网或工具式栏板封闭。",
+            "kg_node": "REG:JGJ 80-2016#4.1.2",
+            "anchor": "kg.html#REG%3AJGJ%2080-2016%234.1.2"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "立即按规范在临边部位设置定型化防护栏杆（上杆1.2m、下杆0.6m）并挂设密目安全网，验收合格后方可作业。（依据 JGJ 80-2016 4.1.2）",
+            "source": "ME-GCZY-001"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00044",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 55
+      },
+      "quote": "上午2#楼屋面防水作业人员未佩戴安全带",
+      "extractor": "rules",
+      "hazard_type": "高处作业未系安全带",
+      "hazard_type_id": "HT-GCZY-002",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "屋面",
+      "attrs": {},
+      "evidence": {
+        "record_index": 55
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00044",
+        "hazard_type_id": "HT-GCZY-002",
+        "hazard_type": "高处作业未系安全带",
+        "category": "高处作业",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-GCZY-002",
+        "clause_refs": [
+          {
+            "standard": "JGJ 80-2016",
+            "clause": "4.5.1",
+            "quote": "高处作业人员应按规定正确使用安全带，安全带应高挂低用。",
+            "kg_node": "REG:JGJ 80-2016#4.5.1",
+            "anchor": "kg.html#REG%3AJGJ%2080-2016%234.5.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "责令高处作业人员立即系挂符合要求的安全带并做到高挂低用，班前交底再次确认，未整改前停止相关部位作业。（依据 JGJ 80-2016 4.5.1）",
+            "source": "ME-GCZY-002"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00045",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 56
+      },
+      "quote": "1#楼8层预留洞口未加盖防护盖板",
+      "extractor": "rules",
+      "hazard_type": "洞口防护缺失",
+      "hazard_type_id": "HT-GCZY-003",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "预留洞口",
+      "attrs": {},
+      "evidence": {
+        "record_index": 56
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00045",
+        "hazard_type_id": "HT-GCZY-003",
+        "hazard_type": "洞口防护缺失",
+        "category": "高处作业",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-GCZY-003",
+        "clause_refs": [
+          {
+            "standard": "JGJ 80-2016",
+            "clause": "4.2.1",
+            "quote": "楼梯口、电梯井口、预留洞口等处应按规范设置防护设施。",
+            "kg_node": "REG:JGJ 80-2016#4.2.1",
+            "anchor": "kg.html#REG%3AJGJ%2080-2016%234.2.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "对洞口加盖固定盖板并设置警示标识，短边尺寸大于一定值时按规范设置防护栏杆，专人复查销项。（依据 JGJ 80-2016 4.2.1）",
+            "source": "ME-GCZY-003"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00046",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 57
+      },
+      "quote": "3#楼5层外架未挂设安全网",
+      "extractor": "rules",
+      "hazard_type": "安全网缺失或破损",
+      "hazard_type_id": "HT-GCZY-004",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "",
+      "attrs": {},
+      "evidence": {
+        "record_index": 57
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00046",
+        "hazard_type_id": "HT-GCZY-004",
+        "hazard_type": "安全网缺失或破损",
+        "category": "高处作业",
+        "risk_level": "一般风险",
+        "base_level": "一般风险",
+        "rule_id": "RL-GCZY-004",
+        "clause_refs": [
+          {
+            "standard": "JGJ 59-2011",
+            "clause": "3.13",
+            "quote": "高处作业检查评分表：安全网、临边与洞口防护、安全通道、操作平台等为检查评定项目。",
+            "kg_node": "REG:JGJ 59-2011#3.13",
+            "anchor": "kg.html#REG%3AJGJ%2059-2011%233.13"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "更换或补挂破损缺失的安全网，确保架体外侧密目网封闭严密，每周组织一次巡检。（依据 JGJ 59-2011 3.13）",
+            "source": "ME-GCZY-004"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00047",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 58
+      },
+      "quote": "3#楼18层安全通道不畅通",
+      "extractor": "rules",
+      "hazard_type": "安全通道不畅通",
+      "hazard_type_id": "HT-GCZY-005",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "安全通道",
+      "attrs": {},
+      "evidence": {
+        "record_index": 58
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00047",
+        "hazard_type_id": "HT-GCZY-005",
+        "hazard_type": "安全通道不畅通",
+        "category": "高处作业",
+        "risk_level": "一般风险",
+        "base_level": "一般风险",
+        "rule_id": "RL-GCZY-005",
+        "clause_refs": [
+          {
+            "standard": "JGJ 59-2011",
+            "clause": "3.13",
+            "quote": "高处作业检查评分表：安全网、临边与洞口防护、安全通道、操作平台等为检查评定项目。",
+            "kg_node": "REG:JGJ 59-2011#3.13",
+            "anchor": "kg.html#REG%3AJGJ%2059-2011%233.13"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "清理安全通道内堆放材料，恢复通道畅通并保持照明与标识完好，纳入日常巡查清单。（依据 JGJ 59-2011 3.13）",
+            "source": "ME-GCZY-005"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00048",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 60
+      },
+      "quote": "1#楼8层移动操作平台脚轮未锁",
+      "extractor": "rules",
+      "hazard_type": "移动操作平台违规使用",
+      "hazard_type_id": "HT-GCZY-006",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "移动操作平台",
+      "attrs": {},
+      "evidence": {
+        "record_index": 60
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00048",
+        "hazard_type_id": "HT-GCZY-006",
+        "hazard_type": "移动操作平台违规使用",
+        "category": "高处作业",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-GCZY-006",
+        "clause_refs": [
+          {
+            "standard": "JGJ 80-2016",
+            "clause": "5.3.1",
+            "quote": "移动式操作平台应按设计荷载使用，脚轮应锁定，作业时不得晃动移位。",
+            "kg_node": "REG:JGJ 80-2016#5.3.1",
+            "anchor": "kg.html#REG%3AJGJ%2080-2016%235.3.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "移动操作平台立即停止使用，锁定脚轮、核实配重与荷载，验收合格并挂牌后方可重新投入使用。（依据 JGJ 80-2016 5.3.1）",
+            "source": "ME-GCZY-006"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00049",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 61
+      },
+      "quote": "2#楼屋面临边防护栏杆缺失",
+      "extractor": "rules",
+      "hazard_type": "临边防护缺失",
+      "hazard_type_id": "HT-GCZY-001",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "屋面临边",
+      "attrs": {},
+      "evidence": {
+        "record_index": 61
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00049",
+        "hazard_type_id": "HT-GCZY-001",
+        "hazard_type": "临边防护缺失",
+        "category": "高处作业",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-GCZY-001",
+        "clause_refs": [
+          {
+            "standard": "JGJ 80-2016",
+            "clause": "4.1.2",
+            "quote": "临边作业时，应在临边设置防护栏杆，并采用密目式安全立网或工具式栏板封闭。",
+            "kg_node": "REG:JGJ 80-2016#4.1.2",
+            "anchor": "kg.html#REG%3AJGJ%2080-2016%234.1.2"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "立即按规范在临边部位设置定型化防护栏杆（上杆1.2m、下杆0.6m）并挂设密目安全网，验收合格后方可作业。（依据 JGJ 80-2016 4.1.2）",
+            "source": "ME-GCZY-001"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00050",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 62
+      },
+      "quote": "3#楼5层钢结构作业面焊接工人安全带未系挂",
+      "extractor": "rules",
+      "hazard_type": "高处作业未系安全带",
+      "hazard_type_id": "HT-GCZY-002",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "钢结构作业面",
+      "attrs": {},
+      "evidence": {
+        "record_index": 62
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00050",
+        "hazard_type_id": "HT-GCZY-002",
+        "hazard_type": "高处作业未系安全带",
+        "category": "高处作业",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-GCZY-002",
+        "clause_refs": [
+          {
+            "standard": "JGJ 80-2016",
+            "clause": "4.5.1",
+            "quote": "高处作业人员应按规定正确使用安全带，安全带应高挂低用。",
+            "kg_node": "REG:JGJ 80-2016#4.5.1",
+            "anchor": "kg.html#REG%3AJGJ%2080-2016%234.5.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "责令高处作业人员立即系挂符合要求的安全带并做到高挂低用，班前交底再次确认，未整改前停止相关部位作业。（依据 JGJ 80-2016 4.5.1）",
+            "source": "ME-GCZY-002"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00051",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 63
+      },
+      "quote": "2#楼12层电梯井口未设置防护",
+      "extractor": "rules",
+      "hazard_type": "洞口防护缺失",
+      "hazard_type_id": "HT-GCZY-003",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "电梯井口",
+      "attrs": {},
+      "evidence": {
+        "record_index": 63
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00051",
+        "hazard_type_id": "HT-GCZY-003",
+        "hazard_type": "洞口防护缺失",
+        "category": "高处作业",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-GCZY-003",
+        "clause_refs": [
+          {
+            "standard": "JGJ 80-2016",
+            "clause": "4.2.1",
+            "quote": "楼梯口、电梯井口、预留洞口等处应按规范设置防护设施。",
+            "kg_node": "REG:JGJ 80-2016#4.2.1",
+            "anchor": "kg.html#REG%3AJGJ%2080-2016%234.2.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "对洞口加盖固定盖板并设置警示标识，短边尺寸大于一定值时按规范设置防护栏杆，专人复查销项。（依据 JGJ 80-2016 4.2.1）",
+            "source": "ME-GCZY-003"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00052",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 65
+      },
+      "quote": "3#楼12层楼层临边安全网破损5处",
+      "extractor": "rules",
+      "hazard_type": "安全网缺失或破损",
+      "hazard_type_id": "HT-GCZY-004",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "楼层临边",
+      "attrs": {},
+      "evidence": {
+        "record_index": 65
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00052",
+        "hazard_type_id": "HT-GCZY-004",
+        "hazard_type": "安全网缺失或破损",
+        "category": "高处作业",
+        "risk_level": "一般风险",
+        "base_level": "一般风险",
+        "rule_id": "RL-GCZY-004",
+        "clause_refs": [
+          {
+            "standard": "JGJ 59-2011",
+            "clause": "3.13",
+            "quote": "高处作业检查评分表：安全网、临边与洞口防护、安全通道、操作平台等为检查评定项目。",
+            "kg_node": "REG:JGJ 59-2011#3.13",
+            "anchor": "kg.html#REG%3AJGJ%2059-2011%233.13"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "更换或补挂破损缺失的安全网，确保架体外侧密目网封闭严密，每周组织一次巡检。（依据 JGJ 59-2011 3.13）",
+            "source": "ME-GCZY-004"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00053",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 66
+      },
+      "quote": "2#楼基坑东侧安全通道堵塞",
+      "extractor": "rules",
+      "hazard_type": "安全通道不畅通",
+      "hazard_type_id": "HT-GCZY-005",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "安全通道",
+      "attrs": {},
+      "evidence": {
+        "record_index": 66
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00053",
+        "hazard_type_id": "HT-GCZY-005",
+        "hazard_type": "安全通道不畅通",
+        "category": "高处作业",
+        "risk_level": "一般风险",
+        "base_level": "一般风险",
+        "rule_id": "RL-GCZY-005",
+        "clause_refs": [
+          {
+            "standard": "JGJ 59-2011",
+            "clause": "3.13",
+            "quote": "高处作业检查评分表：安全网、临边与洞口防护、安全通道、操作平台等为检查评定项目。",
+            "kg_node": "REG:JGJ 59-2011#3.13",
+            "anchor": "kg.html#REG%3AJGJ%2059-2011%233.13"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "清理安全通道内堆放材料，恢复通道畅通并保持照明与标识完好，纳入日常巡查清单。（依据 JGJ 59-2011 3.13）",
+            "source": "ME-GCZY-005"
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "HC-00054",
+      "source": {
+        "file": "data/samples/text/demo_gczy.txt",
+        "record_index": 67
+      },
+      "quote": "下午1#楼内装修操作平台未固定",
+      "extractor": "rules",
+      "hazard_type": "移动操作平台违规使用",
+      "hazard_type_id": "HT-GCZY-006",
+      "category": "高处作业",
+      "work_type": "高处作业",
+      "site_object": "操作平台",
+      "attrs": {},
+      "evidence": {
+        "record_index": 67
+      },
+      "confidence": 0.95,
+      "merged_from": [
+        "rules"
+      ],
+      "judgment": {
+        "card_id": "HC-00054",
+        "hazard_type_id": "HT-GCZY-006",
+        "hazard_type": "移动操作平台违规使用",
+        "category": "高处作业",
+        "risk_level": "较大风险",
+        "base_level": "较大风险",
+        "rule_id": "RL-GCZY-006",
+        "clause_refs": [
+          {
+            "standard": "JGJ 80-2016",
+            "clause": "5.3.1",
+            "quote": "移动式操作平台应按设计荷载使用，脚轮应锁定，作业时不得晃动移位。",
+            "kg_node": "REG:JGJ 80-2016#5.3.1",
+            "anchor": "kg.html#REG%3AJGJ%2080-2016%235.3.1"
+          }
+        ],
+        "upgraded": {
+          "major_pattern": null,
+          "severity_word": null
+        },
+        "override_id": null,
+        "threshold_id": null,
+        "human_confirm": false,
+        "suggestions": [
+          {
+            "text": "移动操作平台立即停止使用，锁定脚轮、核实配重与荷载，验收合格并挂牌后方可重新投入使用。（依据 JGJ 80-2016 5.3.1）",
+            "source": "ME-GCZY-006"
+          }
+        ]
+      }
+    }
+  ],
+  "warnings": [],
+  "timings": [
+    {
+      "step": "parse",
+      "seconds": 0.0021,
+      "ok": true
+    },
+    {
+      "step": "extract_rules",
+      "seconds": 0.0009,
+      "ok": true
+    }
+  ],
+  "settings": {
+    "disable_llm": true
+  }
+}
