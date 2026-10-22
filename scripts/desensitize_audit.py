@@ -37,7 +37,7 @@ BINARY_WHITELIST = {
     "data/samples/images/shwd_5.jpg":
         "2b867f3d132d23f7df9d3e8612132795f40eaf5f9c7d5f16e867680a5a35abea",
     "docs/技术方案.docx":
-        "09662ba2d1e619206ba68ea26b4387fbd80e05404c16d7c71574f9d94f6aa35a",
+        "de8c71812c2db60cc2cf5713d34bd9ae464aec235f93ab6f016cae3eb7828b39",
 }
 
 # ① 密钥模式（赋值形态要求引号内长字面量，避免命中 api_key_env 等变量名/环境变量引用）

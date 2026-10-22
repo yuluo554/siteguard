@@ -138,9 +138,9 @@ def create_app(out_dir="examples/web_output", scenario="all"):
         title="SiteGuard Web 面板",
         description="融合 LLM 与知识图谱的施工现场安全风险隐患智能研判系统",
         version=_app_version())
-    out_path = config.repo_path(out_dir)
-    webapp_dir = config.repo_path("webapp")
-    kg_dir = config.repo_path("examples", "kg")
+    out_path = config.out_path(out_dir)
+    webapp_dir = config.asset_path("webapp")
+    kg_dir = config.out_path("examples", "kg")
 
     @app.get("/")
     def index():
@@ -161,7 +161,7 @@ def create_app(out_dir="examples/web_output", scenario="all"):
             raise fastapi.HTTPException(
                 status_code=404, detail="场景不存在或未包含在 --scenario=%s 中: %s"
                                         % (scenario, scenario_key))
-        p = config.repo_path("data", "samples", "text", spec["file"])
+        p = config.data_path("samples", "text", spec["file"])
         if not p.exists():
             raise fastapi.HTTPException(
                 status_code=404, detail="样例文件不存在，请先运行：py -X utf8 -m siteguard.cli datagen")

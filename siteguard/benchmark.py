@@ -147,7 +147,7 @@ def eval_paired():
 
     cases = []
     for key, pspec in PAIRED.items():
-        base = config.repo_path("data", "eval", "cases")
+        base = config.data_path("eval", "cases")
         log_records = parsers.parse_log_file(base / pspec["log"])
         patrol_records = parsers.parse_log_file(base / pspec["patrol"])
         gold = config.load_json(base / pspec["gold"])
@@ -171,8 +171,8 @@ def run_eval(settings=None, out_path=None):
     graph = None  # 评测不依赖图谱内容，条款关联走词表即可
     results = []
     for key, spec in _scenarios():
-        txt = config.repo_path("data", "samples", "text", spec["file"])
-        gold = config.repo_path("data", "eval", "gold", spec["file"].replace(".txt", ".gold.json"))
+        txt = config.data_path("samples", "text", spec["file"])
+        gold = config.data_path("eval", "gold", spec["file"].replace(".txt", ".gold.json"))
         results.append(eval_file(txt, gold, schema, graph, settings))
     tp = sum(r["tp"] for r in results)
     fp = sum(r["fp"] for r in results)

@@ -37,3 +37,31 @@ packages = [
   "siteguard.pipeline",
   "siteguard.report",
 ]
+
+# 随包资产：data/（知识库 + 样例 + 真值）、webapp/（免构建静态页）、config/（示例配置）。
+#
+# 为什么用 data-files 而不是 package-data：package-data 只收**包目录内**的文件，
+# 而本仓资产在**仓库根**（siteguard/ 之外），package-data 收不到——v0.1.1 实测：
+# 不加这段时 wheel 里 assets 条目数 = 0，装出来的包 `eval` 直接崩、
+# Web 面板首页 404（`File ... does not exist`），只有 /api/health 这类不碰资产的
+# 接口还活着，很容易被误判成"装好了"。
+#
+# 装到 <prefix>/share/siteguard/{data,webapp,config}，由 config.share_root() /
+# asset_path() 在装态回落查找；源码态仍读仓库根，行为不变。
+[tool.setuptools.data-files]
+"share/siteguard/data/knowledge/seed" = [
+  "data/knowledge/seed/hazard_types.json",
+  "data/knowledge/seed/measures.json",
+]
+"share/siteguard/data/knowledge/regulations" = ["data/knowledge/regulations/seed_regulations.jsonl"]
+"share/siteguard/data/knowledge/thresholds" = ["data/knowledge/thresholds/seed_thresholds.json"]
+"share/siteguard/data/knowledge/rules" = ["data/knowledge/rules/rules_v1.json"]
+"share/siteguard/data/knowledge/cases" = ["data/knowledge/cases/cases.jsonl"]
+"share/siteguard/data/samples/text" = ["data/samples/text/*.txt"]
+"share/siteguard/data/samples/images" = ["data/samples/images/*.jpg"]
+"share/siteguard/data/eval/gold" = ["data/eval/gold/*.gold.json"]
+"share/siteguard/data/eval/cases" = ["data/eval/cases/*.txt", "data/eval/cases/*.json"]
+"share/siteguard/data" = ["data/README.md"]
+"share/siteguard/webapp" = ["webapp/*.html", "webapp/*.js", "webapp/*.css", "webapp/README.md"]
+"share/siteguard/config" = ["config/*.json"]
+

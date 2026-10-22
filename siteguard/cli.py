@@ -35,18 +35,18 @@ def cmd_demo(args):
 
     generate_all(force=False)
     if args.scenario == "all":
-        files = [config.repo_path("data", "samples", "text", s["file"])
+        files = [config.data_path("samples", "text", s["file"])
                  for s in SCENARIOS.values()]
     else:
         spec = SCENARIOS[args.scenario]
-        files = [config.repo_path("data", "samples", "text", spec["file"])]
+        files = [config.data_path("samples", "text", spec["file"])]
 
     video_frames = []
     if getattr(args, "video", ""):
         from .extract import video as video_mod
         try:
             video_frames = video_mod.extract_keyframes(
-                args.video, config.repo_path(args.out) / "video_frames")
+                args.video, config.out_path(args.out) / "video_frames")
             print("视频抽帧：%d 帧关键帧（复用视觉通路参与图文融合，optional video 组）"
                   % len(video_frames))
         except ValueError as exc:  # 缺 opencv / 坏文件：打印说明降级，不崩溃
@@ -56,7 +56,7 @@ def cmd_demo(args):
     for f in files:
         vision_images = [str(p) for p in video_frames]
         if getattr(args, "with_vision", False):
-            img_dir = config.repo_path("data", "samples", "images")
+            img_dir = config.data_path("samples", "images")
             if img_dir.exists():
                 imgs = sorted(
                     (p for p in img_dir.iterdir()
@@ -71,7 +71,7 @@ def cmd_demo(args):
             n_fb = vector_mod.fallback_clauses(
                 report, vector_mod.build_regulation_index())
             print("  向量检索兜底：%d 张卡片补充候选条款（提示性，非判定依据）" % n_fb)
-        out_dir = config.repo_path(args.out)
+        out_dir = config.out_path(args.out)
         from .report import export
         stem = f.stem
         export.export_json(report, out_dir / (stem + ".report.json"))
@@ -98,7 +98,7 @@ def cmd_demo(args):
                      j["hazard_type"],
                      "、".join("%s %s" % (x["standard"], x["clause"])
                                for x in j["clause_refs"]) or "无条款"))
-    print("报告目录：%s" % config.repo_path(args.out))
+    print("报告目录：%s" % config.out_path(args.out))
     return 0
 
 
@@ -108,7 +108,7 @@ def cmd_build_kg(args):
     from .kg import visualize
 
     graph = kg_schema.build_seed_graph()
-    out = config.repo_path(args.out)
+    out = config.out_path(args.out)
     out.mkdir(parents=True, exist_ok=True)
     payload = visualize.export_stats(graph, out / "kg_stats.json")
     visualize.export_graph_json(graph, out / "kg.json")
@@ -129,7 +129,7 @@ def cmd_eval(args):
     from .benchmark import run_eval
 
     generate_if_needed()
-    payload = run_eval(out_path=config.repo_path(args.out))
+    payload = run_eval(out_path=config.out_path(args.out))
     print(json.dumps(payload["micro"], ensure_ascii=False))
     for r in payload["files"]:
         print("%s: F1=%.4f P=%.4f R=%.4f 分级准确率=%s"
@@ -160,7 +160,7 @@ def cmd_eval(args):
     print("目标 F1>=%.2f 且误报<=%d（字段级 F1>=%.2f、配对差异全检出、端到端误报=%d）：%s"
           % (target["f1"], target["fp"], target.get("field_f1", target["f1"]),
              target.get("e2e_fpr", 0), "达标" if passed else "未达标"))
-    print("评测报告：%s" % config.repo_path(args.out))
+    print("评测报告：%s" % config.out_path(args.out))
     return 0 if passed else 1
 
 

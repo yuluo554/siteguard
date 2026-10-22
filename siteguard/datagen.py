@@ -291,9 +291,9 @@ def _build_paired(spec, pspec, rng, schema, force=False):
     差异三类（写入 gold 差异清单）：漏项 missing / 数值不一致 value / 多报 extra。
     两版按同一事件序列生成（时间戳一一对应），巡查版换表面时间格式与行文前缀。
     """
-    log_path = config.repo_path("data", "eval", "cases", pspec["log"])
-    patrol_path = config.repo_path("data", "eval", "cases", pspec["patrol"])
-    gold_path = config.repo_path("data", "eval", "cases", pspec["gold"])
+    log_path = config.data_path("eval", "cases", pspec["log"])
+    patrol_path = config.data_path("eval", "cases", pspec["patrol"])
+    gold_path = config.data_path("eval", "cases", pspec["gold"])
     if not force and _paired_uptodate(gold_path):
         return "exists"
 
@@ -448,9 +448,9 @@ def generate_all(force=False, seed=DEFAULT_SEED):
     rng = random.Random(seed)
     made = {}
     for key, spec in SCENARIOS.items():
-        txt = config.repo_path("data", "samples", "text", spec["file"])
-        gold = config.repo_path("data", "eval", "gold",
-                                spec["file"].replace(".txt", ".gold.json"))
+        txt = config.data_path("samples", "text", spec["file"])
+        gold = config.data_path("eval", "gold",
+                                  spec["file"].replace(".txt", ".gold.json"))
         if not force and _scenario_uptodate(txt, gold):
             made[key] = "exists"
             continue

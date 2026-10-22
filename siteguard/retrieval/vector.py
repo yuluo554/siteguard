@@ -111,8 +111,8 @@ def build_regulation_index(regs_path=None, embedder=None):
     doc 的 text 由标准名 + 条文文本 + 关键词拼接；standard/clause/std_name 作为
     候选元数据随命中返回（候选必挂条款出处）。
     """
-    p = Path(regs_path) if regs_path else config.repo_path(
-        "data", "knowledge", "regulations", "seed_regulations.jsonl")
+    p = Path(regs_path) if regs_path else config.data_path(
+        "knowledge", "regulations", "seed_regulations.jsonl")
     docs = []
     if p.exists():
         with open(str(p), "r", encoding="utf-8") as f:

@@ -147,3 +147,108 @@ jobs:
             git diff --stat
             exit 1
           fi
+
+  # ------------------------------------------------------- 装态（打包）腿
+  # DEC2=B（Release 附 sdist + wheel）带来的契约：**装完必须能用**。
+  # 这里真构建 + 真从 wheel 非 editable 安装（不是 -e），在中性 CWD 跑业务命令。
+  # 为什么单独一腿：源码态跑绿了不代表装态可用——v0.1.1 实测过 wheel 里零资产时
+  # `eval` 直接 FileNotFoundError、面板首页 500，而源码态全绿。
+  packaging:
+    name: packaging (${{ matrix.os }} / py${{ matrix.python-version }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python-version: ["3.12"]
+
+    env:
+      PYTHONUTF8: "1"
+      PYTHONDONTWRITEBYTECODE: "1"
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Build sdist + wheel
+        run: |
+          python -m pip install -U pip build
+          python -m build --outdir dist
+
+      - name: Assert assets really shipped inside the wheel
+        # 静态契约测试盯 pyproject，这里盯**产物**：资产条目必须真的在 wheel 里
+        run: |
+          python - <<'PY'
+          import glob, zipfile
+          whl = glob.glob("dist/*.whl")[0]
+          names = zipfile.ZipFile(whl).namelist()
+          need = ["share/siteguard/data/knowledge/seed/hazard_types.json",
+                  "share/siteguard/webapp/index.html",
+                  "share/siteguard/config/settings.example.json"]
+          missing = [n for n in need
+                     if not any(x.endswith(n) for x in names)]
+          print("wheel:", whl, "entries:", len(names))
+          assert not missing, "wheel 缺随包资产: %s" % missing
+          print("WHEEL_ASSETS_OK")
+          PY
+
+      - name: Install wheel (non-editable) into a clean venv
+        # 关键：**不用 -e**，且在新 venv 里装——editable 会把仓库 cwd 当数据源，
+        # 那样永远测不出"装态缺资产"
+        run: |
+          python -m venv "$RUNNER_TEMP/sg-installed"
+          if [ -f "$RUNNER_TEMP/sg-installed/Scripts/python.exe" ]; then
+            PY="$RUNNER_TEMP/sg-installed/Scripts/python.exe"   # Windows
+          else
+            PY="$RUNNER_TEMP/sg-installed/bin/python"
+          fi
+          echo "SG_PY=$PY" >> "$GITHUB_ENV"
+          "$PY" -m pip install -U pip
+          "$PY" -m pip install "$(ls dist/*.whl)[llm,doc,kg,web]"
+
+      - name: Installed-state smoke (neutral CWD, real business commands)
+        # 在中性目录跑：源码树不在 CWD，数据只能来自 share/
+        run: |
+          mkdir -p "$RUNNER_TEMP/neutral" && cd "$RUNNER_TEMP/neutral"
+          "$SG_PY" -X utf8 -m siteguard.cli version
+          "$SG_PY" -X utf8 -m siteguard.cli eval
+          "$SG_PY" -X utf8 -m siteguard.cli demo
+          "$SG_PY" -X utf8 -m siteguard.cli build-kg
+          ls -R examples | head -40
+
+      - name: Installed-state web panel (D1 + D8 regression)
+        run: |
+          mkdir -p "$RUNNER_TEMP/neutral" && cd "$RUNNER_TEMP/neutral"
+          "$SG_PY" -X utf8 - <<'PY'
+          from fastapi.testclient import TestClient
+          from siteguard.serverapp import create_app
+          app = create_app(out_dir="examples/web_output")
+          c = TestClient(app)
+          # 首页 + 静态页：D8（webapp 未随包会 500）
+          for p in ("/", "/static/app.js", "/api/health", "/api/scenarios"):
+              r = c.get(p)
+              assert r.status_code == 200, (p, r.status_code)
+          # 样例 + 研判 + 三格式下载：D1（缺 multipart 会在 create_app 就崩）
+          s = c.get("/api/sample/gczy").json()
+          r = c.post("/api/analyze", data={"text": s["text"], "filename": s["filename"]})
+          assert r.status_code == 200, r.text[:400]
+          body = r.json()
+          assert body["hazard_count"] == 54, body["hazard_count"]
+          assert body["downloads"]["docx"], body["downloads"]
+          print("INSTALLED_PANEL_OK", body["downloads"])
+          PY
+
+      - name: Assert installed package did not write into site-packages
+        # 产物必须落在 CWD，不能写进已安装包（否则包被污染、且多用户环境会冲突）
+        run: |
+          SP=$("$SG_PY" -c "import site; print(site.getsitepackages()[0])")
+          if find "$SP" -name "eval_report.json" -o -name "demo_output" 2>/dev/null | grep -q .; then
+            echo "::error::产物被写进了 site-packages"
+            find "$SP" -name "eval_report.json" -o -name "demo_output"
+            exit 1
+          fi
+          echo "no artifacts leaked into site-packages"
+

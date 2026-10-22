@@ -31,10 +31,21 @@
 
 环境要求：Python ≥ 3.12（v0.1.1 起；`v0.1.0` 曾在本机 Python 3.8.8 实测过），**核心链路零第三方依赖**。
 
+两种装法（都可用，行为一致）：
+
 ```bash
-# 0. 安装（可选：只装核心用 pip install -e .；跑全部测试与 Web 面板请装齐 extras）
+# A. 从源码（要跑测试/改代码用这个）
 py -m pip install -e ".[llm,doc,kg,web]"
 
+# B. 从 Release 的 wheel 装（不 clone 仓库也能用；知识库/样例/静态页已随包）
+py -m pip install siteguard_safety-0.1.1-py3-none-any.whl[llm,doc,kg,web]
+```
+
+> 装态（B）下随包资产装在 `<python 前缀>/share/siteguard/`，运行时自动回落查找；
+> `eval`/`demo`/`build-kg` 的产物写在**当前工作目录**的 `examples/` 下（不写 site-packages），
+> 可用环境变量 `SITEGUARD_OUT_ROOT` 改落点。
+
+```bash
 # 1. 生成样例语料与真值（幂等，seed=42 可复现）
 py -X utf8 -m siteguard.cli datagen
 
@@ -97,7 +108,7 @@ flowchart TB
 | 端到端检出率（全链路研判 vs gold） | 1.0000（108/108） | ≥ 0.90 | 解析→抽取→条款关联→四级判定全链路结果与真值对齐 |
 | 端到端误报率 | 0.0000（0/108） | 0（硬性） | 与抽取级 FP=0 同口径硬约束 |
 | KG 节点 / 边 | 187 / 238 | ≥ 100 节点 | `build-kg` 实测，`examples/kg/kg_stats.json` |
-| 单元/集成测试 | 143 项全绿（装齐 `.[llm,doc,kg,web]` 后；78 基线+23 M4+20 M5+13 M6+9 v0.1.1） | 全绿 | 含失败路径：缺文件/坏格式/缺依赖/服务不可用；仅装核心时部分用例因缺 optional 依赖失败（见"已知限制"） |
+| 单元/集成测试 | 150 项全绿（装齐 `.[llm,doc,kg,web]` 后；78 基线+23 M4+20 M5+13 M6+16 v0.1.1） | 全绿 | 含失败路径：缺文件/坏格式/缺依赖/服务不可用；仅装核心时部分用例因缺 optional 依赖失败（见"已知限制"） |
 
 语料规模（生成器 v2，seed=42 可复现）：两大场景各 **54 条隐患 + 14 条正常记录**
 （含多行记录、4 种时间戳表面格式），每类隐患 6 种口语化变体；配对语料 2 组
