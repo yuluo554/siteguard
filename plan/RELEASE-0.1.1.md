@@ -100,6 +100,29 @@ sdist 同样验过：`pip install <下载的 tar.gz>[llm,doc,kg,web]` → `versi
 - run `39704057452`（push `1881dfa`）：`core-only` / `full-extras`×2 / `packaging`×2 = **5 job 全 success**
 - 注解：3 条 `ubuntu-latest → Ubuntu 26` 迁移提示（GitHub 平台公告），**Node20 弃用告警 0 条**
 - 前两次 run 如实留痕：`39702353643` failure（抓到跨平台缺陷）、`39702910942` success
+- run `39704705047`（push `00af704`，本文件的 tag 后补充）：同样 **5 job 全 success**
+
+### 4.6 tag 之后还有一个纯文档提交（如实披露）
+
+打 tag 后，本文件（`plan/RELEASE-0.1.1.md`）需要补写 §四「tag 后事实」，于是多出：
+
+| 项 | 值 |
+|---|---|
+| `v0.1.1..HEAD` | **恰好 1 个提交**：`00af704`（只改 `plan/RELEASE-0.1.1.md`，+61/−1 行） |
+| 是否含代码/资产改动 | **否**（`git diff --stat v0.1.1..HEAD` 只有这一个文件） |
+| 该文件是否在发布物里 | **否**（实测：wheel 里无 `plan/`；sdist 里 `plan/` 条目数 = **0**） |
+| 结论 | **已发布的两个附件仍然是 tag 树 `1881dfa` 的完整代码**，不含也不需要这个文档提交 |
+
+**为什么不把 tag 挪到 `00af704`**：挪了之后附件就不再是"从 tag 树构建"的产物
+（setuptools 构建非字节可复现，重建会改变 sha256，导致已发布的三方对撞失效）。
+两害相权，保留 tag = 代码提交、并把「1 个纯文档提交的滞后」写进本表，是更能被复验的口径。
+
+复验方若要确认，跑这两条即可：
+
+```bash
+git -C <repo> log --oneline v0.1.1..HEAD          # → 只有 00af704
+git -C <repo> diff --stat v0.1.1..HEAD            # → 只有 plan/RELEASE-0.1.1.md
+```
 
 ## 五、验收命令与结果
 
