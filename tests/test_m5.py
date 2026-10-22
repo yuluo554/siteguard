@@ -144,6 +144,31 @@ class TestServeCore(unittest.TestCase):
         out = analyze_input(txt.read_bytes(), "..\\..\\evil\\demo_gczy.txt", self.tmp)
         self.assertEqual(out["report"]["source_file"], "demo_gczy.txt")
 
+    def test_filename_sanitization_is_cross_platform(self):
+        """v0.1.1 回归：\ 与 / 都必须被当分隔符（POSIX 上 Path().name 只认 /）。
+
+        CI 的 Linux 腿抓到过：旧实现 Path(name).name 在 POSIX 上把
+        "..\\..\\evil\\demo_gczy.txt" 原样保留 → 文件名穿越清洗失效。
+        这里两种分隔符、混合分隔符、盘符路径、纯分隔符、空串全覆盖。
+        """
+        txt = config.repo_path("data", "samples", "text", "demo_gczy.txt")
+        raw = txt.read_bytes()
+        cases = {
+            "..\\..\\evil\\demo_gczy.txt": "demo_gczy.txt",   # Windows 风格
+            "../../evil/demo_gczy.txt": "demo_gczy.txt",      # POSIX 风格
+            "a/b\\c/demo_gczy.txt": "demo_gczy.txt",          # 混合
+            "C:\\Users\\x\\demo_gczy.txt": "demo_gczy.txt",   # 盘符路径
+        }
+        for given, expected in cases.items():
+            out = analyze_input(raw, given, self.tmp)
+            self.assertEqual(out["report"]["source_file"], expected, given)
+
+    def test_filename_only_separators_falls_back_to_pasted(self):
+        """纯分隔符 / 点号不该变成空文件名或 "."。"""
+        from siteguard.serverapp import _clean_filename
+        for bad in ("..\\..\\", "../../", "", ".", ".."):
+            self.assertEqual(_clean_filename(bad), "pasted.txt", repr(bad))
+
     def test_analyze_input_bad_docx_degrades(self):
         out = analyze_input(b"not a real docx", "bad.docx", self.tmp)
         self.assertEqual(out["report"]["hazard_count"], 0)

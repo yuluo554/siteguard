@@ -16,6 +16,7 @@
   "CLI + Web ≥2 场景真实演示"）。
 """
 
+import re
 import shutil
 import tempfile
 from pathlib import Path
@@ -58,6 +59,20 @@ def scenario_payload(scenario="all"):
             for k in keys]
 
 
+def _clean_filename(filename):
+    """上传文件名清洗（防路径穿越），**跨平台**：同时按 / 与 \\ 切分。
+
+    只用 ``Path(name).name`` 是不跨平台的——POSIX 上 "\\" 不是路径分隔符，
+    ``"..\\..\\evil\\x.txt"`` 会被原样保留，穿越清洗静默失效。
+    这是 v0.1.1 的 CI（Linux 腿）在干净环境里实测抓到的真实缺陷。
+    纯分隔符/点号/空串一律回落到 pasted.txt。
+    """
+    name = re.split(r"[\\/]", str(filename or ""))[-1].strip()
+    if name in ("", ".", ".."):
+        return "pasted.txt"
+    return name
+
+
 def analyze_input(content, filename, out_dir):
     """上传内容 → 研判报告与导出产物（纯函数，不依赖 fastapi 类型）。
 
@@ -66,9 +81,7 @@ def analyze_input(content, filename, out_dir):
     不支持的后缀/空内容抛 ValueError（HTTP 层转 400）。坏 docx/坏编码不崩溃：
     按流水线条目级降级纪律进 report["warnings"]。
     """
-    name = Path(str(filename or "")).name
-    if not name:
-        name = "pasted.txt"
+    name = _clean_filename(filename)
     suffix = Path(name).suffix.lower()
     if suffix not in ALLOWED_SUFFIXES:
         raise ValueError("暂不支持的文件类型: %s（支持 .txt/.docx）" % (suffix or "(无后缀)"))

@@ -37,5 +37,5 @@
 - [x] 基准脚本可重复，解析 F1 ≥ 0.95、误报 0，指标写入 README（实测 F1=1.0000、FP=0，README 评测表与 eval 实测一致）
 - [x] 端到端命令（CLI + Web）在 ≥2 个典型场景（高处作业、临时用电）真实演示通过（CLI：`demo` 两场景各 54 条；Web：真实 uvicorn 进程 `scripts.serve_live_demo` 两场景上传→研判→三格式下载全过）
 - [x] KG 可视化 HTML 含 ≥100 核心节点（实测 187 节点/238 边，kg.html 单文件 0 外链）
-- [x] 测试全绿（含失败路径：缺文件/坏格式/服务不可用）（v0.1.0 时 134 项：78 基线+23 M4+20 M5+13 M6；**v0.1.1 起 141 项**：+7 项 optional-dependencies 契约与自述计数守门，前提为装齐 `.[llm,doc,kg,web]`）
+- [x] 测试全绿（含失败路径：缺文件/坏格式/服务不可用）（v0.1.0 时 134 项：78 基线+23 M4+20 M5+13 M6；**v0.1.1 起 143 项**：+9 项 optional-dependencies 契约、自述计数守门与跨平台文件名清洗回归，前提为装齐 `.[llm,doc,kg,web]`）
 - [x] 脱敏四步审查通过（密钥、个人信息、个人路径、二进制内容扫描）（`scripts/desensitize_audit.py` 程序化全 PASS，记录见 data/README.md M5 段）
