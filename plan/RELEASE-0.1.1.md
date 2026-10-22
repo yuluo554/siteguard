@@ -43,11 +43,15 @@
 
 （本节在打完 tag 后追加，如实记录 tag 之后才发现/发生的事。）
 
-### 4.1 tag 时点
+### 4.1 tag 时点（最终态：零滞后）
 
-- tag `v0.1.1`（annotated）→ 剥离后指向 `1881dfaaab09b3ae7ea6355fe0fbfa169ded5e8c`
-- 该提交就是 CI 全绿的那个提交：run `39704057452`（5 job 全 success）
-- 与 `v0.1.0`（`8355584`）的关系：3 个提交（`4089fad` / `ef0d524` / `1881dfa`）
+- tag `v0.1.1`（annotated，对象 `4471a5b`）→ 剥离后指向 **`6bc74f43`**
+- `6bc74f43` = `main` HEAD = **tag 与 HEAD 零滞后**（本组仓审计口径）
+- 该提交的 CI：run `39704897842`（5 job 全 success）
+- 与 `v0.1.0`（`8355584`）的关系：5 个提交
+  （`4089fad` 主体 → `ef0d524` D9 → `1881dfa` D8 → `00af704`/`6bc74f4` 文档）
+- **tag 曾被移动一次**：首次打在 `1881dfa`，为纳入 2 个只改本文件的文档提交而移到
+  `6bc74f4` 并**重新构建、重新上传**附件。详见 §4.7。
 
 ### 4.2 tag 之前就发生、但不属于原计划的两次修复（都是 CI/实装自己抓出来的）
 
@@ -72,13 +76,28 @@
 
 附件来自 **tag 树重新构建**（`git clone --branch v0.1.1` → `python -m build`），不是本地工作树：
 
-| 文件 | 字节 | sha256（本地 = SHA256SUMS = GitHub digest） |
-|---|---|---|
-| `siteguard_safety-0.1.1-py3-none-any.whl` | 305 292 | `03f7e3d66c39a51a59d586b8af23a8ea53ab8b73d01b24881ad4d034cdb7adde` |
-| `siteguard_safety-0.1.1.tar.gz` | 313 105 | `a0bc6713fde5e9f85fe08db18747ca8e4d241816a294b75796faf7a829612bb0` |
-| `SHA256SUMS` | 202 | `461e3de5ec7f7c9002f828bffe70bb4dc70b4ace4ea25cafe161bfb681723b26` |
+**最终发布物**：`siteguard_safety-0.1.1-py3-none-any.whl` + `.tar.gz` + `SHA256SUMS`，
+从 `v0.1.1`（= `main` HEAD，零滞后）的 tag 树构建：
 
-真下载复验（`curl` Release 附件 → `cmp` 本地 → `sha256sum -c`）：**两个附件均 IDENTICAL / OK**。
+```bash
+git clone --depth 1 --branch v0.1.1 <repo> && cd <repo> && python -m build
+```
+
+> **sha256 的权威来源是 Release 说明页与随件 `SHA256SUMS`，不在本文件里写死。**
+> 原因：setuptools 的 sdist/wheel 构建**非字节可复现**（zip 内时间戳随构建时刻变），
+> 而本文件随每次文档修订都要提交 → 若在此写死 sha，就会陷入
+> 「改文档 → 移 tag → 重建 → sha 变 → 再改文档」的循环。
+> 这是一个值得记住的坑：**台账只留不变量与历史，易变数值放发布页**。
+
+已作废的历史值（仅留痕，勿再使用）：
+
+| 时点 | whl sha256 | tar sha256 |
+|---|---|---|
+| 首次发布（tag 在 `1881dfa`） | `03f7e3d6…` | `a0bc6713…` |
+| 移 tag 后第 2 次（`6bc74f4`） | `d91e0135…` | `ad03799f…` |
+
+两次重建的**内容**均与首次一致（wheel 解压 `diff -r` 无差异；sdist 条目 102 条一致、`plan/` 命中 0），
+仅 zip 时间戳导致 sha 变化。最终值与复验命令见 Release 说明页。
 
 ### 4.4 从下载件装完能用（对外用户视角，实测）
 
@@ -100,29 +119,36 @@ sdist 同样验过：`pip install <下载的 tar.gz>[llm,doc,kg,web]` → `versi
 - run `39704057452`（push `1881dfa`）：`core-only` / `full-extras`×2 / `packaging`×2 = **5 job 全 success**
 - 注解：3 条 `ubuntu-latest → Ubuntu 26` 迁移提示（GitHub 平台公告），**Node20 弃用告警 0 条**
 - 前两次 run 如实留痕：`39702353643` failure（抓到跨平台缺陷）、`39702910942` success
-- run `39704705047`（push `00af704`，本文件的 tag 后补充）：同样 **5 job 全 success**
+- run `39704705047`（push `00af704`）：5 job 全 success
+- run `39704897842`（push `6bc74f4` = **最终 tag/HEAD**）：5 job 全 success
 
-### 4.6 tag 之后还有一个纯文档提交（如实披露）
+### 4.6 用户拍板：移 tag 到 HEAD 并重发附件（最终执行）
 
-打 tag 后，本文件（`plan/RELEASE-0.1.1.md`）需要补写 §四「tag 后事实」，于是多出：
+首次发布后 `v0.1.1` 落后 HEAD 2 个提交（`00af704` / `6bc74f4`，都只改本文件）。
+**用户拍板 A：移 tag 到 HEAD，重发附件**（而不是保留滞后）。已执行：
 
-| 项 | 值 |
+| 步骤 | 结果 |
 |---|---|
-| `v0.1.1..HEAD` | **恰好 1 个提交**：`00af704`（只改 `plan/RELEASE-0.1.1.md`，+61/−1 行） |
-| 是否含代码/资产改动 | **否**（`git diff --stat v0.1.1..HEAD` 只有这一个文件） |
-| 该文件是否在发布物里 | **否**（实测：wheel 里无 `plan/`；sdist 里 `plan/` 条目数 = **0**） |
-| 结论 | **已发布的两个附件仍然是 tag 树 `1881dfa` 的完整代码**，不含也不需要这个文档提交 |
+| 删本地 tag 并重建（annotated）于 `6bc74f4` | 新 tag 对象 `4471a5b` |
+| `git push --force ... v0.1.1` | `+ e661dcd...4471a5b v0.1.1 -> v0.1.1 (forced update)` |
+| 远端剥离核验 | `refs/tags/v0.1.1^{}` = `6bc74f43` = `refs/heads/main` → **零滞后** |
+| 从新 tag 树重建（`git clone --depth 1 --branch v0.1.1` → `python -m build`） | wheel 305 292 / sdist 313 128 |
+| 删旧附件（3 个）→ 上传新附件（3 个）→ `gh release edit` 更新说明 | 附件数回到 3 |
+| 三方 sha256 对撞 | 本地 = 下载件 = GitHub digest，**逐字符一致** |
+| 真下载 → `cmp` 本地 | **三个文件全 IDENTICAL** |
+| 从下载件装（干净 venv）→ version/eval/demo/build-kg/面板 | 全 rc=0；面板 5 端点 200 + 研判 54 条 + 三格式；site-packages 零污染 |
 
-**为什么不把 tag 挪到 `00af704`**：挪了之后附件就不再是"从 tag 树构建"的产物
-（setuptools 构建非字节可复现，重建会改变 sha256，导致已发布的三方对撞失效）。
-两害相权，保留 tag = 代码提交、并把「1 个纯文档提交的滞后」写进本表，是更能被复验的口径。
+**重建带来的字节差异已查清，不是内容变化**：
 
-复验方若要确认，跑这两条即可：
+- wheel：解压后与旧版 **`diff -r` 无差异**（`WHEEL_CONTENT_IDENTICAL`），sha 变只因 zip 时间戳；
+- sdist：条目数 **102 = 102**、`diff` 条目列表**无差异**、`plan/` 命中 **0**（计划文档从不进发布物），
+  字节 +23 亦仅时间戳。
 
-```bash
-git -C <repo> log --oneline v0.1.1..HEAD          # → 只有 00af704
-git -C <repo> diff --stat v0.1.1..HEAD            # → 只有 plan/RELEASE-0.1.1.md
-```
+### 4.7 一段需要记住的教训
+
+「tag 先打、文档后补」会让 tag 永远落在 HEAD 后面。本仓的审计口径是**零滞后**，
+所以正确顺序应当是：**先把 tag 后事实写进 RELEASE 文档并提交，最后再打 tag**。
+本次因已发布才发现，只能靠「移 tag + 重发附件」补救——代价是两个附件的 sha256 全部作废。
 
 ## 五、验收命令与结果
 
