@@ -34,3 +34,6 @@ Thumbs.db
 
 # Web 面板运行产物（演示现场生成，不入仓）
 examples/web_output/
+
+# 交接物（含本机绝对路径，不入公共仓）
+update/

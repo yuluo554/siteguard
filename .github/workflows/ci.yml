@@ -1,0 +1,149 @@
+name: CI
+
+# push 数 = run 数对账（无 filters 时 tag push 也会触发一轮）
+on:
+  push:
+  pull_request:
+
+# 最小权限：本 workflow 只读仓库
+permissions:
+  contents: read
+
+# 同一 ref 的旧跑自动取消
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+# 两个 job 的 shell 都显式指定 bash：windows-latest 默认是 pwsh，
+# 而下面的判据用了 `git status --porcelain` 测试与 exit 码，写法以 bash 为准
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  # ---------------------------------------------------------------- 核心腿
+  # 只装核心（pip install -e .）——验证"核心真零依赖"这条卖点没有被破坏。
+  # 注意：本仓 tests/ 里有部分用例天然需要 optional 组（docx/fastapi/pyvis），
+  # 只装核心时它们必然失败，这是设计如此。所以这一腿**不能**跑裸
+  # `unittest discover`（那会永远红且掩盖真问题），而是跑
+  # scripts/ci_core_only_gate.py：失败必须逐条归因到"确实缺失的 optional 依赖"，
+  # 出现一条清单外失败、或"依赖其实装了还失败"，门就红。
+  core-only:
+    name: core-only (py${{ matrix.python-version }}，零依赖可用性)
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # DEC1（v0.1.1，用户拍板 B）：floor >=3.12；ubuntu-latest 自 2026-10-19
+        # 起为 Ubuntu 26，只跑现代解释器，不再养已 EOL 的 3.8 腿
+        python-version: ["3.12"]
+
+    env:
+      # CI 的 python 不是"我们敲的命令"，没有 -X utf8；
+      # 子进程/测试内部打印中文在非 UTF-8 管道下会 UnicodeEncodeError
+      PYTHONUTF8: "1"
+      PYTHONDONTWRITEBYTECODE: "1"
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install core only (no extras)
+        run: |
+          python -m pip install -U pip
+          python -m pip install -e .
+
+      - name: Assert zero third-party runtime deps
+        # 核心零依赖是 README 第一卖点：pip list 与 import 双判据都得干净
+        run: python -X utf8 -m scripts.ci_core_only_gate --assert-core-only-env
+
+      - name: Core CLI smoke (zero-dependency paths still run)
+        # demo 默认写 examples/demo_output（已跟踪产物，含计时字段）；
+        # 这里故意 --out 到临时目录，免得为了"冒烟"污染确定性产物
+        run: |
+          python -X utf8 -m siteguard.cli version
+          python -X utf8 -m siteguard.cli eval
+          python -X utf8 -m siteguard.cli demo --out "$RUNNER_TEMP/demo_output"
+
+      - name: Core-only failure attribution gate
+        # 清单外失败 / 依赖装了还失败 / 非预期 skip → exit 1
+        # --selftest 是门自身的正控：注入一条清单外失败，门必须红
+        run: |
+          python -X utf8 -m scripts.ci_core_only_gate --selftest
+          python -X utf8 -m scripts.ci_core_only_gate
+
+      - name: Assert tracked artifacts stayed byte-identical
+        # eval 会重写已跟踪的 examples/eval_report.json；确定性被破坏（或产物被
+        # 手改坏）时这里红。注意：demo 已 --out 到临时目录，不在此列。
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "::error::跟踪文件在核心腿跑完后发生变更（确定性被破坏？）"
+            git status --porcelain
+            git diff --stat
+            exit 1
+          fi
+
+  # ------------------------------------------------------------ 完整腿
+  # 装齐 README 推荐的 extras，跑全量测试 + 发版级门禁。
+  full-extras:
+    name: full-extras (${{ matrix.os }} / py${{ matrix.python-version }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python-version: ["3.12"]
+
+    env:
+      PYTHONUTF8: "1"
+      PYTHONDONTWRITEBYTECODE: "1"
+
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          # scripts/desensitize_audit.py 用 git ls-files 枚举跟踪文件；
+          # 浅克隆会让"跟踪文件集合"变形
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install full extras (README 推荐装法)
+        run: |
+          python -m pip install -U pip
+          python -m pip install -e ".[llm,doc,kg,web]"
+
+      - name: Assert web extra really brings python-multipart (D1 regression)
+        # v0.1.0 的 P1：web extra 漏 python-multipart → create_app() 直接抛
+        # RuntimeError，README 让用户装 [web] 会得到起不来的面板。
+        # 这里在**干净环境**里把那条崩溃路径真跑一遍（不是静态看 pyproject）。
+        run: |
+          python -X utf8 -c "import multipart, fastapi, uvicorn, httpx; print('web deps OK')"
+          python -X utf8 -c "from siteguard.serverapp import create_app; app = create_app(); print('CREATE_APP_OK', app.title)"
+
+      - name: Full test suite
+        run: python -X utf8 -m unittest discover -s tests -t . -v
+
+      - name: Eval gate (exit 0 = 达标)
+        # siteguard eval 的 passed 是五项合取（micro F1 / fp / 字段级 F1 /
+        # 配对差异全检出 / 端到端检出率与误报），不达标 return 1
+        run: |
+          python -X utf8 -m siteguard.cli eval
+          python -X utf8 -m siteguard.cli eval > /dev/null 2>&1
+          echo "eval 二次运行仍 exit 0（确定性）"
+
+      - name: Desensitization audit (four steps)
+        run: python -X utf8 -m scripts.desensitize_audit
+
+      - name: Assert tracked artifacts stayed byte-identical
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "::error::跟踪文件在完整腿跑完后发生变更（确定性被破坏？）"
+            git status --porcelain
+            git diff --stat
+            exit 1
+          fi

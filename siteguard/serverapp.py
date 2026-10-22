@@ -22,8 +22,9 @@ from pathlib import Path
 
 from . import config
 
-INSTALL_HINT = ("Web 面板需要可选依赖 fastapi/uvicorn（pyproject web 组）："
-                "py -m pip install fastapi uvicorn "
+INSTALL_HINT = ("Web 面板需要可选依赖 fastapi/uvicorn/httpx/python-multipart"
+                "（pyproject web 组），推荐：py -m pip install -e \".[web]\"；"
+                "等价手工装法：py -m pip install fastapi uvicorn httpx python-multipart "
                 "-i https://pypi.tuna.tsinghua.edu.cn/simple")
 
 ALLOWED_SUFFIXES = (".txt", ".docx")

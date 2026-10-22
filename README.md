@@ -29,9 +29,12 @@
 
 ## 快速开始
 
-环境要求：Python ≥ 3.8（本机 3.8.8 实测），**核心链路零第三方依赖**。
+环境要求：Python ≥ 3.12（v0.1.1 起；`v0.1.0` 曾在本机 Python 3.8.8 实测过），**核心链路零第三方依赖**。
 
 ```bash
+# 0. 安装（可选：只装核心用 pip install -e .；跑全部测试与 Web 面板请装齐 extras）
+py -m pip install -e ".[llm,doc,kg,web]"
+
 # 1. 生成样例语料与真值（幂等，seed=42 可复现）
 py -X utf8 -m siteguard.cli datagen
 
@@ -44,7 +47,7 @@ py -X utf8 -m siteguard.cli build-kg
 # 4. 内置基准评测（解析 F1 + 分级准确率，误报须为 0）
 py -X utf8 -m siteguard.cli eval
 
-# 5. 全部单元测试
+# 5. 全部单元测试（前提：第 0 步已装齐 extras）
 py -X utf8 -m unittest discover -s tests -v
 ```
 
@@ -54,14 +57,16 @@ Linux/macOS 把 `py -X utf8` 换成 `python3` 即可。
 
 ```bash
 # Web 面板：上传/载入示例 → 隐患卡片 → 报告下载（页面 0 外链，断网可演示）
-py -m pip install fastapi uvicorn -i https://pypi.tuna.tsinghua.edu.cn/simple
+# 用 extras 一次装齐 fastapi / uvicorn / httpx / python-multipart（手工列举容易漏）
+py -m pip install -e ".[web]" -i https://pypi.tuna.tsinghua.edu.cn/simple
 py -X utf8 -m siteguard.cli serve --port 8000
+# 面板里的 Word 下载另需 doc 组：pip install -e ".[web,doc]"（缺 doc 时该格式降级为不可用，其余格式不受影响）
 
 # Word 报告导出（含签署栏）
-py -m pip install python-docx
+py -m pip install -e ".[doc]"
 py -X utf8 -m siteguard.cli demo --docx
 
-# 图文融合演示（YOLO 视觉通路）
+# 图文融合演示（YOLO 视觉通路；本仓 CI 未覆盖该通路，见文末"已知限制"）
 py -X utf8 -m siteguard.cli demo --with-vision
 ```
 
@@ -92,7 +97,7 @@ flowchart TB
 | 端到端检出率（全链路研判 vs gold） | 1.0000（108/108） | ≥ 0.90 | 解析→抽取→条款关联→四级判定全链路结果与真值对齐 |
 | 端到端误报率 | 0.0000（0/108） | 0（硬性） | 与抽取级 FP=0 同口径硬约束 |
 | KG 节点 / 边 | 187 / 238 | ≥ 100 节点 | `build-kg` 实测，`examples/kg/kg_stats.json` |
-| 单元/集成测试 | 134 项全绿（78 基线+23 M4+20 M5+13 M6） | 全绿 | 含失败路径：缺文件/坏格式/缺依赖/服务不可用 |
+| 单元/集成测试 | 141 项全绿（装齐 `.[llm,doc,kg,web]` 后；78 基线+23 M4+20 M5+13 M6+7 v0.1.1 契约） | 全绿 | 含失败路径：缺文件/坏格式/缺依赖/服务不可用；仅装核心时部分用例因缺 optional 依赖失败（见"已知限制"） |
 
 语料规模（生成器 v2，seed=42 可复现）：两大场景各 **54 条隐患 + 14 条正常记录**
 （含多行记录、4 种时间戳表面格式），每类隐患 6 种口语化变体；配对语料 2 组
@@ -134,10 +139,27 @@ sha256 与来源链登记 `data/README.md` 查证记录）、阈值 **7 条**、
 | M5 | 交付打磨：Web 面板 serve（FastAPI+免构建静态页，0 外链断网可演示，≥2 场景真实演示）、docx 报告导出+签署栏、docs/技术方案.md 与 README 评测表、脱敏四步审查（程序化脚本全 PASS 留痕）、演示命令清单、发布 GitHub | ✅ |
 | M6 | 收尾与材料固化：发布物复核与全量回归复跑、v0.1.0 tag+release、仓库 topics、技术方案 docx 程序化固化、缓冲周加分项（视频抽帧+向量检索兜底） | ✅ |
 
+## 已知限制（v0.1.1 如实登记）
+
+- **测试项数的口径**：README 表中的「141 项全绿」指**装齐 `.[llm,doc,kg,web]` 之后**；
+  只装核心（`pip install -e .`）时，需要 `python-docx` / `fastapi` / `pyvis` 的用例会失败
+  （核心零依赖是有意设计，这些通路本就声明为 optional）。CI 的核心腿不掩盖这些失败，
+  而是**逐条归因**：任何一条"清单外失败"或"依赖其实装了还失败"都会让 CI 红
+  （`scripts/ci_core_only_gate.py`）。
+- **`vision` / `video` 两条通路未随 CI 验证**：需要 `ultralytics`（会拉 PyTorch）与
+  `opencv-python`，体积与构建时间不适合常规 CI。`demo --with-vision` / `demo --video`
+  的降级路径（缺依赖时优雅提示、exit 0）有测试覆盖，**真实推理通路**未在 CI 中运行。
+- **Web 面板的交互目检**：CI 覆盖到 `TestClient` 级的 HTTP 契约与"从 wheel 装 `[web]`
+  后 `create_app()` 能起来"，但**未做真实浏览器点击验证**（上传文件 → 隐患卡片 →
+  条款锚点跳 KG → 三格式下载需人工目检一次）。
+- **Python floor**：`>=3.12`（v0.1.1 起）。`v0.1.0` 曾在本机 Python 3.8.8 实测过，
+  但 3.8 已于 2024-10 EOL，本仓没有任何依赖把 floor 卡在旧线，故不再维护 3.8 腿。
+
 ## 免责与合规说明
 
 - `data/knowledge/` 中的条文为**研究性摘录概括**，标注"以官方文本为准"；
   正式使用请核对 JGJ 59-2011、JGJ 80-2016、JGJ 46-2005、建质规〔2022〕2号 等标准原文。
+  各标准的**下次复核日**见 `data/README.md` 的「下次复核」列（机读锚，年度复核）。
 - 样例数据由程序生成，非真实项目；含真实个人信息的数据一律不入库（见 `data/README.md` 台账
   与脱敏四步审查记录，脚本 `py -X utf8 -m scripts.desensitize_audit` 可重跑验证）。
 
