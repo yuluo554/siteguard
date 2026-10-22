@@ -20,6 +20,8 @@
 | **D4** | P2 | `vision`/`video` 两条通路本轮未验证 | **维持不验证**，在 README「已知限制」如实登记（不声称已交付） |
 | **D5** | P2 | `v0.1.0` Release 是 0 附件 | DEC2=B：`v0.1.1` 附 sdist + wheel + SHA256SUMS；`v0.1.0` 的 tag/Release **原样不动** |
 | **D7** | P2 | 规范条文只有登记日期，没有「下次复核」 | `data/README.md` 知识库表加「下次复核」列（2027-09-27，年度复核）+ 复核节奏说明；机读字段（`seed_regulations.jsonl` 的 `reviewed_on`/`next_review_due`）**未做**，因与本批纪律「不许改 `data/knowledge/*`」冲突，纪律优先，已记入待办 |
+| **D8**（本批新增） | P1 | **诊断报告里没有、由 CI + 实装探活逼出来**：`pyproject` 只声明 `packages`，仓库根的 `data/`/`webapp/`/`config/` 进不了 wheel → 装出来的包能 import、`/api/health` 也活着，但 `eval` 抛 `FileNotFoundError`、面板首页 500 | `[tool.setuptools.data-files]` 把 24 个资产装到 `<prefix>/share/siteguard/`；`config` 按用途分层（`asset_path` 只读资产回落 share / `out_path` 可写产物落 CWD / `data_path` 两级查找）；`repo_path` 保留为别名；新增 7 项装态契约测试 + CI `packaging` 腿（非 editable 真装 + 中性 CWD 端到端）。细节见 §四·4.2 |
+| **D9**（本批新增） | P1 | 同上来源：文件名穿越清洗用 `Path(name).name`，**POSIX 上 `\` 不是分隔符** → 防穿越在 Linux/macOS 静默失效（Windows 上恰好有效，故 `v0.1.0` 未暴露） | 抽出 `_clean_filename()` 按 `[\\/]` 同时切分；新增 2 条跨平台回归测试。细节见 §四·4.2 |
 
 ## 三、tag 时点事实（本节在打 tag 前写定，内容不随后续提交变化）
 
@@ -39,7 +41,65 @@
 
 ## 四、tag 后追加事实
 
-（打 tag 之后填写，见文末「执行记录」。）
+（本节在打完 tag 后追加，如实记录 tag 之后才发现/发生的事。）
+
+### 4.1 tag 时点
+
+- tag `v0.1.1`（annotated）→ 剥离后指向 `1881dfaaab09b3ae7ea6355fe0fbfa169ded5e8c`
+- 该提交就是 CI 全绿的那个提交：run `39704057452`（5 job 全 success）
+- 与 `v0.1.0`（`8355584`）的关系：3 个提交（`4089fad` / `ef0d524` / `1881dfa`）
+
+### 4.2 tag 之前就发生、但不属于原计划的两次修复（都是 CI/实装自己抓出来的）
+
+原提示词的批次 1–4 里**没有**这两条，它们是做完之后被门禁/实装实测逼出来的：
+
+1. **`ef0d524`：文件名穿越清洗在 POSIX 上失效**
+   CI 第一次跑（run `39702353643`）的 Linux 腿红了一条：`Path(name).name` 在 POSIX
+   上不把 `\` 当分隔符，`..\..\evil\demo_gczy.txt` 原样保留。这在 Windows 上
+   恰好有效，所以 `v0.1.0` 一年没暴露。改为按 `[\/]` 同时切分，+2 条回归测试。
+   **注意**：这不是我改坏的，是既有缺陷被新 CI 抓到——正好印证 D2「没有 CI 就没人发现」。
+
+2. **`1881dfa`：DEC2=B 引出的「装完不能用」（记为 D8）**
+   决定附 wheel 后实测：wheel 里**零资产**（`data/`/`webapp/`/`config/` 都在仓库根，
+   `package-data` 收不到）。装出来的包能 import、`/api/health` 也活着，但
+   `eval` 抛 `FileNotFoundError`、面板首页 500 —— **比装不上更坑**。
+   按用户拍板「A 真修」：新增 `data-files`（24 个资产）+ `config` 按用途分层
+   （`asset_path` 只读资产回落 share / `out_path` 可写产物落 CWD）+ 7 项装态契约测试
+   + CI 新增 packaging 腿（非 editable 真装）。
+   若不修，本版 Release 的两个附件会是"看起来装好了但用不了"的产物。
+
+### 4.3 发布物与三方 sha256 对撞
+
+附件来自 **tag 树重新构建**（`git clone --branch v0.1.1` → `python -m build`），不是本地工作树：
+
+| 文件 | 字节 | sha256（本地 = SHA256SUMS = GitHub digest） |
+|---|---|---|
+| `siteguard_safety-0.1.1-py3-none-any.whl` | 305 292 | `03f7e3d66c39a51a59d586b8af23a8ea53ab8b73d01b24881ad4d034cdb7adde` |
+| `siteguard_safety-0.1.1.tar.gz` | 313 105 | `a0bc6713fde5e9f85fe08db18747ca8e4d241816a294b75796faf7a829612bb0` |
+| `SHA256SUMS` | 202 | `461e3de5ec7f7c9002f828bffe70bb4dc70b4ace4ea25cafe161bfb681723b26` |
+
+真下载复验（`curl` Release 附件 → `cmp` 本地 → `sha256sum -c`）：**两个附件均 IDENTICAL / OK**。
+
+### 4.4 从下载件装完能用（对外用户视角，实测）
+
+干净 venv（系统 Python 3.12.10）→ `pip install <下载的 whl>[llm,doc,kg,web]` → 中性 CWD：
+
+| 命令 | 结果 |
+|---|---|
+| `siteguard version` | `SiteGuard v0.1.1`，rc=0 |
+| `siteguard eval` | F1=1.0000（category/site_object/…）：**达标**，rc=0 |
+| `siteguard demo` / `build-kg` | rc=0 / rc=0，产物落 CWD 的 `examples/` |
+| 面板 `/` `/static/app.js` `/api/health` `/api/scenarios` `/api/sample/gczy` | 全 200 |
+| `POST /api/analyze` | `hazard_count=54`，三格式下载齐全 |
+| site-packages 产物污染 | **0**（`find` 无命中） |
+
+sdist 同样验过：`pip install <下载的 tar.gz>[llm,doc,kg,web]` → `version`/`eval`/`build-kg` 全 rc=0。
+
+### 4.5 本版 CI 最终留痕
+
+- run `39704057452`（push `1881dfa`）：`core-only` / `full-extras`×2 / `packaging`×2 = **5 job 全 success**
+- 注解：3 条 `ubuntu-latest → Ubuntu 26` 迁移提示（GitHub 平台公告），**Node20 弃用告警 0 条**
+- 前两次 run 如实留痕：`39702353643` failure（抓到跨平台缺陷）、`39702910942` success
 
 ## 五、验收命令与结果
 
