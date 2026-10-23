@@ -17,28 +17,29 @@ setuptools 弃用，硬期限 **2027-02-18**（实测 setuptools 84.2.1）：
    （实测 `pip index versions setuptools --python-version 3.8` → LATEST 75.3.4）。
    这条是把「3.8 上装不到 77」写成机检，防止有人只改 license 不抬 floor 就提交。
 
-第 5~7 条是**审计函数自身的负控**：喂合成的错误输入，必须报错。没有这组，
-上面的断言只证明「当前文件是对的」，不证明「这个门会红」。
+后四条是**审计函数自身的负控**：喂合成的错误输入，必须报错。没有这组，
+前两条断言只证明「当前文件是对的」，不证明「这个门会红」。
+
+为什么用 unittest 而不是 pytest：本仓全部测试都是 `unittest.TestCase`，CI 用
+`python -m unittest discover`（core-only 腿为了证明"零依赖可用"**故意不装 pytest**）。
+写成 pytest 风格会在 core-only 腿里整份模块导入失败 —— 这是 v0.1.2 前实测踩过的坑。
 """
 
 from __future__ import annotations
 
 import re
-import sys
+import unittest
 from pathlib import Path
-
-import pytest
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 PYPROJECT = REPO_ROOT / "pyproject.toml"
 
 
 def _load_toml(text):
-    """3.11+ 用 tomllib；更老的解释器上退回 tomli（CI 的 3.9/3.10 腿）。"""
+    """3.11+ 用 tomllib；更老的解释器上退回 tomli。"""
     try:
         import tomllib as _t  # py>=3.11
     except ImportError:  # pragma: no cover - 取决于解释器版本
-        pytest.importorskip("tomli", reason="py<3.11 需要 tomli 才能解析 pyproject")
         import tomli as _t  # type: ignore[no-redef]
     return _t.loads(text)
 
@@ -59,7 +60,7 @@ def audit_pyproject(text):
 
     files = project.get("license-files")
     if files != ["LICENSE"]:
-        problems.append("project.license-files 应为 [\"LICENSE\"]，实际 %r" % (files,))
+        problems.append('project.license-files 应为 ["LICENSE"]，实际 %r' % (files,))
 
     # 不锚行首：classifiers 可能是单行数组，也可能逐行写
     if re.search(r'"License ::', text):
@@ -95,21 +96,6 @@ def audit_pyproject(text):
     return problems
 
 
-# ---- 对真实仓文件的断言 ----
-
-
-def test_repo_pyproject_is_pep639_compliant():
-    problems = audit_pyproject(PYPROJECT.read_text(encoding="utf-8"))
-    assert problems == [], "许可证元数据不合规：\n  - " + "\n  - ".join(problems)
-
-
-def test_license_file_exists_on_disk():
-    """license-files 指向的文件必须真的在仓库里（否则 wheel 里也是空的）。"""
-    assert (REPO_ROOT / "LICENSE").is_file()
-
-
-# ---- 审计函数自身的负控（证明这个门会红）----
-
 GOOD = '''\
 [build-system]
 requires = ["setuptools>=77"]
@@ -123,32 +109,51 @@ license-files = ["LICENSE"]
 '''
 
 
-def test_auditor_accepts_compliant_input():
-    assert audit_pyproject(GOOD) == []
+class TestRepoPyprojectIsPep639Compliant(unittest.TestCase):
+    """对真实仓文件的断言。"""
+
+    def test_real_pyproject_passes_audit(self):
+        problems = audit_pyproject(PYPROJECT.read_text(encoding="utf-8"))
+        self.assertEqual(problems, [],
+                         "许可证元数据不合规：\n  - " + "\n  - ".join(problems))
+
+    def test_license_file_exists_on_disk(self):
+        """license-files 指向的文件必须真的在仓库里（否则 wheel 里也是空的）。"""
+        self.assertTrue((REPO_ROOT / "LICENSE").is_file())
 
 
-def test_auditor_flags_legacy_license_table():
-    bad = GOOD.replace('license = "MIT"\nlicense-files = ["LICENSE"]',
-                       'license = { text = "MIT" }')
-    problems = audit_pyproject(bad)
-    assert any("TOML 表形态" in p for p in problems), problems
+class TestAuditorNegativeControls(unittest.TestCase):
+    """审计函数自身的负控（证明这个门会红，不是恒绿）。"""
+
+    def test_accepts_compliant_input(self):
+        self.assertEqual(audit_pyproject(GOOD), [])
+
+    def test_flags_legacy_license_table(self):
+        bad = GOOD.replace('license = "MIT"\nlicense-files = ["LICENSE"]',
+                           'license = { text = "MIT" }')
+        problems = audit_pyproject(bad)
+        self.assertTrue(any("TOML 表形态" in p for p in problems), problems)
+
+    def test_flags_license_classifier(self):
+        bad = GOOD.replace(
+            'license-files = ["LICENSE"]',
+            'license-files = ["LICENSE"]\n'
+            'classifiers = ["License :: OSI Approved :: MIT License"]',
+        )
+        problems = audit_pyproject(bad)
+        self.assertTrue(any("License ::" in p for p in problems), problems)
+
+    def test_flags_setuptools_below_77(self):
+        bad = GOOD.replace("setuptools>=77", "setuptools>=61")
+        problems = audit_pyproject(bad)
+        self.assertTrue(any("< 77" in p for p in problems), problems)
+
+    def test_flags_python_below_39(self):
+        """3.8 + SPDX 是自相矛盾的组合，必须在 pyproject 层面就被判红。"""
+        bad = GOOD.replace('requires-python = ">=3.9"', 'requires-python = ">=3.8"')
+        problems = audit_pyproject(bad)
+        self.assertTrue(any("< 3.9" in p for p in problems), problems)
 
 
-def test_auditor_flags_license_classifier():
-    bad = GOOD.replace('license-files = ["LICENSE"]',
-                       'license-files = ["LICENSE"]\nclassifiers = ["License :: OSI Approved :: MIT License"]')
-    problems = audit_pyproject(bad)
-    assert any("License ::" in p for p in problems), problems
-
-
-def test_auditor_flags_setuptools_below_77():
-    bad = GOOD.replace("setuptools>=77", "setuptools>=61")
-    problems = audit_pyproject(bad)
-    assert any("< 77" in p for p in problems), problems
-
-
-def test_auditor_flags_python_below_39():
-    """3.8 + SPDX 是自相矛盾的组合，必须在 pyproject 层面就被判红。"""
-    bad = GOOD.replace('requires-python = ">=3.9"', 'requires-python = ">=3.8"')
-    problems = audit_pyproject(bad)
-    assert any("< 3.9" in p for p in problems), problems
+if __name__ == "__main__":  # pragma: no cover
+    unittest.main()
